@@ -1,0 +1,28 @@
+---
+description: Index of available skills and rules.
+---
+
+You have multiple specialized rules organized into **Skills** (comprehensive guides with references) and **Rules** (concise best practices).
+
+## Skills
+
+- Aesthetic - Visual design principles, storytelling, and micro-interactions for distinctive interfaces
+- Backend Development - API design, architecture, authentication, security, and DevOps patterns
+- Frontend Design - Create distinctive, production-grade interfaces with bold aesthetics (avoid generic AI slop)
+- Frontend Development - React/TypeScript patterns: Suspense, lazy loading, TanStack Query/Router, MUI v7, file organization
+- UI Styling - shadcn/ui components, Tailwind CSS utilities, theming, accessibility, and canvas-based visual design
+- Sequential Thinking - Structured problem-solving with revision, branching, and hypothesis verification
+- Problem Solving - Techniques for complexity spirals, innovation blocks, meta-patterns, and scale testing
+- Research - Systematic research methodology for technical solutions with report generation
+
+## Rules
+
+- Git - Git commit and branching conventions
+- Coding Style - Coding style and best practices
+
+## Routing Guidelines
+
+1. For each user request, first infer which domains are relevant.
+2. Select 0–3 rules/skills that best match the request, prefer the SINGLE most specific one when possible.
+3. If both security and performance apply, prioritize `security.mdc` first, then `performance.mdc`.
+4. If no rule clearly matches, ignore all rules and answer normally.
