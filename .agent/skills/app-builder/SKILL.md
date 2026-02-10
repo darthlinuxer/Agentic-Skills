@@ -24,7 +24,7 @@ name: app-builder
 | `agent-coordination.md` | Agent pipeline, execution order | Coordinating multi-agent work |
 | `scaffolding.md` | Directory structure, core files | Creating project structure |
 | `feature-building.md` | Feature analysis, error handling | Adding features to existing project |
-| `templates/SKILL.md` | **Project templates** | Scaffolding new project |
+| `templates/<stack>/TEMPLATE.md` | **Project templates** | Scaffolding new project |
 
 ---
 

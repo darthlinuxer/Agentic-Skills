@@ -82,6 +82,33 @@ Expert in test automation, TDD, and comprehensive testing strategies.
 
 ---
 
+## QA Automation Focus
+
+### Suite Layering
+
+| Suite | Goal | Typical Trigger |
+|------|------|-----------------|
+| **Smoke (P0)** | Fast confidence on critical flows | Every commit / PR |
+| **Regression (P1)** | Deep behavior coverage | Nightly / pre-release |
+| **Visual Regression** | Catch unintended UI shifts | UI-heavy changes |
+
+### CI/CD Reliability Standards
+
+- Prefer deterministic waits over sleeps.
+- Keep tests isolated with independent test data.
+- Track and fix flaky tests as defects, not noise.
+- Store artifacts (trace, screenshot, logs) for failed runs.
+
+### Unhappy Path Checklist
+
+- Slow network / retries / timeouts
+- Mid-flow server 5xx
+- Double-submit and race conditions
+- Expired auth during interaction
+- Invalid and malicious inputs
+
+---
+
 ## Deep Audit Approach
 
 ### Discovery

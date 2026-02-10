@@ -8,8 +8,8 @@
 
 Antigravity Kit is a modular system consisting of:
 
-- **20 Specialist Agents** - Role-based AI personas
-- **36 Skills** - Domain-specific knowledge modules
+- **18 Specialist Agents** - Role-based AI personas
+- **68 Skills** - Domain-specific knowledge modules
 - **11 Workflows** - Slash command procedures
 
 ---
@@ -19,8 +19,8 @@ Antigravity Kit is a modular system consisting of:
 ```plaintext
 .agent/
 ├── ARCHITECTURE.md          # This file
-├── agents/                  # 20 Specialist Agents
-├── skills/                  # 36 Skills
+├── agents/                  # 18 Specialist Agents
+├── skills/                  # 68 Skills
 ├── workflows/               # 11 Slash Commands
 ├── rules/                   # Global Rules
 └── scripts/                 # Master Validation Scripts
@@ -28,14 +28,14 @@ Antigravity Kit is a modular system consisting of:
 
 ---
 
-## 🤖 Agents (20)
+## 🤖 Agents (18)
 
 Specialist AI personas for different domains.
 
 | Agent                    | Focus                      | Skills Used                                              |
 | ------------------------ | -------------------------- | -------------------------------------------------------- |
 | `orchestrator`           | Multi-agent coordination   | parallel-agents, behavioral-modes                        |
-| `project-planner`        | Discovery, task planning   | brainstorming, plan-writing, architecture                |
+| `project-planner`        | Discovery, task planning   | brainstorming, writing-plans, architecture               |
 | `frontend-specialist`    | Web UI/UX                  | frontend-design, nextjs-react-expert, tailwind-patterns |
 | `backend-specialist`     | API, business logic        | api-patterns, nodejs-best-practices, database-design     |
 | `database-architect`     | Schema, SQL                | database-design, prisma-expert                           |
@@ -44,20 +44,18 @@ Specialist AI personas for different domains.
 | `devops-engineer`        | CI/CD, Docker              | deployment-procedures, docker-expert                     |
 | `security-auditor`       | Security compliance        | vulnerability-scanner, red-team-tactics                  |
 | `penetration-tester`     | Offensive security         | red-team-tactics                                         |
-| `test-engineer`          | Testing strategies         | testing-patterns, tdd-workflow, webapp-testing           |
+| `test-engineer`          | Testing strategies         | testing-patterns, test-driven-development, webapp-testing |
 | `debugger`               | Root cause analysis        | systematic-debugging                                     |
 | `performance-optimizer`  | Speed, Web Vitals          | performance-profiling                                    |
 | `seo-specialist`         | Ranking, visibility        | seo-fundamentals, geo-fundamentals                       |
 | `documentation-writer`   | Manuals, docs              | documentation-templates                                  |
-| `product-manager`        | Requirements, user stories | plan-writing, brainstorming                              |
-| `product-owner`          | Strategy, backlog, MVP     | plan-writing, brainstorming                              |
-| `qa-automation-engineer` | E2E testing, CI pipelines  | webapp-testing, testing-patterns                         |
+| `product-manager`        | Requirements, user stories | writing-plans, brainstorming                             |
 | `code-archaeologist`     | Legacy code, refactoring   | clean-code, code-review-checklist                        |
 | `explorer-agent`         | Codebase analysis          | -                                                        |
 
 ---
 
-## 🧩 Skills (36)
+## 🧩 Skills (68)
 
 Modular knowledge domains that agents can load on-demand. based on task context.
 
@@ -107,7 +105,7 @@ Modular knowledge domains that agents can load on-demand. based on task context.
 | ----------------------- | ------------------------ |
 | `testing-patterns`      | Jest, Vitest, strategies |
 | `webapp-testing`        | E2E, Playwright          |
-| `tdd-workflow`          | Test-driven development  |
+| `test-driven-development` | Test-first implementation |
 | `code-review-checklist` | Code review standards    |
 | `lint-and-validate`     | Linting, validation      |
 
@@ -124,7 +122,7 @@ Modular knowledge domains that agents can load on-demand. based on task context.
 | --------------- | -------------------------- |
 | `app-builder`   | Full-stack app scaffolding |
 | `architecture`  | System design patterns     |
-| `plan-writing`  | Task planning, breakdown   |
+| `writing-plans` | Task planning, breakdown   |
 | `brainstorming` | Socratic questioning       |
 
 ### Mobile
@@ -266,8 +264,8 @@ For details, see [scripts/README.md](scripts/README.md)
 
 | Metric              | Value                         |
 | ------------------- | ----------------------------- |
-| **Total Agents**    | 20                            |
-| **Total Skills**    | 36                            |
+| **Total Agents**    | 18                            |
+| **Total Skills**    | 68                            |
 | **Total Workflows** | 11                            |
 | **Total Scripts**   | 2 (master) + 18 (skill-level) |
 | **Coverage**        | ~90% web/mobile development   |
@@ -285,4 +283,4 @@ For details, see [scripts/README.md](scripts/README.md)
 | Security | `security-auditor`    | vulnerability-scanner                 |
 | Testing  | `test-engineer`       | testing-patterns, webapp-testing      |
 | Debug    | `debugger`            | systematic-debugging                  |
-| Plan     | `project-planner`     | brainstorming, plan-writing           |
+| Plan     | `project-planner`     | brainstorming, writing-plans          |

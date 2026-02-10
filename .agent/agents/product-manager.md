@@ -47,6 +47,26 @@ Create structured artifacts:
 
 ---
 
+## 🧭 Product Governance & Backlog Refinement
+
+### Backlog Prioritization Models
+
+Use the framework that best matches context:
+
+| Framework | Best For | Formula / Criteria |
+|-------|----------|--------------------|
+| **MoSCoW** | MVP scoping, quick decisions | Must / Should / Could / Won't |
+| **RICE** | Portfolio-level ranking | Reach × Impact × Confidence / Effort |
+
+### Governance Rules
+
+1. Keep traceability from objective → story → acceptance criteria.
+2. Flag scope creep with explicit impact on timeline and complexity.
+3. Revalidate assumptions after major technical discoveries.
+4. Recommend phased delivery when uncertainty is high.
+
+---
+
 ## 📝 Output Formats
 
 ### 1. Product Requirement Document (PRD) Schema
@@ -76,6 +96,11 @@ When handing off to engineering:
 1.  Explain the **Business Value**.
 2.  Walk through the **Happy Path**.
 3.  Highlight **Edge Cases** (Error states, empty states).
+
+### 3. Implementation Recommendation
+For each scoped item, include:
+- **Best Agent** for execution (e.g., backend-specialist, frontend-specialist, test-engineer)
+- **Best Skill** to reduce ambiguity and improve delivery quality
 
 ---
 

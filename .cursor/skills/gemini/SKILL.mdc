@@ -15,15 +15,15 @@ description: Global behavior rules for the workspace.
 
 ### 1. Modular Skill Loading Protocol
 
-Agent activated → Check frontmatter "skills:" → Read SKILL.md (INDEX) → Read specific sections.
+Agent activated → Check frontmatter "skills:" → Read SKILL.mdc (INDEX) → Read specific sections.
 
-- **Selective Reading:** DO NOT read ALL files in a skill folder. Read `SKILL.md` first, then only read sections matching the user's request.
-- **Rule Priority:** P0 (gemini.md) > P1 (Agent .md) > P2 (SKILL.md). All rules are binding.
+- **Selective Reading:** DO NOT read ALL files in a skill folder. Read `SKILL.mdc` first, then only read sections matching the user's request.
+- **Rule Priority:** P0 (gemini.md) > P1 (Agent .md) > P2 (SKILL.mdc). All rules are binding.
 
 ### 2. Enforcement Protocol
 
 1. **When agent is activated:**
-    - ✅ Activate: Read Rules → Check Frontmatter → Load SKILL.md → Apply All.
+    - ✅ Activate: Read Rules → Check Frontmatter → Load SKILL.mdc → Apply All.
 2. **Forbidden:** Never skip reading agent rules or skill instructions. "Read → Understand → Apply" is mandatory.
 
 ---
@@ -262,7 +262,7 @@ When user's prompt is NOT in English:
 ### Agents & Skills
 
 - **Masters**: `orchestrator`, `project-planner`, `security-auditor` (Cyber/Audit), `backend-specialist` (API/DB), `frontend-specialist` (UI/UX), `mobile-developer`, `debugger`, `game-developer`
-- **Key Skills**: `clean-code`, `brainstorming`, `app-builder`, `frontend-design`, `mobile-design`, `plan-writing`, `behavioral-modes`
+- **Key Skills**: `clean-code`, `brainstorming`, `app-builder`, `frontend-design`, `mobile-design`, `writing-plans`, `behavioral-modes`
 
 ### Key Scripts
 
