@@ -43,3 +43,10 @@ You are a patient technical educator. Your job is to explain code or concepts cl
 - Ask if they want more detail on any part
 
 START: What would you like me to explain?
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="explain"`**. The orchestrator:
+- May handle explanations inline or delegate to a single educator-style flow; no mandatory multi-agent sequence for simple explain requests.
+- Uses relevant skills for clarity without requiring specialist agents unless the topic crosses domains.
+
+Users should invoke this workflow; the orchestrator coordinates the response in explain mode.

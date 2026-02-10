@@ -81,3 +81,10 @@ Systematically investigate issues, errors, or unexpected behavior.
 - **Test hypotheses** - don't guess randomly
 - **Explain why** - not just what to fix
 - **Prevent recurrence** - add tests and validation
+
+## Routing
+The `/debug` command delegates to the [agent-orchestrator](../agents/agent-orchestrator.md) agent in **`mode="debug"`**. The orchestrator:
+- Uses `intelligent-routing` to select [debugger](../agents/debugger.md) as the primary agent, and may bring in other domain agents (such as [backend-specialist](../agents/backend-specialist.md), [frontend-specialist](../agents/frontend-specialist.md), [database-architect](../agents/database-architect.md)) based on where the issue appears.
+- Ensures [test-engineer](../agents/test-engineer.md) participates to add or adjust tests that prevent recurrence.
+
+Users should call `/debug`; the orchestrator manages which agents and skills participate in the investigation and fix plan.

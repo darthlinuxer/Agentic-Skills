@@ -95,3 +95,10 @@ What direction would you like to explore?
 - **Visual when helpful** - use diagrams for architecture
 - **Honest tradeoffs** - don't hide complexity
 - **Defer to user** - present options, let them decide
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="brainstorm"`**. The orchestrator:
+- Uses the `brainstorming` and `research` skills (and may consult [project-planner](../agents/project-planner.md) or domain agents) to explore options without committing to implementation.
+- Keeps the outcome as options and recommendations that can later be fed into plan, implement, or orchestrate workflows as needed.
+
+Users should invoke this workflow for idea exploration; orchestration and skill usage remain internal.

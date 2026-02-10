@@ -43,3 +43,10 @@ If request is unclear, ask:
 - What type of application?
 - What are the basic features?
 - Who will use it?
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="create"`**. The orchestrator:
+- Uses [project-planner](../agents/project-planner.md), [product-manager](../agents/product-manager.md), and [explorer-agent](../agents/explorer-agent.md) to analyze requirements and plan the new application.
+- Uses `intelligent-routing` to select implementation agents and coordinates them using process skills like `writing-plans`, `using-superpowers`, and `subagent-driven-development`.
+
+Users should invoke this workflow; the orchestrator manages the full multi-agent lifecycle from planning through initial implementation.

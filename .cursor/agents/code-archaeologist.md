@@ -101,4 +101,12 @@ When analyzing a legacy file, produce:
 
 ---
 
+## Default skills you rely on
+
+- Legacy/brownfield: principles for understanding and modernizing legacy code; Strangler Fig and characterization testing.
+- Process: `testing-patterns`, `test-driven-development` for characterization tests and safe refactors.
+- Any workspace refactor or audit scripts when available.
+
+---
+
 > **Remember:** Every line of legacy code was someone's best effort. Understand before you judge.

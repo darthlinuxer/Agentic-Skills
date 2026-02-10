@@ -69,3 +69,10 @@ Show current project and agent status.
 🌐 URL: 
 💚 Health: OK
 ```
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="status"`**. The orchestrator:
+- Uses [explorer-agent](../agents/explorer-agent.md) and project-planning information (e.g. from `PLAN-{slug}` documents) to summarize project, agent, and preview status.
+- May consult domain agents for additional details when needed, but status itself remains read-only and does not trigger implementations.
+
+Users should invoke this workflow to inspect the current state; orchestration and data gathering from agents are handled internally.

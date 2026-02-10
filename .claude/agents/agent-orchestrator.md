@@ -80,6 +80,32 @@ You are the master orchestrator agent. You coordinate multiple specialized agent
 4. **Synthesize** results into cohesive output
 5. **Report** findings with actionable recommendations
 
+### Command Modes (Workspace Contract)
+
+In this workspace, user entrypoints are **commands**, and each command maps to an orchestrator **mode**:
+
+| Command | Mode | Description |
+|---------|------|-------------|
+| `/orchestrate` | `multi-domain` | Multi-agent orchestration across several domains |
+| `/plan` | `plan` | Planning and task breakdown only (no code) |
+| `/implement` | `implement` | Implement new features according to a plan |
+| `/fix` | `fix` | Fix bugs and regressions with tests |
+| `/debug` | `debug` | Systematic debugging and root-cause analysis |
+| `/refactor` | `refactor` | Refactor code without changing behavior |
+| `/create` | `create` | Create new applications or major modules |
+| `/deploy` | `deploy` | Coordinate production/staging deployment workflows |
+| `/test` | `test` | Generate and run tests, improve coverage |
+| `/docs` | `docs` | Create or update documentation |
+| `/review` | `review` | Perform multi-agent code review |
+| `/status` | `status` | Report project/agent/preview status (read-only) |
+| `/ui-ux-pro-max` | `ui-ux-pro-max` | Run design intelligence workflows |
+| `/brainstorm` | `brainstorm` | Explore options before committing to implementation |
+| `/enhance` | `enhance` | Add or update features in an existing application |
+| `/explain` | `explain` | Explain code or concepts (educator mode) |
+| `/preview` | `preview` | Manage preview server (start, stop, status, health) |
+
+Joined commands (e.g. `/brainstorm /plan /implement`) are interpreted as **sequential modes** on the same task, in left-to-right order.
+
 ---
 
 ## 🛑 CRITICAL: CLARIFY BEFORE ORCHESTRATING
@@ -486,6 +512,32 @@ You are the master orchestrator agent. You coordinate multiple specialized agent
 4. **Synthesize** results into cohesive output
 5. **Report** findings with actionable recommendations
 
+### Command Modes (Workspace Contract)
+
+In this workspace, user entrypoints are **commands**, and each command maps to an orchestrator **mode**:
+
+| Command | Mode | Description |
+|---------|------|-------------|
+| `/orchestrate` | `multi-domain` | Multi-agent orchestration across several domains |
+| `/plan` | `plan` | Planning and task breakdown only (no code) |
+| `/implement` | `implement` | Implement new features according to a plan |
+| `/fix` | `fix` | Fix bugs and regressions with tests |
+| `/debug` | `debug` | Systematic debugging and root-cause analysis |
+| `/refactor` | `refactor` | Refactor code without changing behavior |
+| `/create` | `create` | Create new applications or major modules |
+| `/deploy` | `deploy` | Coordinate production/staging deployment workflows |
+| `/test` | `test` | Generate and run tests, improve coverage |
+| `/docs` | `docs` | Create or update documentation |
+| `/review` | `review` | Perform multi-agent code review |
+| `/status` | `status` | Report project/agent/preview status (read-only) |
+| `/ui-ux-pro-max` | `ui-ux-pro-max` | Run design intelligence workflows |
+| `/brainstorm` | `brainstorm` | Explore options before committing to implementation |
+| `/enhance` | `enhance` | Add or update features in an existing application |
+| `/explain` | `explain` | Explain code or concepts (educator mode) |
+| `/preview` | `preview` | Manage preview server (start, stop, status, health) |
+
+Joined commands (e.g. `/brainstorm /plan /implement`) are interpreted as **sequential modes** on the same task, in left-to-right order.
+
 ---
 
 ## 🛑 CRITICAL: CLARIFY BEFORE ORCHESTRATING
@@ -891,6 +943,32 @@ You are the master orchestrator agent. You coordinate multiple specialized agent
 3. **Invoke** agents using native Agent Tool
 4. **Synthesize** results into cohesive output
 5. **Report** findings with actionable recommendations
+
+### Command Modes (Workspace Contract)
+
+In this workspace, user entrypoints are **commands**, and each command maps to an orchestrator **mode**:
+
+| Command | Mode | Description |
+|---------|------|-------------|
+| `/orchestrate` | `multi-domain` | Multi-agent orchestration across several domains |
+| `/plan` | `plan` | Planning and task breakdown only (no code) |
+| `/implement` | `implement` | Implement new features according to a plan |
+| `/fix` | `fix` | Fix bugs and regressions with tests |
+| `/debug` | `debug` | Systematic debugging and root-cause analysis |
+| `/refactor` | `refactor` | Refactor code without changing behavior |
+| `/create` | `create` | Create new applications or major modules |
+| `/deploy` | `deploy` | Coordinate production/staging deployment workflows |
+| `/test` | `test` | Generate and run tests, improve coverage |
+| `/docs` | `docs` | Create or update documentation |
+| `/review` | `review` | Perform multi-agent code review |
+| `/status` | `status` | Report project/agent/preview status (read-only) |
+| `/ui-ux-pro-max` | `ui-ux-pro-max` | Run design intelligence workflows |
+| `/brainstorm` | `brainstorm` | Explore options before committing to implementation |
+| `/enhance` | `enhance` | Add or update features in an existing application |
+| `/explain` | `explain` | Explain code or concepts (educator mode) |
+| `/preview` | `preview` | Manage preview server (start, stop, status, health) |
+
+Joined commands (e.g. `/brainstorm /plan /implement`) are interpreted as **sequential modes** on the same task, in left-to-right order.
 
 ---
 

@@ -52,3 +52,9 @@ For each issue found:
 
 START: Paste the code to review.
 
+## Routing
+The `/review` command delegates to the [agent-orchestrator](../agents/agent-orchestrator.md) agent in **`mode="review"`**. The orchestrator:
+- Uses `intelligent-routing` to select reviewers (e.g. [frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md), [security-auditor](../agents/security-auditor.md), [test-engineer](../agents/test-engineer.md)) based on the code under review.
+- Synthesizes findings into a single review report with severity, location, issue, and fix.
+
+Users should call `/review`; the orchestrator decides which agents and skills participate in the code review workflow.

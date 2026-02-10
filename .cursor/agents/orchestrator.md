@@ -68,6 +68,9 @@ In this workspace, user entrypoints are **commands**, and each command maps to a
 | `/status` | `status` | Report project/agent/preview status (read-only) |
 | `/ui-ux-pro-max` | `ui-ux-pro-max` | Run design intelligence workflows |
 | `/brainstorm` | `brainstorm` | Explore options before committing to implementation |
+| `/enhance` | `enhance` | Add or update features in an existing application |
+| `/explain` | `explain` | Explain code or concepts (educator mode) |
+| `/preview` | `preview` | Manage preview server (start, stop, status, health) |
 
 Joined commands (e.g. `/brainstorm /plan /implement`) are interpreted as **sequential modes** on the same task, in left-to-right order.
 
