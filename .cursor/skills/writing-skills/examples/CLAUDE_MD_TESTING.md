@@ -92,7 +92,7 @@ Your personal library of proven techniques, patterns, and tools
 is at `~/.local/share/com.talkcody/skills`.
 
 Browse categories: `ls ~/.local/share/com.talkcody/skills`
-Search: `grep -r "keyword" ~/.local/share/com.talkcody/skills --include="SKILL.mdc"`
+Search: `grep -r "keyword" ~/.local/share/com.talkcody/skills --include="SKILL.md"`
 
 Instructions: `skills/using-skills`
 </available_skills>

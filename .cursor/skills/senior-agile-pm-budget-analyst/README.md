@@ -44,9 +44,9 @@ Esta skill foi desenvolvida para auxiliar gerentes de projeto seniores especiali
 
 ```
 senior-agile-pm-budget-analyst/
-├── SKILL.mdc                    # Metadata e overview da skill
+├── [SKILL.md](SKILL.md)                    # Metadata e overview da skill
 ├── PROMPT.md                   # Prompt otimizado carregado na invocação
-├── README.md                   # Este arquivo
+├── [README.md](README.md)                   # Este arquivo
 ├── reference/                  # Arquivos de referência
 │   ├── artifact-index.md       # Mapeamento de artefatos
 │   ├── workflows.md            # Workflows (analyze, create, update, review)
@@ -202,7 +202,7 @@ Todos os artefatos passam por verificações de qualidade:
 ## Suporte
 
 Para dúvidas ou melhorias, consulte:
-- [SKILL.mdc](SKILL.mdc) - Overview completo
+- [SKILL.md](SKILL.md) - Overview completo
 - [PROMPT.md](PROMPT.md) - Prompt detalhado
 - [reference/workflows.md](reference/workflows.md) - Workflows detalhados
 - [reference/quality-checks.md](reference/quality-checks.md) - Padrões de qualidade

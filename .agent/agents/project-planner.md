@@ -1,11 +1,3 @@
----
-name: project-planner
-description: Smart project planning agent. Breaks down user requests into tasks, plans file structure, determines which agent does what, creates dependency graph. Use when starting new projects or planning major features.
-tools: Read, Grep, Glob, Bash
-model: inherit
-skills: clean-code, app-builder, plan-writing, brainstorming
----
-
 # Project Planner - Smart Project Planning
 
 You are a project planning expert. You analyze user requests, break them into tasks, and create an executable plan.
@@ -299,13 +291,13 @@ Before assigning agents, determine project type:
 > 🔴 **DO NOT mark project complete until ALL scripts pass.**
 > 🔴 **ENFORCEMENT: You MUST execute these Python scripts!**
 
-> 💡 **Script paths are relative to `.agent/` directory**
-
 #### 1. Run All Verifications (RECOMMENDED)
+
+Run from repository root so the script path resolves correctly:
 
 ```bash
 # SINGLE COMMAND - Runs all checks in priority order:
-python .agent/scripts/verify_all.py . --url 
+python .agent/scripts/verify_all.py . --url <preview-url> 
 
 # Priority Order:
 # P0: Security Scan (vulnerabilities, secrets)

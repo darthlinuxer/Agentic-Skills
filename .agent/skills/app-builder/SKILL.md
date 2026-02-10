@@ -1,10 +1,15 @@
 ---
+description: Main application building orchestrator. Creates full-stack applications
+  from natural language requests. Determines project type, selects tech stack, coordinates
+  agents.
 name: app-builder
-description: Main application building orchestrator. Creates full-stack applications from natural language requests. Determines project type, selects tech stack, coordinates agents.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 ---
 
 # App Builder - Application Building Orchestrator
+
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
 
 > Analyzes user's requests, determines tech stack, plans structure, and coordinates agents.
 
@@ -19,7 +24,6 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
 | `agent-coordination.md` | Agent pipeline, execution order | Coordinating multi-agent work |
 | `scaffolding.md` | Directory structure, core files | Creating project structure |
 | `feature-building.md` | Feature analysis, error handling | Adding features to existing project |
-| `templates/SKILL.md` | **Project templates** | Scaffolding new project |
 
 ---
 
@@ -32,6 +36,7 @@ Quick-start scaffolding for new projects. **Read the matching template only!**
 | [nextjs-fullstack](templates/nextjs-fullstack/TEMPLATE.md) | Next.js + Prisma | Full-stack web app |
 | [nextjs-saas](templates/nextjs-saas/TEMPLATE.md) | Next.js + Stripe | SaaS product |
 | [nextjs-static](templates/nextjs-static/TEMPLATE.md) | Next.js + Framer | Landing page |
+| [astro-static](templates/astro-static/TEMPLATE.md) | Astro | Static site / content |
 | [nuxt-app](templates/nuxt-app/TEMPLATE.md) | Nuxt 3 + Pinia | Vue full-stack app |
 | [express-api](templates/express-api/TEMPLATE.md) | Express + JWT | REST API |
 | [python-fastapi](templates/python-fastapi/TEMPLATE.md) | FastAPI | Python API |

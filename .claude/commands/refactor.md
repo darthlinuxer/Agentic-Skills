@@ -56,3 +56,11 @@ Evaluate the specific code that needs refactoring:
 - Complex orchestration (animations, state): Understand fully first
 
 START: Wait for the code to refactor.
+
+## Routing
+The `/refactor` command delegates to the [agent-orchestrator](../agents/agent-orchestrator.md) agent in **`mode="refactor"`**. The orchestrator:
+- Uses `intelligent-routing` to select the right domain agents for the affected area (for example [frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md), [database-architect](../agents/database-architect.md)).
+- Uses process skills such as `using-superpowers` to choose between `senior-software-developer`, `writing-plans`, and `test-driven-development` depending on the scope of the refactor.
+- Ensures [test-engineer](../agents/test-engineer.md) is included so refactors are backed by appropriate tests.
+
+Users should call `/refactor`; internal routing to agents and skills is handled by the orchestrator.

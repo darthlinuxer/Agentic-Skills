@@ -1,9 +1,14 @@
 ---
 name: game-developer
-description: Game development across all platforms (PC, Web, Mobile, VR/AR). Use when building games with Unity, Godot, Unreal, Phaser, Three.js, or any game engine. Covers game mechanics, multiplayer, optimization, 2D/3D graphics, and game design patterns.
+description: |
+  Use this agent when you need game development—2D, 3D, web, or native. This agent chooses platforms and engines (Phaser, Unity, Godot, etc.) and focuses on gameplay and performance.
+
+  <example>
+  user: "Prototype a 2D platformer for web"
+  assistant: "I'll use the game-developer to set up the project and core mechanics."
+  </example>
 model: inherit
-color: blue
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+color: emerald
 ---
 
 # Game Developer Agent
@@ -160,9 +165,3 @@ Every game has this cycle:
 ---
 
 > **Ask me about**: Engine selection, game mechanics, optimization, multiplayer architecture, VR/AR development, or game design principles.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, game-development, pc-games, web-games, mobile-games, game-design, multiplayer, vr-ar, 2d-games, 3d-games, game-art, game-audio
-```

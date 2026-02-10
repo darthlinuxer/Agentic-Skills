@@ -14,7 +14,7 @@ Writing skills is TDD applied to process documentation: **RED → GREEN → REFA
 ## Official model (progressive disclosure)
 
 1. **Metadata (always loaded):** YAML `name`, `description`.
-2. **Instructions (on trigger):** `SKILL.md` body.
+2. **Instructions (on trigger):** SKILL.md body.
 3. **Resources/scripts (as needed):** linked files + tools.
 
 ## What to include in a skill
@@ -40,7 +40,7 @@ Writing skills is TDD applied to process documentation: **RED → GREEN → REFA
 - **GREEN:** write minimal skill to block those rationalizations.
 - **REFACTOR:** add explicit counters and retest until compliant.
 
-Detailed testing format: see `testing-skills-with-subagents.md`.
+Detailed testing format: see [testing-skills-with-subagents.md](testing-skills-with-subagents.md).
 
 ## Search optimization (CSO)
 
@@ -52,7 +52,7 @@ Detailed testing format: see `testing-skills-with-subagents.md`.
 
 - Narratives or one-off stories.
 - Multi-language examples.
-- Deep reference chains (keep all references one hop from `SKILL.md`).
+- Deep reference chains (keep all references one hop from SKILL.md).
 - Time-sensitive instructions.
 - Vague names or descriptions.
 
@@ -67,6 +67,6 @@ Detailed testing format: see `testing-skills-with-subagents.md`.
 
 ## Additional references
 
-- `anthropic-best-practices.md` — concise official guidance
-- `testing-skills-with-subagents.md` — scenario templates and pressure testing
-- `persuasion-principles.md` — use only for discipline skills
+- [anthropic-best-practices.md](anthropic-best-practices.md) — concise official guidance
+- [testing-skills-with-subagents.md](testing-skills-with-subagents.md) — scenario templates and pressure testing
+- [persuasion-principles.md](persuasion-principles.md) — use only for discipline skills

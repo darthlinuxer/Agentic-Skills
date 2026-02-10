@@ -1,10 +1,13 @@
 ---
+description: Multi-agent orchestration patterns. Use when multiple independent tasks
+  can run with different domain expertise or when comprehensive analysis requires
+  multiple perspectives.
 name: parallel-agents
-description: Multi-agent orchestration patterns. Use when multiple independent tasks can run with different domain expertise or when comprehensive analysis requires multiple perspectives.
-allowed-tools: Read, Glob, Grep
 ---
 
 # Native Parallel Agents
+
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
 > Orchestration through Antigravity's built-in Agent Tool
 
@@ -102,7 +105,6 @@ Agents: security-auditor → penetration-tester → synthesis
 | `devops-engineer` | DevOps | "deploy", "CI/CD", "infrastructure" |
 | `database-architect` | Database | "schema", "Prisma", "migrations" |
 | `mobile-developer` | Mobile | "React Native", "Flutter", "mobile" |
-| `api-designer` | API Design | "REST", "GraphQL", "OpenAPI" |
 | `debugger` | Debugging | "bug", "error", "not working" |
 | `explorer-agent` | Discovery | "explore", "map", "structure" |
 | `documentation-writer` | Documentation | "write docs", "create README", "generate API docs" |
@@ -159,7 +161,7 @@ After all agents complete, synthesize:
 
 ## Best Practices
 
-1. **Available agents** - 17 specialized agents can be orchestrated
+1. **Available agents** - 16 listed specialized agents can be orchestrated
 2. **Logical order** - Discovery → Analysis → Implementation → Testing
 3. **Share context** - Pass relevant findings to subsequent agents
 4. **Single synthesis** - One unified report, not separate outputs

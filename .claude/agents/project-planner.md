@@ -1,9 +1,15 @@
 ---
 name: project-planner
-description: Smart project planning agent. Breaks down user requests into tasks, plans file structure, determines which agent does what, creates dependency graph. Use when starting new projects or planning major features.
+description: |
+  Use this agent when you need task breakdown, milestones, or an executable plan from a user request. This agent analyzes context, creates phased plans, and produces PLAN-{slug}.md for the orchestrator.
+
+  <example>
+  user: "We need to add SSO and refactor the API"
+  assistant: "I'll use the project-planner to break this into tasks and phases."
+  </example>
 model: inherit
 color: blue
-tools: ["Read", "Grep", "Glob", "Bash"]
+memory: project
 ---
 
 # Project Planner - Smart Project Planning
@@ -299,13 +305,14 @@ Before assigning agents, determine project type:
 > 🔴 **DO NOT mark project complete until ALL scripts pass.**
 > 🔴 **ENFORCEMENT: You MUST execute these Python scripts!**
 
-> 💡 **Script paths are relative to `.agent/` directory**
-
 #### 1. Run All Verifications (RECOMMENDED)
 
+Run from repository root so the script path resolves correctly:
+
 ```bash
+# Run from repository root so .claude/scripts/verify_all.py resolves.
 # SINGLE COMMAND - Runs all checks in priority order:
-python .agent/scripts/verify_all.py . --url 
+python .claude/scripts/verify_all.py . --url <preview-url> 
 
 # Priority Order:
 # P0: Security Scan (vulnerabilities, secrets)
@@ -323,16 +330,16 @@ python .agent/scripts/verify_all.py . --url
 npm run lint && npx tsc --noEmit
 
 # P0: Security Scan
-python .agent/skills/vulnerability-scanner/scripts/security_scan.py .
+python .claude/skills/vulnerability-scanner/scripts/security_scan.py .
 
 # P1: UX Audit
-python .agent/skills/frontend-design/scripts/ux_audit.py .
+python .claude/skills/frontend-design/scripts/ux_audit.py .
 
 # P3: Lighthouse (requires running server)
-python .agent/skills/performance-profiling/scripts/lighthouse_audit.py 
+python .claude/skills/performance-profiling/scripts/lighthouse_audit.py 
 
 # P4: Playwright E2E (requires running server)
-python .agent/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
+python .claude/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
 ```
 
 #### 3. Build Verification
@@ -348,7 +355,7 @@ npm run build
 npm run dev
 
 # Optional: Run Playwright tests if available
-python .agent/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
+python .claude/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
 ```
 
 #### 4. Rule Compliance (Manual Check)
@@ -404,8 +411,9 @@ python .agent/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
 
 ---
 
-## Ported Metadata
+# Persistent Agent Memory
 
-```yaml
-skills: clean-code, app-builder, plan-writing, brainstorming
-```
+You have a persistent memory directory at `<agent-memory-root>/project-planner/`. Its contents persist across conversations.
+
+Use it for project type, recurring decisions, and plan patterns. Follow orchestrator memory guidelines: save stable conventions and user preferences; do not save session-specific task lists. Use the Write and Edit tools to update memory. Keep MEMORY.md concise (first 200 lines are loaded).
+

@@ -1,8 +1,10 @@
 ---
+description: Create comprehensive implementation plans for complex, multi-component
+  tasks (>30 min, multiple files/modules, or >5 distinct steps). Breaks work into
+  bite-sized tasks following TDD, DRY, YAGNI principles. After plan creation, execute
+  using subagent-driven-development. For simple single-feature implementations, skip
+  planning and use test-driven-development directly.
 name: writing-plans
-description: Create comprehensive implementation plans for complex, multi-component tasks (>30 min, multiple files/modules, or >5 distinct steps). Breaks work into bite-sized tasks following TDD, DRY, YAGNI principles. After plan creation, execute using subagent-driven-development. For simple single-feature implementations, skip planning and use test-driven-development directly.
-metadata:
-  author: "darthlinuxer"
 ---
 
 # Writing Plans

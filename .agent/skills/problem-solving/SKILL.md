@@ -1,11 +1,15 @@
 ---
+description: Apply systematic problem-solving techniques for complexity spirals (simplification
+  cascades), innovation blocks (collision-zone thinking), recurring patterns (meta-pattern
+  recognition), assumption constraints (inversion exercise), scale uncertainty (scale
+  game), and dispatch when stuck. Techniques derived from Microsoft Amplifier project
+  patterns adapted for immediate application.
 name: problem-solving
-description: Apply systematic problem-solving techniques for complexity spirals (simplification cascades), innovation blocks (collision-zone thinking), recurring patterns (meta-pattern recognition), assumption constraints (inversion exercise), scale uncertainty (scale game), and dispatch when stuck. Techniques derived from Microsoft Amplifier project patterns adapted for immediate application.
-version: 2.0.0
-license: MIT
 ---
 
 # Problem-Solving Techniques
+
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
 Systematic approaches for different types of stuck-ness. Each technique targets specific problem patterns.
 
@@ -25,12 +29,12 @@ Apply when encountering:
 
 | Stuck Symptom | Technique | Reference |
 |---------------|-----------|-----------|
-| Same thing implemented 5+ ways, growing special cases | **Simplification Cascades** | `references/simplification-cascades.md` |
-| Conventional solutions inadequate, need breakthrough | **Collision-Zone Thinking** | `references/collision-zone-thinking.md` |
-| Same issue in different places, reinventing wheels | **Meta-Pattern Recognition** | `references/meta-pattern-recognition.md` |
-| Solution feels forced, "must be done this way" | **Inversion Exercise** | `references/inversion-exercise.md` |
-| Will this work at production? Edge cases unclear? | **Scale Game** | `references/scale-game.md` |
-| Unsure which technique to use | **When Stuck** | `references/when-stuck.md` |
+| Same thing implemented 5+ ways, growing special cases | **Simplification Cascades** | [references/simplification-cascades.md](references/simplification-cascades.md) |
+| Conventional solutions inadequate, need breakthrough | **Collision-Zone Thinking** | [references/collision-zone-thinking.md](references/collision-zone-thinking.md) |
+| Same issue in different places, reinventing wheels | **Meta-Pattern Recognition** | [references/meta-pattern-recognition.md](references/meta-pattern-recognition.md) |
+| Solution feels forced, "must be done this way" | **Inversion Exercise** | [references/inversion-exercise.md](references/inversion-exercise.md) |
+| Will this work at production? Edge cases unclear? | **Scale Game** | [references/scale-game.md](references/scale-game.md) |
+| Unsure which technique to use | **When Stuck** | [references/when-stuck.md](references/when-stuck.md) |
 
 ## Core Techniques
 
@@ -72,7 +76,7 @@ Test at extremes (1000x bigger/smaller, instant/year-long) to expose fundamental
 ## Application Process
 
 1. **Identify stuck-type** - Match symptom to technique above
-2. **Load detailed reference** - Read specific technique from `references/`
+2. **Load detailed reference** - Read specific technique from [references/](references/)
 3. **Apply systematically** - Follow technique's process
 4. **Document insights** - Record what worked/failed
 5. **Combine if needed** - Some problems need multiple techniques
@@ -88,10 +92,10 @@ Powerful combinations:
 ## References
 
 Load detailed guides as needed:
-- `references/when-stuck.md` - Dispatch flowchart and decision tree
-- `references/simplification-cascades.md` - Cascade detection and extraction
-- `references/collision-zone-thinking.md` - Metaphor collision process
-- `references/meta-pattern-recognition.md` - Pattern abstraction techniques
-- `references/inversion-exercise.md` - Assumption flipping methodology
-- `references/scale-game.md` - Extreme testing procedures
-- `references/attribution.md` - Source and adaptation notes
+- [references/when-stuck.md](references/when-stuck.md) - Dispatch flowchart and decision tree
+- [references/simplification-cascades.md](references/simplification-cascades.md) - Cascade detection and extraction
+- [references/collision-zone-thinking.md](references/collision-zone-thinking.md) - Metaphor collision process
+- [references/meta-pattern-recognition.md](references/meta-pattern-recognition.md) - Pattern abstraction techniques
+- [references/inversion-exercise.md](references/inversion-exercise.md) - Assumption flipping methodology
+- [references/scale-game.md](references/scale-game.md) - Extreme testing procedures
+- [references/attribution.md](references/attribution.md) - Source and adaptation notes

@@ -31,3 +31,9 @@ You are a technical writer. Your mission is to create or update documentation th
 
 START: What would you like me to document?
 
+## Routing
+The `/docs` command delegates to the [agent-orchestrator](../agents/agent-orchestrator.md) agent in **`mode="docs"`**. The orchestrator:
+- Uses `intelligent-routing` to select [documentation-writer](../agents/documentation-writer.md) as the primary agent and may consult other domain agents ([frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md), etc.) to ensure docs match real behavior.
+- Ensures documentation-related skills (such as `documentation-templates`, `writing-skills`, and `geo-fundamentals` and `seo-fundamentals` when appropriate) are applied through the documentation-writer agent.
+
+Users should call `/docs`; the orchestrator coordinates which agents and skills are involved in documentation work.

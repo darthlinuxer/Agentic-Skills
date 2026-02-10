@@ -16,10 +16,10 @@ The skill automatically detects your language and loads only relevant files:
 ### Token Savings
 
 **Before (Monolithic):**
-- Loading SKILL.mdc (857 lines) + language-style-guides.md (871 lines) = ~3000 tokens
+- Loading [SKILL.md](SKILL.md) (857 lines) + language-style-guides.md (871 lines) = ~3000 tokens
 
 **After (Modular):**
-- Loading SKILL.mdc (400 lines) + 3 language files (~1200 lines) = ~1600 tokens
+- Loading [SKILL.md](SKILL.md) (400 lines) + 3 language files (~1200 lines) = ~1600 tokens
 - **~70% reduction** for language-specific work
 
 ## Decision Trees
@@ -275,7 +275,7 @@ python3 scripts/check_quality_python.py
 - Context managers: `with open(...) as f:`
 - Match statements: Python 3.10+ pattern matching
 
-**See:** `reference/python-style.md`, `python-testing.md`, `python-patterns.md`
+**See:** [reference/python-style.md](reference/python-style.md), [reference/python-testing.md](reference/python-testing.md), [reference/python-patterns.md](reference/python-patterns.md)
 
 ### C# (modern .NET 8+)
 
@@ -310,7 +310,7 @@ dotnet test --filter "FullyQualifiedName~ClassName.MethodName"
 - Async/await: `async Task<T>`
 - File-scoped namespaces: `namespace MyApp;`
 
-**See:** `reference/csharp-style.md`, `csharp-testing.md`, `csharp-patterns.md`
+**See:** [reference/csharp-style.md](reference/csharp-style.md), [reference/csharp-testing.md](reference/csharp-testing.md), [reference/csharp-patterns.md](reference/csharp-patterns.md)
 
 ### TypeScript (strict mode)
 
@@ -348,7 +348,7 @@ npm test -- UserService.test.ts
 - Branded types: `type UserId = number & { __brand: 'UserId' }`
 - Type guards: `function isUser(x: unknown): x is User`
 
-**See:** `reference/typescript-style.md`, `typescript-testing.md`, `typescript-patterns.md`
+**See:** [reference/typescript-style.md](reference/typescript-style.md), [reference/typescript-testing.md](reference/typescript-testing.md), [reference/typescript-patterns.md](reference/typescript-patterns.md)
 
 ### Node.js (ESM modules)
 
@@ -383,7 +383,7 @@ NODE_ENV=production node index.js
 - Graceful shutdown: Handle SIGTERM/SIGINT
 - Streams: For large data processing
 
-**See:** `reference/nodejs-style.md`, `nodejs-testing.md`, `nodejs-patterns.md`
+**See:** [reference/nodejs-style.md](reference/nodejs-style.md), [reference/nodejs-testing.md](reference/nodejs-testing.md), [reference/nodejs-patterns.md](reference/nodejs-patterns.md)
 
 ## Testing Quick Patterns
 
@@ -532,7 +532,7 @@ if (user.Age > LEGAL_AGE && user.AccountBalance > MINIMUM_BALANCE)
 - [ ] For Python: Ensure uv is installed (`curl -LsSf  | sh`)
 - [ ] Review the language-specific reference file for your language
 - [ ] Run the appropriate quality check script for your project
-- [ ] Read `SKILL.mdc` for full operational guidelines
+- [ ] Read [SKILL.md](SKILL.md) for full operational guidelines
 
 ## Reference File Locations
 

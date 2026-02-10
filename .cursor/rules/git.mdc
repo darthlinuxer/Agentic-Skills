@@ -1,7 +1,7 @@
 ---
-alwaysApply: true
+description: Git workflow and commit conventions.
+alwaysApply: false
 ---
-
 # Git Conventions
 
 ## Commit Messages

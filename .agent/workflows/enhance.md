@@ -43,3 +43,10 @@ Add features or make updates to an existing application.
 - Get approval for major changes
 - Warn on conflicting requests (e.g., "use Firebase" when project uses PostgreSQL)
 - Commit each change with git
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="enhance"`**. The orchestrator:
+- Uses `intelligent-routing` to select domain agents and process skills for planning and applying updates.
+- May use [project-planner](../agents/project-planner.md) for larger enhancements that need task breakdown.
+
+Users should invoke this workflow; the orchestrator decides which agents and skills participate in the update workflow.

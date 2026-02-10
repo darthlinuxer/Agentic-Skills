@@ -1,73 +1,103 @@
 # Agentic-Skills
 
-LLM-agnostic skills based on Anthropic’s Skills Framework. Each skill is a self-contained playbook (with optional scripts and references) that guides an LLM through a reliable workflow for a specific kind of task.
+A **multi-platform agentic ecosystem** for AI-assisted development. It provides commands (or workflows), an orchestrator, specialist agents, and reusable skills so you can plan, implement, fix, test, deploy, and document projects in a consistent way across **Cursor**, **Claude Code**, and **Google Anthropic Agent**.
 
-## What’s in this repo
+---
 
-- **Antigravity workspace**: `.agent/` contains agents, skills, rules, workflows, and scripts.
-- **Cursor workspace**: `.cursor/` contains rules, commands, skills, and agents.
-- **Claude workspace**: `.claude/` contains Claude-compatible skills and agents.
-- **References & assets**: Some skills include `reference/`, `references/`, `assets/`, or `scripts/` for deeper guidance or automation.
+## What this repo is
 
-## Skill index (Claude)
+- **Entry points**: 17 commands (Cursor/Claude) or workflows (Agent) that you invoke—e.g. `/plan`, `/implement`, `/fix`, `/docs`.
+- **Orchestrator**: A single coordinator per platform that receives your request by *mode*, selects the right agents and skills, and runs the workflow. You don’t call agents or skills directly.
+- **Agents**: Domain specialists (e.g. backend-specialist, frontend-specialist, documentation-writer, test-engineer) and process roles (e.g. project-planner, verifier). Each has its own skills.
+- **Skills**: Reusable guidance and patterns (e.g. test-driven-development, writing-plans, frontend-design) used by the orchestrator and agents. Skills never call commands or the orchestrator.
 
-| Skill | Folder | What it does |
-| --- | --- | --- |
-| docx | `.claude/skills/docx/` | Create, edit, and analyze `.docx` files with tracked changes, comments, and OOXML workflows. |
-| mcp-builder | `.claude/skills/mcp-builder/` | Build high-quality MCP servers with strong tool design, error handling, and evaluation guidance. |
-| senior-agile-pm-budget-analyst | `.claude/skills/senior-agile-pm-budget-analyst/` | Create/review Agile artifacts with budget analysis, poker planning, Gantt, and critical path support. |
-| senior-pmbok-pm | `.claude/skills/senior-pmbok-pm/` | Create/review PMBOK artifacts using provided templates and workflows. |
-| senior-software-developer | `.claude/skills/senior-software-developer/` | Engineering standards and patterns for Python, C#, Node.js, and TypeScript work. |
-| subagent-driven-development | `.claude/skills/subagent-driven-development/` | Execute plans via subagents with spec + code quality review cycles. |
-| test-driven-development | `.claude/skills/test-driven-development/` | Enforce TDD (red-green-refactor) for features and bugfixes. |
-| using-superpowers | `.claude/skills/using-superpowers/` | Guidance on when and how to invoke skills in workflows. |
-| verification-before-completion | `.claude/skills/verification-before-completion/` | Require verification evidence before claiming work is complete. |
-| writing-plans | `.claude/skills/writing-plans/` | Create detailed, executable implementation plans for complex tasks. |
-| writing-prompts | `.claude/skills/writing-prompts/` | Craft high-quality prompts for LLM performance and consistency. |
-| writing-skills | `.claude/skills/writing-skills/` | Author and validate skills using a TDD-style approach. |
+**Contract:** You use **only** the entry points (commands or workflows). They route to the orchestrator; the orchestrator uses agents and skills. No cycles: skills don’t call commands or the orchestrator; agents don’t call commands.
 
-## How to use these skills
+---
 
-### In Claude (Anthropic)
+## Platforms and entry points
 
-1. Pick the relevant skill folder under `.claude/skills/`.
-2. Open the `SKILL.md` file and load its content into your session (paste it, or attach it if your client supports file attachments).
-3. Follow the skill instructions while working on your task.
+| Platform | Entry path | How you start |
+|----------|------------|----------------|
+| **Cursor** | `.cursor/commands/` | Run a **command** (e.g. `/plan`, `/implement`) from the Cursor command palette or chat. |
+| **Claude** | `.claude/commands/` | Run a **command** in Claude Code; it routes to the agent-orchestrator. |
+| **Agent** (Google Anthropic) | `.agent/workflows/` | Invoke a **workflow**; workflows are the entry point (no commands directory). |
 
-If your Claude client supports skills directories natively, point it at `.claude/skills/` or copy the specific skill folder into your configured skills path.
+Same 17 entry names on all platforms:
 
-## Platform structure
+| Command / workflow | Typical use |
+|--------------------|-------------|
+| `/plan` | Create or refine a plan (task breakdown, agent/skill assignments). No code. |
+| `/create` | New app or major module; full lifecycle from plan to initial implementation. |
+| `/implement` | Implement features from an existing plan. |
+| `/fix` | Fix bugs and regressions with tests. |
+| `/debug` | Systematic debugging and root-cause analysis. |
+| `/refactor` | Refactor without changing behavior. |
+| `/test` | Generate and run tests, improve coverage. |
+| `/review` | Multi-agent code review. |
+| `/docs` | Create or update documentation (sync with code). |
+| `/deploy` | Coordinate deployment (staging/production). |
+| `/status` | Report project/agent/preview status (read-only). |
+| `/preview` | Manage preview server (start, stop, status, health). |
+| `/brainstorm` | Explore options before committing to implementation. |
+| `/enhance` | Add or update features in an existing app. |
+| `/explain` | Explain code or concepts (educator mode). |
+| `/ui-ux-pro-max` | Design intelligence (UI/UX, design system). |
+| `/orchestrate` | Multi-domain orchestration; orchestrator chooses agents/skills. |
 
-```
-.agent/   # Antigravity agents, skills, workflows, rules, scripts
-.cursor/  # Cursor rules, commands, skills, agents
-.claude/  # Claude skills, agents (project-level)
-```
+You can chain modes (e.g. `/brainstorm` then `/plan` then `/implement`) for one task.
 
-### In GitHub Copilot
+---
 
-Copilot does not currently provide a first-class “skills” installation mechanism like Anthropic’s framework. You can still use these skills effectively by:
+## How to use the ecosystem
 
-1. Opening the relevant `SKILL.md` and pasting its instructions into Copilot Chat as a starting context.
-2. Keeping the skill file open and asking Copilot to follow it while working.
-3. (If available in your Copilot setup) adding repository-level or workspace-level **custom instructions** that reference the skill you want Copilot to follow.
+1. **Start with a command (or workflow).**  
+   In Cursor or Claude, use the command (e.g. `/plan`, `/implement`, `/docs`). On Agent, invoke the matching workflow. Do not call the orchestrator or agents directly.
 
-> Note: Copilot features evolve; if your version supports workspace instructions or instruction files, you can point those instructions at the relevant skill folder.
+2. **Be specific.**  
+   Example: `/plan e-commerce site with cart and auth` or `/docs add README for the API module`. The orchestrator will route to the right agents and skills.
 
-## Contributing
+3. **If your prompt has no command.**  
+   The workspace rule is: figure out which command(s) apply and mention them (e.g. “Use `/plan` then `/implement`”). Commands live in the platform’s commands (or workflows) directory.
 
-Contributions are welcome! To add a new skill or improve an existing one:
-1. Fork this repository.
-2. Create a new branch for your feature or fix.
-3. Add your skill folder with a `SKILL.md` and any necessary assets.
-4. Submit a pull request with a description of your changes.
-5. Ensure your code follows the existing style and conventions.
-6. Include tests or examples if applicable.
-7. Update this README to include your new skill in the index.
-8. Respond to any feedback on your pull request.
-9. Once approved, your changes will be merged into the main repository.
-10. Celebrate your contribution to the Agentic-Skills community!
+4. **Plans.**  
+   Plans are written to `docs/PLAN-{task-slug}.md`. After `/plan`, use `/create` or `/implement` to execute; the orchestrator uses the plan to assign work.
+
+5. **Documentation.**  
+   Use `/docs` for anything doc-related; the orchestrator uses the documentation-writer agent and doc-related skills so docs stay aligned with the codebase.
+
+---
+
+## Directory layout (per platform)
+
+Layout is parallel across the three platforms; only the top-level folder and “commands vs workflows” differ.
+
+| Directory | Purpose |
+|-----------|---------|
+| **`.cursor/`** | Cursor IDE: commands, agents, rules, skills, scripts. |
+| **`.claude/`** | Claude Code: commands, agents, skills, scripts. |
+| **`.agent/`** | Google Anthropic Agent: workflows (no commands dir), agents, skills, scripts. |
+| **`docs/`** | Project docs, plans (`docs/PLAN-*.md`), and ecosystem review artifacts. |
+
+Under each platform:
+
+- **`commands/`** (or **`workflows/`** for `.agent/`) — Entry points; each file has a **Routing** section to the orchestrator and a mode.
+- **`agents/`** — Orchestrator plus specialist agents (e.g. `orchestrator.md`, `documentation-writer.md`, `backend-specialist.md`). Cursor also has `verifier.md`.
+- **`skills/`** — Reusable skills (e.g. `documentation-templates`, `writing-plans`, `test-driven-development`). Agents reference skills; skills do not call commands or the orchestrator.
+- **`rules/`** (Cursor/Agent) — Workspace rules (e.g. entry-point, coding-style, git).
+- **`scripts/`** — Helper scripts (e.g. preview, verification).
+
+---
+
+## More detail
+
+- **Ecosystem flow and review:** [docs/REVIEW-ECOSYSTEM-FLOW.md](docs/REVIEW-ECOSYSTEM-FLOW.md) (review prompt) and [docs/ECOSYSTEM-FLOW-REVIEW-REPORT.md](docs/ECOSYSTEM-FLOW-REVIEW-REPORT.md) (latest report).
+- **Orchestrator and modes:** See the Command Modes (or Workflow Modes) table in the platform’s orchestrator:  
+  `.cursor/agents/orchestrator.md`, `.claude/agents/agent-orchestrator.md`, `.agent/agents/orchestrator.md`.
+- **Skills:** Browsable under `.cursor/skills/` (and `.claude/skills/`, `.agent/skills/`). Each skill has a `SKILL.md` describing when and how it’s used.
+
+---
 
 ## License
 
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+See [LICENSE](LICENSE).

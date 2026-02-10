@@ -16,30 +16,30 @@ Do **not** use when the request is unrelated to PMBOK artifacts or does not invo
 ## First decisions (always)
 1. **Identify the command**: `create`, `update`, or `review`.
 2. **Identify the language**: PT-BR or EN (based on the user request or document language).
-3. **Identify artifact(s)** using `reference/artifact-index.md`.
+3. **Identify artifact(s)** using [reference/artifact-index.md](reference/artifact-index.md).
 4. **Load sources for each artifact** from the language-appropriate folder:
    - `TEMPLATE.md`
    - `INPUTS.md`
    - `DOCUMENTACAO.md` or all files in `DOCUMENTACAO/`
 
-If a template is **not** in the standard format, refactor it first (see `reference/quality-checks.md`).
+If a template is **not** in the standard format, refactor it first (see [reference/quality-checks.md](reference/quality-checks.md)).
 
 ## Quick reference
 - **Command** → `create` | `update` | `review`
-- **Artifact map** → `reference/artifact-index.md`
-- **Workflow** → `reference/workflows.md`
-- **Template standard** → `reference/quality-checks.md`
+- **Artifact map** → [reference/artifact-index.md](reference/artifact-index.md)
+- **Workflow** → [reference/workflows.md](reference/workflows.md)
+- **Template standard** → [reference/quality-checks.md](reference/quality-checks.md)
 - **Location (PT-BR)** → `senior-pmbok-pm/reference/PM_DOCS_PT_BR/<artifact>`
 - **Location (EN)** → `senior-pmbok-pm/reference/PM_DOC_EN/<artifact>`
 
 ## Workflows
-Follow the appropriate workflow in `reference/workflows.md`:
+Follow the appropriate workflow in [reference/workflows.md](reference/workflows.md):
 - **Create**: build a new artifact using the template and inputs.
 - **Update**: apply changes to an existing artifact, then update document controls.
 - **Review**: check compliance with template, inputs, and documentation.
 
 Always **copy the workflow checklist into your response** and **track progress**. Ensure each workflow explicitly includes:
-- Validate/normalize template format (see `reference/quality-checks.md`)
+- Validate/normalize template format (see [reference/quality-checks.md](reference/quality-checks.md))
 - Map inputs to placeholders
 - Run quality checks
 
@@ -80,25 +80,25 @@ Every artifact must include (when applicable):
 These scripts are intended to enhance the skill’s objectives. Store them under `senior-pmbok-pm/scripts/`.
 
 - `artifact_mapper.py` — Resolves artifact names to the correct PT-BR/EN paths and validates required files.
-   - Location: `senior-pmbok-pm/scripts/artifact_mapper.py`
+   - Location: [scripts/artifact_mapper.py](scripts/artifact_mapper.py)
    - When to use: At the start of any create/update/review task to locate the correct artifact folder and required files.
-- `template_normalizer.py` — Validates/normalizes template structure per `reference/quality-checks.md`.
-   - Location: `senior-pmbok-pm/scripts/template_normalizer.py`
+- `template_normalizer.py` — Validates/normalizes template structure per [reference/quality-checks.md](reference/quality-checks.md).
+   - Location: [scripts/template_normalizer.py](scripts/template_normalizer.py)
    - When to use: Before drafting or updating an artifact to ensure the template is compliant with the standard format.
 - `inputs_validator.py` — Checks placeholder coverage between `TEMPLATE.md` and `INPUTS.md`.
-   - Location: `senior-pmbok-pm/scripts/inputs_validator.py`
+   - Location: [scripts/inputs_validator.py](scripts/inputs_validator.py)
    - When to use: Before filling a template to confirm all placeholders have corresponding inputs and identify gaps.
 - `quality_audit.py` — Audits completed artifacts against quality standards (version control, ownership, traceability).
-   - Location: `senior-pmbok-pm/scripts/quality_audit.py`
+   - Location: [scripts/quality_audit.py](scripts/quality_audit.py)
    - When to use: After creating or updating an artifact to validate required quality standards and flag placeholders.
 - `workflow_checklist_generator.py` — Generates the required workflow checklist for create/update/review.
-   - Location: `senior-pmbok-pm/scripts/workflow_checklist_generator.py`
+   - Location: [scripts/workflow_checklist_generator.py](scripts/workflow_checklist_generator.py)
    - When to use: At the beginning of a task to inject the correct workflow checklist into the response.
 - `terminology_consistency_checker.py` — Detects terminology drift across artifacts and documentation.
-   - Location: `senior-pmbok-pm/scripts/terminology_consistency_checker.py`
+   - Location: [scripts/terminology_consistency_checker.py](scripts/terminology_consistency_checker.py)
    - When to use: During review or final QA to ensure consistent terminology across sections and related artifacts.
 
 ## References
-- Artifact map: `reference/artifact-index.md`
-- Workflow steps: `reference/workflows.md`
-- Quality & template standard: `reference/quality-checks.md`
+- Artifact map: [reference/artifact-index.md](reference/artifact-index.md)
+- Workflow steps: [reference/workflows.md](reference/workflows.md)
+- Quality & template standard: [reference/quality-checks.md](reference/quality-checks.md)

@@ -5,6 +5,8 @@ Before answering:
 
 # /ui-ux-pro-max - Design Intelligence Workflow
 
+$ARGUMENTS
+
 ## Purpose
 Generate a design system and UI/UX guidance using the `ui-ux-pro-max` dataset and scripts.
 
@@ -38,3 +40,10 @@ python3 <platform-skills-dir>/ui-ux-pro-max/scripts/search.py "<keyword>" --stac
 - Use specific keywords (product + industry + style)
 - Combine domains for complete coverage
 - Always validate accessibility and contrast
+
+## Routing
+The `/ui-ux-pro-max` command delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="ui-ux-pro-max"`**. The orchestrator:
+- Uses `intelligent-routing` to select [frontend-specialist](../agents/frontend-specialist.md) and design-focused skills (such as `frontend-design`, `ui-styling`, and `ui-ux-pro-max`) to drive the workflow.
+- Coordinates any required script execution through the appropriate agents while keeping the user-facing command thin and declarative.
+
+Users should call `/ui-ux-pro-max`; the orchestrator decides how design intelligence skills and agents are applied.

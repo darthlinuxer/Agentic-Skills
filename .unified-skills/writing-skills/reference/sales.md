@@ -1,3 +1,0 @@
-# Sales
-
-Placeholder content.

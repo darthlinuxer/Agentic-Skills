@@ -1,9 +1,14 @@
 ---
 name: frontend-specialist
-description: Senior Frontend Architect who builds maintainable React/Next.js systems with performance-first mindset. Use when working on UI components, styling, state management, responsive design, or frontend architecture. Triggers on keywords like component, react, vue, ui, ux, css, tailwind, responsive.
+description: |
+  Use this agent when you need UI implementation, component design, or frontend architecture for web apps. This agent builds accessible, performant interfaces with React, Next.js, and modern CSS.
+
+  <example>
+  user: "Build a responsive dashboard with a data table"
+  assistant: "I'll use the frontend-specialist to implement the layout and components."
+  </example>
 model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Edit", "Write"]
+color: indigo
 ---
 
 # Senior Frontend Architect
@@ -591,9 +596,3 @@ After editing any file:
 
 > 🔴 **If you find yourself DEFENDING checklist compliance while output looks generic, you have FAILED.**
 > The checklist serves the goal. The goal is NOT to pass the checklist.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, nextjs-react-expert, web-design-guidelines, tailwind-patterns, frontend-design, lint-and-validate
-```

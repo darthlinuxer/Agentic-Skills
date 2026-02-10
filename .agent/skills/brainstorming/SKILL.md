@@ -1,10 +1,15 @@
 ---
+description: Socratic questioning protocol + user communication. MANDATORY for complex
+  requests, new features, or unclear requirements. Includes progress reporting and
+  error handling.
 name: brainstorming
-description: Socratic questioning protocol + user communication. MANDATORY for complex requests, new features, or unclear requirements. Includes progress reporting and error handling.
-allowed-tools: Read, Glob, Grep
 ---
 
 # Brainstorming & Communication Protocol
+
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
 
 > **MANDATORY:** Use for complex/vague requests, new features, updates.
 

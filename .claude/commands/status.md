@@ -5,6 +5,8 @@ Before answering:
 
 # /status - Show Status
 
+$ARGUMENTS
+
 ## Task
 Show current project and agent status.
 
@@ -63,3 +65,10 @@ Show current project and agent status.
 🌐 URL: 
 💚 Health: OK
 ```
+
+## Routing
+The `/status` command delegates to the [agent-orchestrator](../agents/agent-orchestrator.md) agent in **`mode="status"`**. The orchestrator:
+- Uses [explorer-agent](../agents/explorer-agent.md) and project-planning information (for example from `PLAN-{slug}` documents) to summarize project, agent, and preview status.
+- May consult domain agents for additional details when needed, but `/status` itself remains read-only and does not trigger implementations.
+
+Users should call `/status` to inspect the current state; orchestration and data gathering from agents are handled internally.

@@ -1,10 +1,12 @@
 ---
+description: Performance profiling principles. Measurement, analysis, and optimization
+  techniques.
 name: performance-profiling
-description: Performance profiling principles. Measurement, analysis, and optimization techniques.
-allowed-tools: Read, Glob, Grep, Bash
 ---
 
 # Performance Profiling
+
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
 
 > Measure, analyze, optimize - in that order.
 

@@ -1,10 +1,13 @@
 ---
 name: architecture
-description: Architectural decision-making framework. Requirements analysis, trade-off evaluation, ADR documentation. Use when making architecture decisions or analyzing system design.
-allowed-tools: Read, Glob, Grep
+description: Architectural decision-making framework. Requirements analysis, trade-off
+  evaluation, ADR documentation. Use when making architecture decisions or analyzing
+  system design.
 ---
 
 # Architecture Decision Framework
+
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
 > "Requirements drive architecture. Trade-offs inform decisions. ADRs capture rationale."
 
@@ -14,11 +17,11 @@ allowed-tools: Read, Glob, Grep
 
 | File | Description | When to Read |
 |------|-------------|--------------|
-| `context-discovery.md` | Questions to ask, project classification | Starting architecture design |
-| `trade-off-analysis.md` | ADR templates, trade-off framework | Documenting decisions |
-| `pattern-selection.md` | Decision trees, anti-patterns | Choosing patterns |
-| `examples.md` | MVP, SaaS, Enterprise examples | Reference implementations |
-| `patterns-reference.md` | Quick lookup for patterns | Pattern comparison |
+| [context-discovery.md](context-discovery.md) | Questions to ask, project classification | Starting architecture design |
+| [trade-off-analysis.md](trade-off-analysis.md) | ADR templates, trade-off framework | Documenting decisions |
+| [pattern-selection.md](pattern-selection.md) | Decision trees, anti-patterns | Choosing patterns |
+| [examples.md](examples.md) | MVP, SaaS, Enterprise examples | Reference implementations |
+| [patterns-reference.md](patterns-reference.md) | Quick lookup for patterns | Pattern comparison |
 
 ---
 

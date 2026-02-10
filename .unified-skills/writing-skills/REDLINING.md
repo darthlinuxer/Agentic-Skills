@@ -1,3 +1,0 @@
-# Redlining
-
-Placeholder content.

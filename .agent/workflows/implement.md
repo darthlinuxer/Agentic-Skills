@@ -37,3 +37,11 @@ First, extract from their description:
 - Vague requests: Propose the most likely interpretation first, then ask
 
 START: Wait for the user's feature description.
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="implement"`**. The orchestrator:
+- Uses the `intelligent-routing` skill to select appropriate domain agents based on the feature.
+- Uses process skills such as `using-superpowers`, `writing-plans`, and `test-driven-development` (via agents) to choose the right implementation methodology.
+- Coordinates all selected agents so that code changes, tests, and verifications follow a consistent, multi-agent workflow.
+
+Users should invoke this workflow; agents and skills are chosen internally by the orchestrator.

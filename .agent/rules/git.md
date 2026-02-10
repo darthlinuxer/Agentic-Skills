@@ -1,5 +1,6 @@
 ---
-description: Git commit and branching conventions.
+trigger: model_decision
+description: Guidelines for Git usage, including commit messages, branch naming, and pull request practices.
 ---
 
 # Git Conventions

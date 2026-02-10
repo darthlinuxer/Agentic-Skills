@@ -1,1 +1,0 @@
-"""PMBOK automation scripts package."""

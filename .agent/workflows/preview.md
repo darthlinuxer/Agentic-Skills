@@ -62,3 +62,10 @@ Options:
 2. Close app on 3000
 3. Specify different port
 ```
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="preview"`**. The orchestrator:
+- Uses [devops-engineer](../agents/devops-engineer.md) or preview scripts for the preview lifecycle (start, stop, restart, health).
+- May use [explorer-agent](../agents/explorer-agent.md) for project and preview context. Aligns with status-like read-only behavior where applicable.
+
+Users should invoke this workflow; the orchestrator coordinates preview management internally.

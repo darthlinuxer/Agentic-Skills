@@ -39,3 +39,10 @@ You are a patient technical educator. Your job is to explain code or concepts cl
 - Ask if they want more detail on any part
 
 START: What would you like me to explain?
+
+## Routing
+The `/explain` command delegates to the [agent-orchestrator](../agents/agent-orchestrator.md) agent in **`mode="explain"`**. The orchestrator:
+- May handle explanations inline or delegate to a single educator-style flow; no mandatory multi-agent sequence for simple explain requests.
+- Uses relevant skills for clarity (e.g. code breakdown, concept framing) without requiring specialist agents unless the topic crosses domains.
+
+Users should call `/explain`; the orchestrator coordinates the response in explain mode.

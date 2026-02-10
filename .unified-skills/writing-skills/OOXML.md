@@ -1,3 +1,0 @@
-# Ooxml
-
-Placeholder content.

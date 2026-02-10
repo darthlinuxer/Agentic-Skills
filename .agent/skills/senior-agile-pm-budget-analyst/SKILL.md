@@ -31,31 +31,31 @@ Do **not** use when the request is unrelated to Agile/Scrum project management, 
 ## First decisions (always)
 1. **Identify the command**: `create`, `update`, `review`, or `analyze`.
 2. **Identify the language**: PT-BR (default) or EN (if requested).
-3. **Identify artifact(s)** using `reference/artifact-index.md`.
+3. **Identify artifact(s)** using [reference/artifact-index.md](reference/artifact-index.md).
 4. **Identify sprint configuration**: Points-to-sprint ratio (default: 5 points = 2 weeks).
 5. **Load sources for each artifact** from the language-appropriate folder:
    - `TEMPLATE.md`
    - `INPUTS.md`
    - `DOCUMENTACAO.md` or all files in `DOCUMENTACAO/`
 
-If a template is **not** in the standard format, refactor it first (see `reference/quality-checks.md`).
+If a template is **not** in the standard format, refactor it first (see [reference/quality-checks.md](reference/quality-checks.md)).
 
 ## Quick reference
 - **Command** → `create` | `update` | `review` | `analyze`
-- **Artifact map** → `reference/artifact-index.md`
-- **Workflow** → `reference/workflows.md`
-- **Template standard** → `reference/quality-checks.md`
+- **Artifact map** → [reference/artifact-index.md](reference/artifact-index.md)
+- **Workflow** → [reference/workflows.md](reference/workflows.md)
+- **Template standard** → [reference/quality-checks.md](reference/quality-checks.md)
 - **Location (PT-BR)** → `senior-agile-pm-budget-analyst/assets/AGILE_DOCS_PT_BR/<artifact>`
 
 ## Workflows
-Follow the appropriate workflow in `reference/workflows.md`:
+Follow the appropriate workflow in [reference/workflows.md](reference/workflows.md):
 - **Analyze**: analyze project requirements and create full breakdown (initiatives → epics → user stories)
 - **Create**: build a new artifact using the template and inputs
 - **Update**: apply changes to an existing artifact, then update document controls
 - **Review**: check compliance with Agile/Scrum best practices, template, and BDD methodology
 
 Always **copy the workflow checklist into your response** and **track progress**. Ensure each workflow explicitly includes:
-- Validate/normalize template format (see `reference/quality-checks.md`)
+- Validate/normalize template format (see [reference/quality-checks.md](reference/quality-checks.md))
 - Map inputs to placeholders
 - Apply Scrum best practices (3 Cs: Card, Conversation, Confirmation)
 - Verify BDD test methodology (Given-When-Then)
@@ -292,12 +292,12 @@ chart_data = calculator.generate()
 5. Include raw JSON output for traceability
 
 **Documentation:**
-Complete API reference, examples, and integration patterns: `scripts/README.md`
+Complete API reference, examples, and integration patterns: [scripts/README.md](scripts/README.md)
 
 ### Testing & Quality Assurance
 
 **Test Suite:** Integration tests validate real outputs (no mocks)
-**Location:** `scripts/tests/test_integration.py`
+**Location:** [scripts/tests/test_integration.py](scripts/tests/test_integration.py)
 **Test Results:** ✅ **22/22 tests passing (100%)**
 **Code Coverage:** 65% overall (91% test coverage)
 
@@ -344,8 +344,8 @@ All tests generate real files in `scripts/tests/output/` for visual inspection:
 - 1 HTML report (executive summary)
 
 ## References
-- Artifact map: `reference/artifact-index.md`
-- Workflow steps: `reference/workflows.md`
-- Quality & template standard: `reference/quality-checks.md`
+- Artifact map: [reference/artifact-index.md](reference/artifact-index.md)
+- Workflow steps: [reference/workflows.md](reference/workflows.md)
+- Quality & template standard: [reference/quality-checks.md](reference/quality-checks.md)
 - Scrum Guide: Official Scrum methodology
 - BDD Best Practices: Behavior-Driven Development

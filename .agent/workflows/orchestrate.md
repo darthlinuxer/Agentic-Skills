@@ -68,3 +68,11 @@ Before completing orchestration, verify:
 - ✅ Invoked 3+ expert perspectives
 - ✅ Verification scripts ran
 - ✅ Report generated
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="multi-domain"`**. The orchestrator:
+- Uses the `intelligent-routing` skill to select at least three appropriate domain agents for the task.
+- Uses process skills such as `using-superpowers`, `brainstorming`, and `writing-plans` to choose the right methodologies and supporting skills.
+- Coordinates all selected agents and synthesizes their outputs into the final Orchestration Report.
+
+Users should invoke this workflow only; all agents and skills are invoked internally by the orchestrator.

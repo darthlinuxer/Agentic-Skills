@@ -91,7 +91,7 @@ Comprehensive export utilities providing reusable formatters:
 
 ### 3. **Documentation**
 
-#### `examples/README.md`
+#### [examples/README.md](examples/README.md)
 Comprehensive guide covering:
 - ✅ File descriptions and usage
 - ✅ Supported export formats table
@@ -101,15 +101,15 @@ Comprehensive guide covering:
 - ✅ Customization guide
 - ✅ References and resources
 
-#### Updated `scripts/README.md`
+#### Updated [scripts/README.md](README.md)
 Added new section:
 - ✅ Multi-Format Exports overview
 - ✅ Export utilities table
 - ✅ Integration examples listing
 - ✅ Quick example code
-- ✅ Link to examples/README.md
+- ✅ Link to [examples/README.md](examples/README.md)
 
-#### Updated `SKILL.mdc`
+#### Updated [SKILL.md](../SKILL.md)
 Already contains comprehensive Python scripts documentation with:
 - ✅ All 5 scripts documented
 - ✅ When to use each script
@@ -385,7 +385,7 @@ save_to_file(csv_data, 'data.csv')
 - **00_complete_project_analysis.py**: 300 lines
 - **01_critical_path_exports.py**: 300 lines
 - **02_budget_exports.py**: 290 lines
-- **examples/README.md**: 300 lines
+- **[examples/README.md](examples/README.md)**: 300 lines
 - **Total new code**: ~1,860 lines
 
 ### Export Capabilities

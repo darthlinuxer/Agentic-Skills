@@ -1,19 +1,20 @@
 ---
+description: 'Comprehensive document creation, editing, and analysis with support
+  for tracked changes, comments, formatting preservation, and text extraction. When
+  LLM needs to work with professional documents (.docx files) for: (1) Creating new
+  documents, (2) Modifying or editing content, (3) Working with tracked changes, (4)
+  Adding comments, or any other document tasks'
 name: docx
-description: Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When LLM needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks
-license: Proprietary. LICENSE.txt has complete terms
-metadata:
-  author: "anthropics"
-  source: "github"
-  importedFrom: "
-  importedAt: "2026-01-31T08:59:38.214Z"
 ---
 
 # DOCX creation, editing, and analysis
 
 ## Overview
 
-A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.
+A user may ask you to create, edit, or analyze the contents of a .docx file.
+A .docx file is essentially a ZIP archive containing XML files and other resources
+that you can read or edit.
+You have different tools and workflows available for different tasks.
 
 ## Workflow Decision Tree
 
@@ -63,8 +64,14 @@ You need raw XML access for: comments, complex formatting, document structure, e
 When creating a new Word document from scratch, use **docx-js**, which allows you to create Word documents using JavaScript/TypeScript.
 
 ### Workflow
-1. **MANDATORY - READ ENTIRE FILE**: Read [`docx-js.md`](docx-js.md) (~500 lines) completely from start to finish. **NEVER set any range limits when reading this file.** Read the full file content for detailed syntax, critical formatting rules, and best practices before proceeding with document creation.
-2. Create a JavaScript/TypeScript file using Document, Paragraph, TextRun components (You can assume all dependencies are installed, but if not, refer to the dependencies section below)
+1. **MANDATORY - READ ENTIRE FILE**: Read [`docx-js.md`](docx-js.md)
+   (~500 lines) completely from start to finish.
+   **NEVER set any range limits when reading this file.**
+   Read the full file content for detailed syntax, critical formatting rules,
+   and best practices before proceeding with document creation.
+2. Create a JavaScript/TypeScript file using Document, Paragraph, TextRun
+   components (You can assume all dependencies are installed, but if not, refer
+   to the dependencies section below)
 3. Export as .docx using Packer.toBuffer()
 
 ## Editing an existing Word document
@@ -72,7 +79,11 @@ When creating a new Word document from scratch, use **docx-js**, which allows yo
 When editing an existing Word document, use the **Document library** (a Python library for OOXML manipulation). The library automatically handles infrastructure setup and provides methods for document manipulation. For complex scenarios, you can access the underlying DOM directly through the library.
 
 ### Workflow
-1. **MANDATORY - READ ENTIRE FILE**: Read [`ooxml.md`](ooxml.md) (~600 lines) completely from start to finish. **NEVER set any range limits when reading this file.** Read the full file content for the Document library API and XML patterns for directly editing document files.
+1. **MANDATORY - READ ENTIRE FILE**: Read [`ooxml.md`](ooxml.md)
+   (~600 lines) completely from start to finish.
+   **NEVER set any range limits when reading this file.**
+   Read the full file content for the Document library API and XML patterns for
+   directly editing document files.
 2. Unpack the document: `python ooxml/scripts/unpack.py <office_file> <output_directory>`
 3. Create and run a Python script using the Document library (see "Document Library" section in ooxml.md)
 4. Pack the final document: `python ooxml/scripts/pack.py <input_directory> <office_file>`
@@ -81,12 +92,19 @@ The Document library provides both high-level methods for common operations and 
 
 ## Redlining workflow for document review
 
-This workflow allows you to plan comprehensive tracked changes using markdown before implementing them in OOXML. **CRITICAL**: For complete tracked changes, you must implement ALL changes systematically.
+This workflow allows you to plan comprehensive tracked changes using markdown
+before implementing them in OOXML.
+**CRITICAL**: For complete tracked changes, you must implement ALL changes
+systematically.
 
 **Batching Strategy**: Group related changes into batches of 3-10 changes. This makes debugging manageable while maintaining efficiency. Test each batch before moving to the next.
 
 **Principle: Minimal, Precise Edits**
-When implementing tracked changes, only mark text that actually changes. Repeating unchanged text makes edits harder to review and appears unprofessional. Break replacements into: [unchanged text] + [deletion] + [insertion] + [unchanged text]. Preserve the original run's RSID for unchanged text by extracting the `<w:r>` element from the original and reusing it.
+When implementing tracked changes, only mark text that actually changes.
+Repeating unchanged text makes edits harder to review and appears unprofessional.
+Break replacements into: [unchanged text] + [deletion] + [insertion] +
+[unchanged text]. Preserve the original run's RSID for unchanged text by
+extracting the `<w:r>` element from the original and reusing it.
 
 Example - Changing "30 days" to "60 days" in a sentence:
 ```python
@@ -121,7 +139,11 @@ Example - Changing "30 days" to "60 days" in a sentence:
    - Sequential: "Batch 1: Pages 1-3", "Batch 2: Pages 4-6"
 
 3. **Read documentation and unpack**:
-   - **MANDATORY - READ ENTIRE FILE**: Read [`ooxml.md`](ooxml.md) (~600 lines) completely from start to finish. **NEVER set any range limits when reading this file.** Pay special attention to the "Document Library" and "Tracked Change Patterns" sections.
+   - **MANDATORY - READ ENTIRE FILE**: Read [`ooxml.md`](ooxml.md)
+     (~600 lines) completely from start to finish.
+     **NEVER set any range limits when reading this file.**
+     Pay special attention to the "Document Library" and
+     "Tracked Change Patterns" sections.
    - **Unpack the document**: `python ooxml/scripts/unpack.py <file.docx> <dir>`
    - **Note the suggested RSID**: The unpack script will suggest an RSID to use for your tracked changes. Copy this RSID for use in step 4b.
 

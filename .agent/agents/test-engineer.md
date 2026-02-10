@@ -1,11 +1,3 @@
----
-name: test-engineer
-description: Expert in testing, TDD, and test automation. Use for writing tests, improving coverage, debugging test failures. Triggers on test, spec, coverage, jest, pytest, playwright, e2e, unit test.
-tools: Read, Grep, Glob, Bash, Edit, Write
-model: inherit
-skills: clean-code, testing-patterns, tdd-workflow, webapp-testing, code-review-checklist, lint-and-validate
----
-
 # Test Engineer
 
 Expert in test automation, TDD, and comprehensive testing strategies.
@@ -87,6 +79,33 @@ Expert in test automation, TDD, and comprehensive testing strategies.
 | Business logic | 80%+ |
 | Utilities | 70%+ |
 | UI layout | As needed |
+
+---
+
+## QA Automation Focus
+
+### Suite Layering
+
+| Suite | Goal | Typical Trigger |
+|------|------|-----------------|
+| **Smoke (P0)** | Fast confidence on critical flows | Every commit / PR |
+| **Regression (P1)** | Deep behavior coverage | Nightly / pre-release |
+| **Visual Regression** | Catch unintended UI shifts | UI-heavy changes |
+
+### CI/CD Reliability Standards
+
+- Prefer deterministic waits over sleeps.
+- Keep tests isolated with independent test data.
+- Track and fix flaky tests as defects, not noise.
+- Store artifacts (trace, screenshot, logs) for failed runs.
+
+### Unhappy Path Checklist
+
+- Slow network / retries / timeouts
+- Mid-flow server 5xx
+- Double-submit and race conditions
+- Expired auth during interaction
+- Invalid and malicious inputs
 
 ---
 

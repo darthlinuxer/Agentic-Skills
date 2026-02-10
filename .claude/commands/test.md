@@ -68,3 +68,9 @@ describe('[ComponentName]', () => {
 
 START: Paste the code you want tests for.
 
+## Routing
+The `/test` command delegates to the [agent-orchestrator](../agents/agent-orchestrator.md) agent in **`mode="test"`**. The orchestrator:
+- Uses `intelligent-routing` to select [test-engineer](../agents/test-engineer.md) as the primary agent and may involve other domain agents to clarify behavior where necessary.
+- Uses process and verification skills (such as `test-driven-development`, `testing-patterns`, `webapp-testing`, and `verification-before-completion`) to ensure tests are aligned with the project's quality standards.
+
+Users should call `/test`; the orchestrator determines how tests are generated, run, and verified via agents and skills.

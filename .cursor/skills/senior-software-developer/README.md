@@ -47,9 +47,9 @@ When working on a coding task:
 
 ```
 senior-software-developer/
-├── SKILL.mdc                              # Main skill (streamlined, 400 lines)
-├── README.md                             # This file
-├── QUICK_REFERENCE.md                    # Cheat sheet for common patterns
+├── [SKILL.md](SKILL.md)                              # Main skill (streamlined, 400 lines)
+├── [README.md](README.md)                             # This file
+├── [QUICK_REFERENCE.md](QUICK_REFERENCE.md)                    # Cheat sheet for common patterns
 │
 ├── reference/                            # Language-specific references
 │   │
@@ -70,7 +70,7 @@ senior-software-developer/
 │   └── nodejs-patterns.md                # Graceful shutdown, performance
 │
 └── scripts/                              # Utility scripts
-    ├── README.md                         # Scripts documentation
+    ├── [README.md](scripts/README.md)                         # Scripts documentation
     │
     ├── check_quality_python.py           # Python quality checks
     ├── check_quality_csharp.sh           # C# quality checks
@@ -370,7 +370,7 @@ If you're upgrading from the previous monolithic version:
 
 ### What Changed
 
-1. **SKILL.mdc**: Reduced from 857 to ~400 lines
+1. **[SKILL.md](SKILL.md)**: Reduced from 857 to ~400 lines
    - Removed duplicated language-specific examples
    - Added language detection section
    - Now references modular files instead of containing everything
@@ -409,7 +409,7 @@ To add support for a new language:
    - `reference/{language}-testing.md` - Testing patterns
    - `reference/{language}-patterns.md` - Design patterns
 
-2. Add detection logic to `SKILL.mdc`:
+2. Add detection logic to [SKILL.md](SKILL.md):
    ```markdown
    ### {Language} Detection
    **Indicators:** .ext files, config.json
@@ -429,7 +429,7 @@ See `LICENSE.txt` for details.
 ## Support
 
 For issues or questions:
-- Review `SKILL.mdc` for the main operational guidelines
+- Review [SKILL.md](SKILL.md) for the main operational guidelines
 - Check language-specific reference files for detailed patterns
-- Use `QUICK_REFERENCE.md` for common scenarios
+- Use [QUICK_REFERENCE.md](QUICK_REFERENCE.md) for common scenarios
 - Run quality check scripts to validate your setup

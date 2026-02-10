@@ -85,3 +85,10 @@ Systematically investigate issues, errors, or unexpected behavior.
 - **Test hypotheses** - don't guess randomly
 - **Explain why** - not just what to fix
 - **Prevent recurrence** - add tests and validation
+
+## Routing
+This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="debug"`**. The orchestrator:
+- Uses `intelligent-routing` to select [debugger](../agents/debugger.md) as the primary agent, and may bring in other domain agents based on where the issue appears.
+- Ensures [test-engineer](../agents/test-engineer.md) participates to add or adjust tests that prevent recurrence.
+
+Users should invoke this workflow; the orchestrator manages which agents and skills participate in the investigation and fix plan.

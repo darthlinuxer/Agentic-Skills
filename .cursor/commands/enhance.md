@@ -5,6 +5,8 @@ Before answering:
 
 # /enhance - Update Application
 
+$ARGUMENTS
+
 ## Task
 Add features or make updates to an existing application.
 
@@ -37,3 +39,10 @@ Add features or make updates to an existing application.
 - Get approval for major changes
 - Warn on conflicting requests (e.g., "use Firebase" when project uses PostgreSQL)
 - Commit each change with git
+
+## Routing
+The `/enhance` command delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="enhance"`**. The orchestrator:
+- Uses `intelligent-routing` to select domain agents (e.g. [frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md)) and process skills for planning and applying updates.
+- May use [project-planner](../agents/project-planner.md) for larger enhancements that need task breakdown.
+
+Users should call `/enhance`; the orchestrator decides which agents and skills participate in the update workflow.
