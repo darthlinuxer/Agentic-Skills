@@ -46,6 +46,9 @@ Usage:
 
 ```bash
 python3 scripts/ecosystem/ecosystem_audit.py /workspace
+
+# Fail CI on high+ findings
+python3 scripts/ecosystem/ecosystem_audit.py /workspace --fail-on high
 ```
 
 ---
@@ -97,6 +100,42 @@ Adds MCP-related references to selected complex skills.
 
 ---
 
+### `isolation_lint.py`
+
+Hard gate for platform isolation.
+
+Checks:
+
+- no foreign platform tokens in each domain
+- markdown links do not escape platform roots
+- markdown links resolve to existing local files
+
+Usage:
+
+```bash
+python3 scripts/ecosystem/isolation_lint.py /workspace
+```
+
+---
+
+### `build_release_bundles.py`
+
+Builds standalone release bundles:
+
+- `dist/agent`
+- `dist/claude`
+- `dist/cursor`
+
+Each bundle includes a `BUNDLE_MANIFEST.json` with isolation check results.
+
+Usage:
+
+```bash
+python3 scripts/ecosystem/build_release_bundles.py /workspace --clean
+```
+
+---
+
 ## Recommended Workflow
 
 1. Sync mirrors:
@@ -109,6 +148,7 @@ python3 scripts/ecosystem/sync_content.py
 
 ```bash
 python3 scripts/ecosystem/ecosystem_audit.py /workspace
+python3 scripts/ecosystem/isolation_lint.py /workspace
 ```
 
 3. Fix high/medium findings first, then re-run audit.
@@ -122,3 +162,4 @@ python3 scripts/ecosystem/ecosystem_audit.py /workspace
 Use the consolidated review prompt in:
 
 - `docs/refactoring/ECOSYSTEM_REFACTOR_PROMPT.md`
+- `docs/refactoring/MIRROR_POLICY.md`

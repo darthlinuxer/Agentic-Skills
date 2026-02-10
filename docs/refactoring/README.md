@@ -16,15 +16,16 @@
 4. **REFACTORING_ROADMAP.md** - 10-week action plan (detailed)
 5. **METADATA_OFFICIAL_SPECS.md** - Platform specifications (technical)
 6. **ECOSYSTEM_REFACTOR_PROMPT.md** - Concise execution prompt (operational)
+7. **MIRROR_POLICY.md** - Isolation-first mirroring rules
 
 ### Phase Summaries
-7. **PHASE_1_COMPLETE.md** - Critical fixes summary
-8. **PHASE_1.5_COMPLETE.md** - Metadata compliance summary
-9. **mcp_reference_plan.md** - MCP integration plan
+8. **PHASE_1_COMPLETE.md** - Critical fixes summary
+9. **PHASE_1.5_COMPLETE.md** - Metadata compliance summary
+10. **mcp_reference_plan.md** - MCP integration plan
 
 ### Supporting Documents
-10. **DELIVERY_SUMMARY.md** - Original package overview
-11. **METADATA_VERIFICATION_NEEDED.md** - Verification process
+11. **DELIVERY_SUMMARY.md** - Original package overview
+12. **METADATA_VERIFICATION_NEEDED.md** - Verification process
 
 ---
 

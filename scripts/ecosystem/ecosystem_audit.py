@@ -102,9 +102,13 @@ ALLOWED_SCRIPT_EXTENSIONS = {".py", ".sh", ".js", ".ts", ".ps1"}
 
 
 class EcosystemAuditor:
-    def __init__(self, workspace_path: str):
+    def __init__(self, workspace_path: str, fail_on: str = "critical", reports_dir: Optional[str] = None):
         self.workspace = Path(workspace_path).resolve()
-        self.reports_dir = self.workspace / "docs" / "refactoring" / "reports"
+        if reports_dir:
+            self.reports_dir = Path(reports_dir).resolve()
+        else:
+            self.reports_dir = self.workspace / "docs" / "refactoring" / "reports"
+        self.fail_on = fail_on
         self.issues: List[Issue] = []
         self.metrics: Counter = Counter()
         self.platform_roots = {name: (self.workspace / name) for name in PLATFORMS}
@@ -949,6 +953,15 @@ class EcosystemAuditor:
         print(f"Markdown report: {md_path}")
         print("=" * 72)
 
+    def should_fail(self) -> bool:
+        if self.fail_on == "none":
+            return False
+        threshold = SEVERITY_ORDER[self.fail_on]
+        for severity, order in SEVERITY_ORDER.items():
+            if order <= threshold and self.metrics.get(f"{severity}_issues", 0) > 0:
+                return True
+        return False
+
     def run(self) -> int:
         self.audit_agents()
         self.audit_skills()
@@ -958,7 +971,7 @@ class EcosystemAuditor:
         self.audit_uniqueness()
         self.write_reports()
 
-        return 1 if self.metrics.get("critical_issues", 0) > 0 else 0
+        return 1 if self.should_fail() else 0
 
 
 def parse_args() -> argparse.Namespace:
@@ -969,12 +982,26 @@ def parse_args() -> argparse.Namespace:
         default="/workspace",
         help="Workspace path containing .agent/.claude/.cursor directories.",
     )
+    parser.add_argument(
+        "--fail-on",
+        choices=("none", "critical", "high", "medium", "low"),
+        default="critical",
+        help="Exit non-zero when this severity (or higher) is present.",
+    )
+    parser.add_argument(
+        "--reports-dir",
+        help="Directory path for generated audit reports.",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    auditor = EcosystemAuditor(args.workspace)
+    auditor = EcosystemAuditor(
+        workspace_path=args.workspace,
+        fail_on=args.fail_on,
+        reports_dir=args.reports_dir,
+    )
     return auditor.run()
 
 
