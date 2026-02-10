@@ -7,11 +7,11 @@
       ".cursor"
     ],
     "totals": {
-      "issues": 8,
+      "issues": 0,
       "critical": 0,
       "high": 0,
       "medium": 0,
-      "low": 8
+      "low": 0
     },
     "coverage": {
       "agent_groups": 20,
@@ -19,90 +19,14 @@
       "command_groups": 17,
       "rule_groups": 4
     },
-    "category_counts": {
-      "skills": 5,
-      "clarity": 3
-    },
-    "code_counts": {
-      "script_reference_without_assets": 5,
-      "long_lines": 3
-    },
+    "category_counts": {},
+    "code_counts": {},
     "metric_counters": {
       "agent_groups": 20,
       "skill_groups": 76,
-      "low_issues": 8,
-      "skills_issues": 5,
-      "code_script_reference_without_assets": 5,
-      "clarity_issues": 3,
-      "code_long_lines": 3,
       "command_groups": 17,
       "rule_groups": 4
     }
   },
-  "issues": [
-    {
-      "severity": "low",
-      "category": "clarity",
-      "code": "long_lines",
-      "location": ".agent/skills/docx/SKILL.md",
-      "message": "File has 6 very long lines (>220 chars).",
-      "fix": "Break long lines to improve readability."
-    },
-    {
-      "severity": "low",
-      "category": "clarity",
-      "code": "long_lines",
-      "location": ".claude/skills/docx/SKILL.md",
-      "message": "File has 6 very long lines (>220 chars).",
-      "fix": "Break long lines to improve readability."
-    },
-    {
-      "severity": "low",
-      "category": "clarity",
-      "code": "long_lines",
-      "location": ".cursor/skills/docx/SKILL.mdc",
-      "message": "File has 6 very long lines (>220 chars).",
-      "fix": "Break long lines to improve readability."
-    },
-    {
-      "severity": "low",
-      "category": "skills",
-      "code": "script_reference_without_assets",
-      "location": "skills/clean-code",
-      "message": "Skill references scripts but no scripts/ assets are present.",
-      "fix": "Either add required scripts or remove script references."
-    },
-    {
-      "severity": "low",
-      "category": "skills",
-      "code": "script_reference_without_assets",
-      "location": "skills/create-skill",
-      "message": "Skill references scripts but no scripts/ assets are present.",
-      "fix": "Either add required scripts or remove script references."
-    },
-    {
-      "severity": "low",
-      "category": "skills",
-      "code": "script_reference_without_assets",
-      "location": "skills/gemini",
-      "message": "Skill references scripts but no scripts/ assets are present.",
-      "fix": "Either add required scripts or remove script references."
-    },
-    {
-      "severity": "low",
-      "category": "skills",
-      "code": "script_reference_without_assets",
-      "location": "skills/ui-styling",
-      "message": "Skill references scripts but no scripts/ assets are present.",
-      "fix": "Either add required scripts or remove script references."
-    },
-    {
-      "severity": "low",
-      "category": "skills",
-      "code": "script_reference_without_assets",
-      "location": "skills/verification-before-completion",
-      "message": "Skill references scripts but no scripts/ assets are present.",
-      "fix": "Either add required scripts or remove script references."
-    }
-  ]
+  "issues": []
 }
