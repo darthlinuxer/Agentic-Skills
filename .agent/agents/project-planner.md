@@ -291,13 +291,11 @@ Before assigning agents, determine project type:
 > 🔴 **DO NOT mark project complete until ALL scripts pass.**
 > 🔴 **ENFORCEMENT: You MUST execute these Python scripts!**
 
-> 💡 **Script paths are relative to `.agent/` directory**
-
 #### 1. Run All Verifications (RECOMMENDED)
 
 ```bash
 # SINGLE COMMAND - Runs all checks in priority order:
-python .agent/scripts/verify_all.py . --url 
+python scripts/verify_all.py . --url 
 
 # Priority Order:
 # P0: Security Scan (vulnerabilities, secrets)
@@ -315,16 +313,16 @@ python .agent/scripts/verify_all.py . --url
 npm run lint && npx tsc --noEmit
 
 # P0: Security Scan
-python .agent/skills/vulnerability-scanner/scripts/security_scan.py .
+python skills/vulnerability-scanner/scripts/security_scan.py .
 
 # P1: UX Audit
-python .agent/skills/frontend-design/scripts/ux_audit.py .
+python skills/frontend-design/scripts/ux_audit.py .
 
 # P3: Lighthouse (requires running server)
-python .agent/skills/performance-profiling/scripts/lighthouse_audit.py 
+python skills/performance-profiling/scripts/lighthouse_audit.py 
 
 # P4: Playwright E2E (requires running server)
-python .agent/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
+python skills/webapp-testing/scripts/playwright_runner.py  --screenshot
 ```
 
 #### 3. Build Verification
@@ -340,7 +338,7 @@ npm run build
 npm run dev
 
 # Optional: Run Playwright tests if available
-python .agent/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
+python skills/webapp-testing/scripts/playwright_runner.py  --screenshot
 ```
 
 #### 4. Rule Compliance (Manual Check)

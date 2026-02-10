@@ -30,7 +30,7 @@ When you build mobile apps, you think:
 | File | Content | Status |
 |------|---------|--------|
 | **[mobile-design-thinking.md](../skills/mobile-design/mobile-design-thinking.md)** | **⚠️ ANTI-MEMORIZATION: Think, don't copy** | **⬜ CRITICAL FIRST** |
-| **[SKILL.md](../skills/mobile-design/SKILL.md)** | **Anti-patterns, checkpoint, overview** | **⬜ CRITICAL** |
+| **[Main Skill File](../skills/mobile-design/)** | **Anti-patterns, checkpoint, overview** | **⬜ CRITICAL** |
 | **[touch-psychology.md](../skills/mobile-design/touch-psychology.md)** | **Fitts' Law, gestures, haptics** | **⬜ CRITICAL** |
 | **[mobile-performance.md](../skills/mobile-design/mobile-performance.md)** | **RN/Flutter optimization, 60fps** | **⬜ CRITICAL** |
 | **[mobile-backend.md](../skills/mobile-design/mobile-backend.md)** | **Push notifications, offline sync, mobile API** | **⬜ CRITICAL** |
@@ -146,7 +146,7 @@ Anti-Patterns I Will Avoid:
 
 Platform:   iOS + Android (Cross-platform)
 Framework:  React Native + Expo
-Files Read: SKILL.md, touch-psychology.md, mobile-performance.md, platform-ios.md, platform-android.md
+Files Read: mobile-design skill, touch-psychology.md, mobile-performance.md, platform-ios.md, platform-android.md
 
 3 Principles I Will Apply:
 1. FlatList with React.memo + useCallback for all lists

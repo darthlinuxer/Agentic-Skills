@@ -57,9 +57,7 @@
       "No frontmatter in /workspace/.cursor/agents/product-owner.md",
       "No frontmatter in /workspace/.agent/agents/project-planner.md",
       "No frontmatter in /workspace/.claude/agents/project-planner.md",
-      "Cross-platform reference to '.agent' in .claude/agents/project-planner.md",
       "No frontmatter in /workspace/.cursor/agents/project-planner.md",
-      "Cross-platform reference to '.agent' in .cursor/agents/project-planner.md",
       "No frontmatter in /workspace/.agent/agents/qa-automation-engineer.md",
       "No frontmatter in /workspace/.claude/agents/qa-automation-engineer.md",
       "No frontmatter in /workspace/.cursor/agents/qa-automation-engineer.md",
@@ -72,16 +70,6 @@
       "No frontmatter in /workspace/.agent/agents/test-engineer.md",
       "No frontmatter in /workspace/.claude/agents/test-engineer.md",
       "No frontmatter in /workspace/.cursor/agents/test-engineer.md",
-      "Cross-platform reference to '.cursor' in .agent/skills/create-rule/SKILL.md",
-      "Cross-platform reference to '.cursor' in .claude/skills/create-rule/SKILL.md",
-      "Cross-platform reference to '.cursor' in .agent/skills/create-skill/SKILL.md",
-      "Cross-platform reference to '.cursor' in .claude/skills/create-skill/SKILL.md",
-      "Cross-platform reference to '.cursor' in .agent/skills/create-subagent/SKILL.md",
-      "Cross-platform reference to '.cursor' in .claude/skills/create-subagent/SKILL.md",
-      "Cross-platform reference to '.cursor' in .agent/skills/migrate-to-skills/SKILL.md",
-      "Cross-platform reference to '.cursor' in .claude/skills/migrate-to-skills/SKILL.md",
-      "Cross-platform reference to '.cursor' in .agent/skills/plan-writing/SKILL.md",
-      "Cross-platform reference to '.cursor' in .claude/skills/plan-writing/SKILL.md",
       "No frontmatter in /workspace/.agent/rules/coding-style.md",
       "Missing 'trigger' in .agent/rules/coding-style.md",
       "Missing 'alwaysApply' in .cursor/rules/coding-style.mdc",
@@ -126,19 +114,17 @@
       "No frontmatter in /workspace/.claude/commands/test.md",
       "No frontmatter in /workspace/.cursor/commands/test.md",
       "No frontmatter in /workspace/.claude/commands/ui-ux-pro-max.md",
-      "No frontmatter in /workspace/.cursor/commands/ui-ux-pro-max.md",
-      "Broken link in .cursor/agents/mobile-developer.md: ../skills/mobile-design/SKILL.md"
+      "No frontmatter in /workspace/.cursor/commands/ui-ux-pro-max.md"
     ],
     "info": []
   },
   "metrics": {
     "total_agents": 20,
-    "cross_platform_refs": 12,
     "total_skills": 76,
     "skills_with_scripts": 20,
     "skills_with_references": 5,
     "total_rules": 4,
     "total_commands": 17,
-    "broken_links": 1
+    "broken_links": 0
   }
 }

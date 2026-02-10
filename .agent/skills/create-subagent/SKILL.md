@@ -24,14 +24,14 @@ If you have previous conversation context, infer the subagent's purpose and beha
 
 | Location | Scope | Priority |
 |----------|-------|----------|
-| `.cursor/agents/` | Current project | Higher |
-| `~/.cursor/agents/` | All your projects | Lower |
+| Workspace agents directory | Current project | Higher |
+| User agents directory | All your projects | Lower |
 
 When multiple subagents share the same name, the higher-priority location wins.
 
-**Project subagents** (`.cursor/agents/`): Ideal for codebase-specific agents. Check into version control to share with your team.
+**Project subagents** (workspace-level): Ideal for codebase-specific agents. Check into version control to share with your team.
 
-**User subagents** (`~/.cursor/agents/`): Personal agents available across all your projects.
+**User subagents** (user-level): Personal agents available across all your projects.
 
 ## Subagent File Format
 
@@ -175,20 +175,20 @@ Always ensure queries are efficient and cost-effective.
 
 ### Step 1: Decide the Scope
 
-- **Project-level** (`.cursor/agents/`): For codebase-specific agents shared with team
-- **User-level** (`~/.cursor/agents/`): For personal agents across all projects
+- **Project-level** (workspace agents directory): For codebase-specific agents shared with team
+- **User-level** (user agents directory): For personal agents across all projects
 
 ### Step 2: Create the File
 
 ```bash
 
 # For project-level
-mkdir -p .cursor/agents
-touch .cursor/agents/my-agent.md
+mkdir -p <workspace>/agents
+touch <workspace>/agents/my-agent.md
 
-# For user-level
-mkdir -p ~/.cursor/agents
-touch ~/.cursor/agents/my-agent.md
+# For user-level (platform-specific location)
+mkdir -p <user-agents-dir>
+touch <user-agents-dir>/my-agent.md
 ```
 
 ### Step 3: Define Configuration
@@ -221,6 +221,6 @@ Use the my-agent subagent to [task description]
 ## Troubleshooting
 
 ### Subagent Not Found
-- Ensure file is in `.cursor/agents/` or `~/.cursor/agents/`
+- Ensure file is in the agents directory (workspace or user-level)
 - Check file has `.md` extension
 - Verify YAML frontmatter syntax is valid
