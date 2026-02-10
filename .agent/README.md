@@ -5,7 +5,7 @@ This directory is a standalone Antigravity distribution.
 ## Isolation Rule
 
 - Keep all references inside `.agent/`.
-- Do not reference `.claude/` or `.cursor/` from this package.
+- Do not reference other platform roots from this package.
 
 ## Structure
 

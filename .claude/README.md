@@ -5,7 +5,7 @@ This directory is a standalone Claude distribution.
 ## Isolation Rule
 
 - Keep all references inside `.claude/`.
-- Do not reference `.agent/` or `.cursor/` from this package.
+- Do not reference other platform roots from this package.
 
 ## Structure
 

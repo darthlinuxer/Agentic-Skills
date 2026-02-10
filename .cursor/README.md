@@ -5,7 +5,7 @@ This directory is a standalone Cursor distribution.
 ## Isolation Rule
 
 - Keep all references inside `.cursor/`.
-- Do not reference `.agent/` or `.claude/` from this package.
+- Do not reference other platform roots from this package.
 
 ## Structure
 
