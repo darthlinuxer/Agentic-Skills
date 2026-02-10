@@ -530,16 +530,6 @@ class EcosystemAuditor:
     ) -> None:
         script_keys = sorted({key for assets in asset_map.values() for key in assets if key.startswith("scripts/")})
         if not script_keys:
-            combined_core = " ".join(core_bodies.values()).lower()
-            if "scripts/" in combined_core:
-                self.add_issue(
-                    "low",
-                    "skills",
-                    "script_reference_without_assets",
-                    f"skills/{skill_name}",
-                    "Skill references scripts but no scripts/ assets are present.",
-                    "Either add required scripts or remove script references.",
-                )
             return
 
         for key in script_keys:
