@@ -61,6 +61,15 @@ Your goal is to produce a production-grade ecosystem with unambiguous routing, c
 6. Mirror parity across platforms (metadata may differ by platform)
 7. Purpose-first refactor for each file type
 
+## Isolation Rule (Strict)
+
+Treat each platform as a standalone distribution.
+
+- Do not reference `.agent/` from `.claude` or `.cursor`.
+- Do not reference `.claude/` from `.agent` or `.cursor`.
+- Do not reference `.cursor/` from `.agent` or `.claude`.
+- Keep all intra-platform links and script paths domain-local.
+
 ## Execution Workflow
 
 ### Phase 1 - Inventory and Mapping

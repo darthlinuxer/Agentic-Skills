@@ -54,6 +54,11 @@ python3 scripts/ecosystem/ecosystem_audit.py /workspace
 
 Synchronizes mirrored content from `.agent` to `.claude` and `.cursor` while preserving target frontmatter.
 
+Isolation guarantee:
+
+- Rewrites platform paths during sync so each target stays self-contained.
+- Prevents leaking `.agent/`, `.claude/`, or `.cursor/` references into other platform domains.
+
 Usage:
 
 ```bash
