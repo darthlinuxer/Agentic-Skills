@@ -39,8 +39,8 @@ Checks:
 
 Output:
 
-- `AUDIT_REPORT.json` (machine-friendly)
-- `ECOSYSTEM_REVIEW_REPORT.md` (human-readable)
+- `docs/refactoring/reports/AUDIT_REPORT.json` (machine-friendly)
+- `docs/refactoring/reports/ECOSYSTEM_REVIEW_REPORT.md` (human-readable)
 
 Usage:
 
@@ -109,3 +109,11 @@ python3 scripts/ecosystem/ecosystem_audit.py /workspace
 3. Fix high/medium findings first, then re-run audit.
 
 4. Treat low findings as optional quality improvements.
+
+---
+
+## Reference Prompt
+
+Use the consolidated review prompt in:
+
+- `docs/refactoring/ECOSYSTEM_REFACTOR_PROMPT.md`

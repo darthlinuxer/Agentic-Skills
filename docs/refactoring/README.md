@@ -15,15 +15,16 @@
 3. **ECOSYSTEM_REVIEW_PROMPT.md** - Full review framework (reference)
 4. **REFACTORING_ROADMAP.md** - 10-week action plan (detailed)
 5. **METADATA_OFFICIAL_SPECS.md** - Platform specifications (technical)
+6. **ECOSYSTEM_REFACTOR_PROMPT.md** - Concise execution prompt (operational)
 
 ### Phase Summaries
-6. **PHASE_1_COMPLETE.md** - Critical fixes summary
-7. **PHASE_1.5_COMPLETE.md** - Metadata compliance summary
-8. **mcp_reference_plan.md** - MCP integration plan
+7. **PHASE_1_COMPLETE.md** - Critical fixes summary
+8. **PHASE_1.5_COMPLETE.md** - Metadata compliance summary
+9. **mcp_reference_plan.md** - MCP integration plan
 
 ### Supporting Documents
-9. **DELIVERY_SUMMARY.md** - Original package overview
-10. **METADATA_VERIFICATION_NEEDED.md** - Verification process
+10. **DELIVERY_SUMMARY.md** - Original package overview
+11. **METADATA_VERIFICATION_NEEDED.md** - Verification process
 
 ---
 

@@ -104,6 +104,7 @@ ALLOWED_SCRIPT_EXTENSIONS = {".py", ".sh", ".js", ".ts", ".ps1"}
 class EcosystemAuditor:
     def __init__(self, workspace_path: str):
         self.workspace = Path(workspace_path).resolve()
+        self.reports_dir = self.workspace / "docs" / "refactoring" / "reports"
         self.issues: List[Issue] = []
         self.metrics: Counter = Counter()
         self.platform_roots = {name: (self.workspace / name) for name in PLATFORMS}
@@ -883,7 +884,8 @@ class EcosystemAuditor:
             "issues": [asdict(issue) for issue in sorted_issues],
         }
 
-        json_path = self.workspace / "AUDIT_REPORT.json"
+        self.reports_dir.mkdir(parents=True, exist_ok=True)
+        json_path = self.reports_dir / "AUDIT_REPORT.json"
         json_path.write_text(json.dumps(json_report, indent=2), encoding="utf-8")
 
         md_lines = []
@@ -922,7 +924,7 @@ class EcosystemAuditor:
                     md_lines.append(f"  - Fix: {issue.fix}")
             md_lines.append("")
 
-        md_path = self.workspace / "ECOSYSTEM_REVIEW_REPORT.md"
+        md_path = self.reports_dir / "ECOSYSTEM_REVIEW_REPORT.md"
         md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
 
         print("\n" + "=" * 72)
