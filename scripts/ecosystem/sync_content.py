@@ -10,6 +10,9 @@ import yaml
 from pathlib import Path
 from typing import Tuple, Optional
 
+PLATFORMS = ('.agent', '.claude', '.cursor')
+
+
 def extract_parts(file_path: Path) -> Tuple[Optional[dict], str]:
     """Extract metadata and content separately"""
     try:
@@ -37,6 +40,31 @@ def extract_parts(file_path: Path) -> Tuple[Optional[dict], str]:
     except yaml.YAMLError as e:
         print(f"    ❌ YAML error in {file_path.name}: {e}")
         return {}, content
+
+
+def remap_content_for_platform(content: str, target_platform: str) -> str:
+    """Remap platform-specific paths so targets stay domain-isolated."""
+    remapped = content
+
+    for platform_name in PLATFORMS:
+        remapped = remapped.replace(f'{platform_name}/', f'{target_platform}/')
+
+    # Keep SKILL filename references compatible with target platform.
+    if target_platform == '.cursor':
+        remapped = re.sub(r'(?<!\w)SKILL\.md(?!\w)', 'SKILL.mdc', remapped)
+    else:
+        remapped = re.sub(r'(?<!\w)SKILL\.mdc(?!\w)', 'SKILL.md', remapped)
+
+    return remapped
+
+
+def ensure_platform_isolation(content: str, target_platform: str) -> None:
+    """Raise if remapped content still references foreign platform roots."""
+    violations = [name for name in PLATFORMS if name != target_platform and f'{name}/' in content]
+    if violations:
+        joined = ', '.join(violations)
+        raise ValueError(f"foreign platform references remain after remap: {joined}")
+
 
 def write_file(file_path: Path, metadata: dict, content: str) -> bool:
     """Write file with metadata and content"""
@@ -85,7 +113,13 @@ def sync_agent_content():
         claude_file = claude_target / f'{agent_name}.md'
         if claude_file.exists():
             claude_meta, _ = extract_parts(claude_file)
-            if write_file(claude_file, claude_meta, source_content):
+            try:
+                claude_content = remap_content_for_platform(source_content, '.claude')
+                ensure_platform_isolation(claude_content, '.claude')
+            except ValueError as e:
+                print(f"  ❌ {agent_name}.md → .claude ({e})")
+                continue
+            if write_file(claude_file, claude_meta, claude_content):
                 print(f"  ✅ {agent_name}.md → .claude")
                 synced += 1
         
@@ -93,7 +127,13 @@ def sync_agent_content():
         cursor_file = cursor_target / f'{agent_name}.md'
         if cursor_file.exists():
             cursor_meta, _ = extract_parts(cursor_file)
-            if write_file(cursor_file, cursor_meta, source_content):
+            try:
+                cursor_content = remap_content_for_platform(source_content, '.cursor')
+                ensure_platform_isolation(cursor_content, '.cursor')
+            except ValueError as e:
+                print(f"  ❌ {agent_name}.md → .cursor ({e})")
+                continue
+            if write_file(cursor_file, cursor_meta, cursor_content):
                 print(f"  ✅ {agent_name}.md → .cursor")
                 synced += 1
     
@@ -135,7 +175,13 @@ def sync_skill_content():
         if claude_file.exists():
             claude_meta, _ = extract_parts(claude_file)
             if claude_meta is not None:
-                if write_file(claude_file, claude_meta, source_content):
+                try:
+                    claude_content = remap_content_for_platform(source_content, '.claude')
+                    ensure_platform_isolation(claude_content, '.claude')
+                except ValueError as e:
+                    print(f"  ❌ {skill_name}/SKILL.md → .claude ({e})")
+                    continue
+                if write_file(claude_file, claude_meta, claude_content):
                     synced += 1
         
         # Sync to .cursor
@@ -143,7 +189,13 @@ def sync_skill_content():
         if cursor_file.exists():
             cursor_meta, _ = extract_parts(cursor_file)
             if cursor_meta is not None:
-                if write_file(cursor_file, cursor_meta, source_content):
+                try:
+                    cursor_content = remap_content_for_platform(source_content, '.cursor')
+                    ensure_platform_isolation(cursor_content, '.cursor')
+                except ValueError as e:
+                    print(f"  ❌ {skill_name}/SKILL.mdc → .cursor ({e})")
+                    continue
+                if write_file(cursor_file, cursor_meta, cursor_content):
                     synced += 1
     
     return synced
@@ -177,7 +229,13 @@ def sync_command_content():
         claude_file = claude_commands / f'{command_name}.md'
         if claude_file.exists():
             claude_meta, _ = extract_parts(claude_file)
-            if write_file(claude_file, claude_meta, source_content):
+            try:
+                claude_content = remap_content_for_platform(source_content, '.claude')
+                ensure_platform_isolation(claude_content, '.claude')
+            except ValueError as e:
+                print(f"  ❌ {command_name}.md → .claude ({e})")
+                continue
+            if write_file(claude_file, claude_meta, claude_content):
                 print(f"  ✅ {command_name}.md → .claude")
                 synced += 1
         
@@ -185,7 +243,13 @@ def sync_command_content():
         cursor_file = cursor_commands / f'{command_name}.md'
         if cursor_file.exists():
             cursor_meta, _ = extract_parts(cursor_file)
-            if write_file(cursor_file, cursor_meta, source_content):
+            try:
+                cursor_content = remap_content_for_platform(source_content, '.cursor')
+                ensure_platform_isolation(cursor_content, '.cursor')
+            except ValueError as e:
+                print(f"  ❌ {command_name}.md → .cursor ({e})")
+                continue
+            if write_file(cursor_file, cursor_meta, cursor_content):
                 print(f"  ✅ {command_name}.md → .cursor")
                 synced += 1
     

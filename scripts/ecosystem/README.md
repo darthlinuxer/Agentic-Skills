@@ -1,141 +1,165 @@
 # Ecosystem Automation Scripts
 
-**Purpose**: Automated tools for maintaining the LLM agent ecosystem across platforms
+Automation for auditing and synchronizing the mirrored agent ecosystem in:
+
+- `.agent` (Antigravity)
+- `.claude` (Claude)
+- `.cursor` (Cursor)
+
+## Goal
+
+Keep all platforms aligned with these rules:
+
+1. Unique routing (no ambiguity between skills/agents/commands/rules)
+2. Correct links and self-contained platform paths
+3. Clear and concise instructions
+4. Structure compliance per platform/category
+5. Modern skill guidance with scripts only when useful
+6. Mirror parity across platforms (metadata may differ)
+7. Purpose-first refactoring (rule vs workflow vs skill vs agent)
 
 ---
 
-## 📋 Available Scripts
+## Scripts
 
-### 1. ecosystem_audit.py
-**Purpose**: Comprehensive ecosystem health checker
+### `ecosystem_audit.py`
 
-**Checks**:
-- File existence across platforms
-- Content synchronization (mirroring)
-- Metadata compliance per platform specs
-- Cross-platform references
+Comprehensive cross-platform audit engine.
+
+Checks:
+
+- Missing mirrored files/assets
+- Content parity drift across mirrors
+- Cross-platform path leaks (e.g. `.agent/` inside `.cursor` files)
 - Broken internal links
-- YAML syntax errors
+- Required metadata by platform
+- Basic structure and clarity heuristics
+- Skill script usage signals
+- Uniqueness/overlap heuristics
 
-**Usage**:
+Output:
+
+- `docs/refactoring/reports/AUDIT_REPORT.json` (machine-friendly)
+- `docs/refactoring/reports/ECOSYSTEM_REVIEW_REPORT.md` (human-readable)
+
+Usage:
+
 ```bash
-cd /workspace
-python3 scripts/ecosystem/ecosystem_audit.py
+python3 scripts/ecosystem/ecosystem_audit.py /workspace
 
-# View results
-cat AUDIT_REPORT.json
+# Fail CI on high+ findings
+python3 scripts/ecosystem/ecosystem_audit.py /workspace --fail-on high
 ```
-
-**Output**: Console report + `AUDIT_REPORT.json`
 
 ---
 
-### 2. sync_content.py
-**Purpose**: Synchronize content across platforms
+### `sync_content.py`
 
-**Strategy**:
-- Source of truth: `.agent`
-- Targets: `.claude`, `.cursor`
-- Preserves platform-specific metadata
-- Syncs only content (after frontmatter)
+Synchronizes mirrored content from `.agent` to `.claude` and `.cursor` while preserving target frontmatter.
 
-**Usage**:
+Isolation guarantee:
+
+- Rewrites platform paths during sync so each target stays self-contained.
+- Prevents leaking `.agent/`, `.claude/`, or `.cursor/` references into other platform domains.
+
+Usage:
+
 ```bash
-cd /workspace
 python3 scripts/ecosystem/sync_content.py
 ```
 
-**Syncs**: Agents, Skills, Commands/Workflows
+---
+
+### `fix_cross_platform_refs.py`
+
+Fixes known cross-platform path leaks in selected files.
+
+Usage:
+
+```bash
+python3 scripts/ecosystem/fix_cross_platform_refs.py
+```
 
 ---
 
-### 3. remove_agent_frontmatter.py
-**Purpose**: Remove frontmatter from agent files
+### `remove_agent_frontmatter.py`
 
-**Why**: Per official specs, agents should be plain markdown
-
-**Usage**:
-```bash
-cd /workspace
-python3 scripts/ecosystem/remove_agent_frontmatter.py
-```
-
-**Processes**: 60 files (20 agents × 3 platforms)
+Removes frontmatter from agent files where plain markdown is expected.
 
 ---
 
-### 4. simplify_skills_metadata.py
-**Purpose**: Clean up skills metadata to match specs
+### `simplify_skills_metadata.py`
 
-**Keeps**:
-- Antigravity: `description` (+ optional `name`)
-- Claude/Cursor: `name`, `description` (+ optional `license`)
-
-**Removes**: All non-standard fields
-
-**Usage**:
-```bash
-cd /workspace
-python3 scripts/ecosystem/simplify_skills_metadata.py
-```
-
-**Processes**: 228 files (76 skills × 3 platforms)
+Normalizes skill metadata fields to expected platform format.
 
 ---
 
-### 5. add_mcp_references.py
-**Purpose**: Add MCP tool references to complex skills
+### `add_mcp_references.py`
 
-**Adds**:
-- Context7 references (documentation search)
-- Sequential Thinking references (complex reasoning)
-- Both (for highly complex skills)
-
-**Usage**:
-```bash
-cd /workspace
-python3 scripts/ecosystem/add_mcp_references.py
-```
-
-**Edit**: Modify skill categorization in script if needed
+Adds MCP-related references to selected complex skills.
 
 ---
 
-## 🔄 Maintenance Workflow
+### `isolation_lint.py`
 
-### Monthly
+Hard gate for platform isolation.
+
+Checks:
+
+- no foreign platform tokens in each domain
+- markdown links do not escape platform roots
+- markdown links resolve to existing local files
+
+Usage:
+
 ```bash
-# Check ecosystem health
-python3 scripts/ecosystem/ecosystem_audit.py
+python3 scripts/ecosystem/isolation_lint.py /workspace
 ```
 
-### After Major Changes
+---
+
+### `build_release_bundles.py`
+
+Builds standalone release bundles:
+
+- `dist/agent`
+- `dist/claude`
+- `dist/cursor`
+
+Each bundle includes a `BUNDLE_MANIFEST.json` with isolation check results.
+
+Usage:
+
 ```bash
-# Re-sync content if source of truth (.agent) was updated
+python3 scripts/ecosystem/build_release_bundles.py /workspace --clean
+```
+
+---
+
+## Recommended Workflow
+
+1. Sync mirrors:
+
+```bash
 python3 scripts/ecosystem/sync_content.py
-
-# Re-run audit
-python3 scripts/ecosystem/ecosystem_audit.py
 ```
 
-### When Adding New Skills
-1. Add to `.agent/skills/new-skill/SKILL.md`
-2. Run `sync_content.py` to mirror to other platforms
-3. If complex, edit `add_mcp_references.py` and run it
-4. Run audit to verify
+2. Run audit:
+
+```bash
+python3 scripts/ecosystem/ecosystem_audit.py /workspace
+python3 scripts/ecosystem/isolation_lint.py /workspace
+```
+
+3. Fix high/medium findings first, then re-run audit.
+
+4. Treat low findings as optional quality improvements.
 
 ---
 
-## 📊 Expected Results
+## Reference Prompt
 
-After running all scripts correctly:
+Use the consolidated review prompt in:
 
-- ✅ Critical Errors: 0
-- ✅ Content Mismatches: 0
-- ✅ Metadata Issues: 0
-- ✅ Spec Compliance: 100%
-
----
-
-*Scripts created: February 9, 2026*  
-*Location: /workspace/scripts/ecosystem/*
+- `docs/refactoring/ECOSYSTEM_REFACTOR_PROMPT.md`
+- `docs/refactoring/MIRROR_POLICY.md`

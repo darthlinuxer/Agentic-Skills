@@ -1,0 +1,44 @@
+name: ecosystem-isolation-gate
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  isolation-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml
+
+      - name: Validate ecosystem scripts syntax
+        run: |
+          python -m py_compile scripts/ecosystem/ecosystem_audit.py
+          python -m py_compile scripts/ecosystem/sync_content.py
+          python -m py_compile scripts/ecosystem/isolation_lint.py
+          python -m py_compile scripts/ecosystem/build_release_bundles.py
+
+      - name: Enforce platform isolation
+        run: |
+          python scripts/ecosystem/isolation_lint.py "${GITHUB_WORKSPACE}"
+
+      - name: Enforce ecosystem health (fail on high)
+        run: |
+          python scripts/ecosystem/ecosystem_audit.py "${GITHUB_WORKSPACE}" --fail-on high
+
+      - name: Upload ecosystem reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: ecosystem-reports
+          path: docs/refactoring/reports/
+          if-no-files-found: error
