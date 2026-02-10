@@ -5,6 +5,8 @@ Before answering:
 
 # /status - Show Status
 
+$ARGUMENTS
+
 ## Task
 Show current project and agent status.
 

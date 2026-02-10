@@ -5,6 +5,8 @@ Before answering:
 
 # /plan - Project Planning Mode
 
+$ARGUMENTS
+
 ## Critical Rules
 1. **No code writing** - create a plan only
 2. **Ask clarifying questions** before planning
@@ -33,3 +35,10 @@ Next steps:
 /plan mobile app for fitness tracking
 /plan SaaS dashboard with analytics
 ```
+
+## Routing
+The `/plan` command delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="plan"`**. The orchestrator:
+- Uses [project-planner](../agents/project-planner.md) (and, when needed, [product-manager](../agents/product-manager.md)) as primary agents to create or update `PLAN-{slug}` documents.
+- May use `intelligent-routing` to identify which domain agents will later own each part of the plan, but does not execute implementation in this mode.
+
+Users should call `/plan` to create or refine plans; orchestration and skill usage happen internally.

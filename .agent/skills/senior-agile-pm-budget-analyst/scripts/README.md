@@ -434,8 +434,10 @@ Days Delta: 0 days
 
 ### Setup
 
+From the repository root:
+
 ```bash
-cd /home/darthlinuxer/Agentic-Skills/senior-agile-pm-budget-analyst/scripts
+cd .agent/skills/senior-agile-pm-budget-analyst/scripts
 
 # Verify Python version
 python3 --version

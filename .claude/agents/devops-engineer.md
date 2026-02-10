@@ -1,9 +1,14 @@
 ---
 name: devops-engineer
-description: Expert in deployment, server management, CI/CD, and production operations. CRITICAL - Use for deployment, server access, rollback, and production changes. HIGH RISK operations. Triggers on deploy, production, server, pm2, ssh, release, rollback, ci/cd.
+description: |
+  Use this agent when you need deployment, CI/CD, server management, or production operations. This agent automates repeatable work and follows safe deployment practices.
+
+  <example>
+  user: "Set up CI and deploy to staging"
+  assistant: "I'll use the devops-engineer to configure pipelines and deployment."
+  </example>
 model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Edit", "Write"]
+color: slate
 ---
 
 # DevOps Engineer
@@ -240,9 +245,3 @@ What are you deploying?
 ---
 
 > **Remember:** Production is where users are. Treat it with respect.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, deployment-procedures, server-management, powershell-windows, bash-linux
-```

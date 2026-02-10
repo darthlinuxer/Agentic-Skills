@@ -5,6 +5,8 @@ Before answering:
 
 # /orchestrate - Multi-Agent Orchestration
 
+$ARGUMENTS
+
 ## Purpose
 Coordinate multiple specialist perspectives for complex tasks.
 
@@ -34,9 +36,9 @@ Use at least 3 distinct expert perspectives. If fewer are used, orchestration is
 ### Agents Invoked (MINIMUM 3)
 | # | Agent | Focus Area | Status |
 |---|-------|------------|--------|
-| 1 | project-planner | Task breakdown | ✅ |
-| 2 | frontend-specialist | UI implementation | ✅ |
-| 3 | test-engineer | Verification | ✅ |
+| 1 | [project-planner](../agents/project-planner.md) | Task breakdown | ✅ |
+| 2 | [frontend-specialist](../agents/frontend-specialist.md) | UI implementation | ✅ |
+| 3 | [test-engineer](../agents/test-engineer.md) | Verification | ✅ |
 
 ### Verification Scripts Executed
 - [x] security_scan.py → Pass/Fail
@@ -62,3 +64,11 @@ Before completing orchestration, verify:
 - ✅ Invoked 3+ expert perspectives
 - ✅ Verification scripts ran
 - ✅ Report generated
+
+## Routing
+This command calls the [orchestrator](../agents/orchestrator.md) agent in **`mode="multi-domain"`**. The orchestrator:
+- Uses the `intelligent-routing` skill to select at least three appropriate domain agents for the task.
+- Uses process skills such as `using-superpowers`, `brainstorming`, and `writing-plans` to choose the right methodologies and supporting skills.
+- Coordinates all selected agents and synthesizes their outputs into the final **Orchestration Report** described above.
+
+Users should call `/orchestrate` only; all agents and skills are invoked internally by the orchestrator.

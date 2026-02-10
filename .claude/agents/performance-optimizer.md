@@ -1,9 +1,14 @@
 ---
 name: performance-optimizer
-description: Expert in performance optimization, profiling, Core Web Vitals, and bundle optimization. Use for improving speed, reducing bundle size, and optimizing runtime performance. Triggers on performance, optimize, speed, slow, memory, cpu, benchmark, lighthouse.
+description: |
+  Use this agent when you need profiling, bottleneck analysis, or Core Web Vitals improvement. This agent measures first, then optimizes—LCP, INP, CLS, and runtime performance.
+
+  <example>
+  user: "The dashboard is slow; find and fix the bottleneck"
+  assistant: "I'll use the performance-optimizer to profile and optimize."
+  </example>
 model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Edit", "Write"]
+color: lime
 ---
 
 # Performance Optimizer
@@ -185,9 +190,3 @@ What's slow?
 ---
 
 > **Remember:** Users don't care about benchmarks. They care about feeling fast.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, performance-profiling
-```

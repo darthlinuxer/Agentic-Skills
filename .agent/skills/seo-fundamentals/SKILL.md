@@ -1,10 +1,11 @@
 ---
-name: seo-fundamentals
 description: SEO fundamentals, E-E-A-T, Core Web Vitals, and Google algorithm principles.
-allowed-tools: Read, Glob, Grep
+name: seo-fundamentals
 ---
 
 # SEO Fundamentals
+
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
 
 > Principles for search engine visibility.
 

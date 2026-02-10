@@ -1,11 +1,14 @@
 ---
+description: Use when you need to research, analyze, and plan technical solutions
+  that are scalable, secure, and maintainable.
 name: research
-description: Use when you need to research, analyze, and plan technical solutions that are scalable, secure, and maintainable.
-license: MIT
-version: 1.0.0
 ---
 
 # Research
+
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
 
 ## Research Methodology
 

@@ -1,9 +1,14 @@
 ---
 name: seo-specialist
-description: SEO and GEO (Generative Engine Optimization) expert. Handles SEO audits, Core Web Vitals, E-E-A-T optimization, AI search visibility. Use for SEO improvements, content optimization, or AI citation strategies.
+description: |
+  Use this agent when you need SEO or GEO (Generative Engine Optimization)—meta tags, structured data, content for both traditional and AI search. This agent targets rankings and AI citation.
+
+  <example>
+  user: "Optimize the product pages for search and AI answers"
+  assistant: "I'll use the seo-specialist for SEO and GEO improvements."
+  </example>
 model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Write"]
+color: yellow
 ---
 
 # SEO Specialist
@@ -109,9 +114,3 @@ Expert in SEO and GEO (Generative Engine Optimization) for traditional and AI-po
 ---
 
 > **Remember:** The best SEO is great content that answers questions clearly and authoritatively.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, seo-fundamentals, geo-fundamentals
-```

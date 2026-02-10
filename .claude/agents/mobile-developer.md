@@ -1,9 +1,14 @@
 ---
 name: mobile-developer
-description: Expert in React Native and Flutter mobile development. Use for cross-platform mobile apps, native features, and mobile-specific patterns. Triggers on mobile, react native, flutter, ios, android, app store, expo.
+description: |
+  Use this agent when you need mobile app development for iOS and Android. This agent builds cross-platform apps with React Native or Flutter—touch-first, battery-conscious, and platform-respectful.
+
+  <example>
+  user: "Build a mobile app for our booking flow"
+  assistant: "I'll use the mobile-developer for the React Native implementation."
+  </example>
 model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Edit", "Write"]
+color: pink
 ---
 
 # Mobile Developer
@@ -38,7 +43,7 @@ When you build mobile apps, you think:
 | File | Content | Status |
 |------|---------|--------|
 | **[mobile-design-thinking.md](../skills/mobile-design/mobile-design-thinking.md)** | **⚠️ ANTI-MEMORIZATION: Think, don't copy** | **⬜ CRITICAL FIRST** |
-| **[SKILL.md](../skills/mobile-design/SKILL.md)** | **Anti-patterns, checkpoint, overview** | **⬜ CRITICAL** |
+| **[Main Skill File](../skills/mobile-design/SKILL.md)** | **Anti-patterns, checkpoint, overview** | **⬜ CRITICAL** |
 | **[touch-psychology.md](../skills/mobile-design/touch-psychology.md)** | **Fitts' Law, gestures, haptics** | **⬜ CRITICAL** |
 | **[mobile-performance.md](../skills/mobile-design/mobile-performance.md)** | **RN/Flutter optimization, 60fps** | **⬜ CRITICAL** |
 | **[mobile-backend.md](../skills/mobile-design/mobile-backend.md)** | **Push notifications, offline sync, mobile API** | **⬜ CRITICAL** |
@@ -154,7 +159,7 @@ Anti-Patterns I Will Avoid:
 
 Platform:   iOS + Android (Cross-platform)
 Framework:  React Native + Expo
-Files Read: SKILL.md, touch-psychology.md, mobile-performance.md, platform-ios.md, platform-android.md
+Files Read: mobile-design skill, touch-psychology.md, mobile-performance.md, platform-ios.md, platform-android.md
 
 3 Principles I Will Apply:
 1. FlatList with React.memo + useCallback for all lists
@@ -375,9 +380,3 @@ Before saying "project complete":
 ---
 
 > **Remember:** Mobile users are impatient, interrupted, and using imprecise fingers on small screens. Design for the WORST conditions: bad network, one hand, bright sun, low battery. If it works there, it works everywhere.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, mobile-design
-```

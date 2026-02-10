@@ -434,8 +434,10 @@ Days Delta: 0 days
 
 ### Setup
 
+From the repository root:
+
 ```bash
-cd /home/darthlinuxer/Agentic-Skills/senior-agile-pm-budget-analyst/scripts
+cd .cursor/skills/senior-agile-pm-budget-analyst/scripts
 
 # Verify Python version
 python3 --version
@@ -659,7 +661,7 @@ These scripts are part of the Senior Agile PM Budget Analyst skill. For improvem
 
 ## 🔗 Related Documentation
 
-- [SKILL.mdc](../SKILL.mdc) - Main skill documentation
+- [SKILL.md](../SKILL.md) - Main skill documentation
 - [PROMPT.md](../PROMPT.md) - Skill prompt and instructions
 - [AGILE_DOCS_PT_BR](../assets/AGILE_DOCS_PT_BR/) - Comprehensive Agile/Scrum theory (Portuguese)
 - [reference/](../reference/) - Workflow and quality check references

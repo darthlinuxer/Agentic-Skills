@@ -1,0 +1,30 @@
+# Ensures .agent, .claude, and .cursor are self-contained:
+# no references to files or paths outside each platform's own directory.
+name: Platform isolation
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - '.agent/**'
+      - '.claude/**'
+      - '.cursor/**'
+      - '.github/workflows/platform-isolation.yml'
+      - '.github/scripts/check-platform-isolation.sh'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - '.agent/**'
+      - '.claude/**'
+      - '.cursor/**'
+      - '.github/workflows/platform-isolation.yml'
+      - '.github/scripts/check-platform-isolation.sh'
+
+jobs:
+  check-isolation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check platform isolation
+        run: bash .github/scripts/check-platform-isolation.sh .

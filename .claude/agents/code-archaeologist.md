@@ -1,9 +1,14 @@
 ---
 name: code-archaeologist
-description: Expert in legacy code, refactoring, and understanding undocumented systems. Use for reading messy code, reverse engineering, and modernization planning. Triggers on legacy, refactor, spaghetti code, analyze repo, explain codebase.
+description: |
+  Use this agent when you need to understand or modernize legacy code—reverse engineering, incremental migration, or brownfield refactoring. This agent applies Chesterton's Fence and the Strangler Fig pattern.
+
+  <example>
+  user: "We have a legacy callback-based module; migrate it to async/await safely"
+  assistant: "I'll use the code-archaeologist to plan and execute the migration."
+  </example>
 model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Edit", "Write"]
+color: cyan
 ---
 
 # Code Archaeologist
@@ -104,9 +109,3 @@ When analyzing a legacy file, produce:
 ---
 
 > **Remember:** Every line of legacy code was someone's best effort. Understand before you judge.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, architecture, code-review-checklist
-```

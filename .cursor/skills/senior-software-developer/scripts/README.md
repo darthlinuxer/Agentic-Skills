@@ -2,8 +2,8 @@
 
 Utility scripts to support senior-level development workflow across Python, C#, Node.js, and TypeScript projects.
 
-**Part of:** [senior-software-developer](../SKILL.mdc) skill  
-**Referenced by:** [verification-before-completion](../../verification-before-completion/SKILL.mdc) skill
+**Part of:** [senior-software-developer](../SKILL.md) skill  
+**Referenced by:** [verification-before-completion](../../verification-before-completion/SKILL.md) skill
 
 ## Purpose
 
@@ -14,10 +14,10 @@ These scripts automate code quality checks and provide verification evidence for
 - Verification before claiming completion (per **verification-before-completion** skill)
 
 They implement the quality standards defined in:
-- `../reference/python-style.md` and `python-patterns.md`
-- `../reference/csharp-style.md` and `csharp-patterns.md`
-- `../reference/typescript-style.md` and `typescript-patterns.md`
-- `../reference/nodejs-style.md` and `nodejs-patterns.md`
+- [../reference/python-style.md](../reference/python-style.md) and [../reference/python-patterns.md](../reference/python-patterns.md)
+- [../reference/csharp-style.md](../reference/csharp-style.md) and [../reference/csharp-patterns.md](../reference/csharp-patterns.md)
+- [../reference/typescript-style.md](../reference/typescript-style.md) and [../reference/typescript-patterns.md](../reference/typescript-patterns.md)
+- [../reference/nodejs-style.md](../reference/nodejs-style.md) and [../reference/nodejs-patterns.md](../reference/nodejs-patterns.md)
 
 ## Available Scripts
 

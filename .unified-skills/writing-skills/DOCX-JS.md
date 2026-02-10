@@ -1,3 +1,0 @@
-# Docx Js
-
-Placeholder content.

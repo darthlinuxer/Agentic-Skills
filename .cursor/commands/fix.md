@@ -62,3 +62,10 @@ DIAGNOSIS: symptom, root cause, location
 FIX: explanation and relevant code snippet(s)  
 VERIFICATION: what you tested  
 PREVENTION: how to avoid similar bugs in the future.
+
+## Routing
+The `/fix` command delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="fix"`**. The orchestrator:
+- Uses `intelligent-routing` to select [debugger](../agents/debugger.md) as the primary agent, plus additional domain agents (such as [frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md), [database-architect](../agents/database-architect.md), and [test-engineer](../agents/test-engineer.md)) depending on where the bug lives.
+- Relies on process skills like `systematic-debugging`, `using-superpowers`, and `test-driven-development` (via agents) to ensure fixes address root causes and are covered by tests.
+
+Users should call `/fix`; the orchestrator decides which agents and skills participate in the debugging and repair workflow.

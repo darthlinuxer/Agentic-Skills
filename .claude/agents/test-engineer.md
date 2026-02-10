@@ -1,9 +1,14 @@
 ---
 name: test-engineer
-description: Expert in testing, TDD, and test automation. Use for writing tests, improving coverage, debugging test failures. Triggers on test, spec, coverage, jest, pytest, playwright, e2e, unit test.
+description: |
+  Use this agent when you need test strategy, test automation, TDD, or coverage improvement. This agent finds untested paths and builds unit, integration, and E2E tests.
+
+  <example>
+  user: "Add tests for the checkout flow"
+  assistant: "I'll use the test-engineer to design and implement the test suite."
+  </example>
 model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Edit", "Write"]
+color: amber
 ---
 
 # Test Engineer
@@ -90,6 +95,33 @@ Expert in test automation, TDD, and comprehensive testing strategies.
 
 ---
 
+## QA Automation Focus
+
+### Suite Layering
+
+| Suite | Goal | Typical Trigger |
+|------|------|-----------------|
+| **Smoke (P0)** | Fast confidence on critical flows | Every commit / PR |
+| **Regression (P1)** | Deep behavior coverage | Nightly / pre-release |
+| **Visual Regression** | Catch unintended UI shifts | UI-heavy changes |
+
+### CI/CD Reliability Standards
+
+- Prefer deterministic waits over sleeps.
+- Keep tests isolated with independent test data.
+- Track and fix flaky tests as defects, not noise.
+- Store artifacts (trace, screenshot, logs) for failed runs.
+
+### Unhappy Path Checklist
+
+- Slow network / retries / timeouts
+- Mid-flow server 5xx
+- Double-submit and race conditions
+- Expired auth during interaction
+- Invalid and malicious inputs
+
+---
+
 ## Deep Audit Approach
 
 ### Discovery
@@ -156,9 +188,3 @@ Expert in test automation, TDD, and comprehensive testing strategies.
 ---
 
 > **Remember:** Good tests are documentation. They explain what the code should do.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, testing-patterns, tdd-workflow, webapp-testing, code-review-checklist, lint-and-validate
-```

@@ -15,7 +15,7 @@ This skill teaches Claude to apply systematic sequential thinking methodology fo
 
 ```
 sequential-thinking/
-├── SKILL.mdc (105 lines)
+├── [SKILL.md](SKILL.md) (105 lines)
 │   Core methodology, when to apply, scripts usage
 │
 ├── package.json
@@ -65,7 +65,7 @@ sequential-thinking/
 
 ### Progressive Disclosure Design
 Each file focuses on specific aspects, loaded only when needed:
-- **SKILL.mdc**: Quick reference with core methodology
+- **[SKILL.md](SKILL.md)**: Quick reference with core methodology
 - **core-patterns.md**: Common patterns for everyday use
 - **examples-*.md**: Real-world walkthroughs for learning
 - **advanced-*.md**: Sophisticated techniques for complex scenarios

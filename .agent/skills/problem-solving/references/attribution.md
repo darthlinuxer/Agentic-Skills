@@ -35,7 +35,7 @@ The Amplifier agents are specialized long-lived agents with structured JSON outp
 - **Symptom-based discovery** via when_to_use descriptions
 - **Immediate application** without special tooling
 - **Composable patterns** through dispatch system
-- **Progressive disclosure** via SKILL.md + references structure
+- **Progressive disclosure** via [SKILL.md](../SKILL.md) + references structure
 
 ## Core Insight
 

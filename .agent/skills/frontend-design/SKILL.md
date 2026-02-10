@@ -1,10 +1,15 @@
 ---
+description: Design thinking and decision-making for web UI. Use when designing components,
+  layouts, color schemes, typography, or creating aesthetic interfaces. Teaches principles,
+  not fixed values.
 name: frontend-design
-description: Design thinking and decision-making for web UI. Use when designing components, layouts, color schemes, typography, or creating aesthetic interfaces. Teaches principles, not fixed values.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
 # Frontend Design System
+
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
 
 > **Philosophy:** Every pixel has purpose. Restraint is luxury. User psychology drives decisions.
 > **Core Principle:** THINK, don't memorize. ASK, don't assume.
@@ -398,7 +403,7 @@ For deeper guidance on specific areas:
 | Skill | When to Use |
 |-------|-------------|
 | **frontend-design** (this) | Before coding - Learn design principles (color, typography, UX psychology) |
-| **[web-design-guidelines](../web-design-guidelines/)** | After coding - Audit for accessibility, performance, and best practices |
+| **[web-design-guidelines](../web-design-guidelines/SKILL.md)** | After coding - Audit for accessibility, performance, and best practices |
 
 ## Post-Design Workflow
 

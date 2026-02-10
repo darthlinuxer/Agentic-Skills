@@ -5,6 +5,8 @@ Before answering:
 
 # /status - Show Status
 
+$ARGUMENTS
+
 ## Task
 Show current project and agent status.
 
@@ -53,13 +55,23 @@ Show current project and agent status.
 📄 Files: 73 created, 12 modified
 
 === Agent Status ===
+(Symbols: ✓ completed, ⚙ in progress, ⏳ waiting.)
 
-✅ database-architect → Completed
-✅ backend-specialist → Completed
-🔄 frontend-specialist → Dashboard components (60%)
+✓ database-architect → Completed
+✓ backend-specialist → Completed
+⚙ frontend-specialist → Dashboard components (60%)
 ⏳ test-engineer → Waiting
 
 === Preview ===
 🌐 URL: 
 💚 Health: OK
 ```
+
+Agent definitions: [database-architect](../agents/database-architect.md), [backend-specialist](../agents/backend-specialist.md), [frontend-specialist](../agents/frontend-specialist.md), [test-engineer](../agents/test-engineer.md).
+
+## Routing
+The `/status` command delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="status"`**. The orchestrator:
+- Uses [explorer-agent](../agents/explorer-agent.md) and project-planning information (for example from `PLAN-{slug}` documents) to summarize project, agent, and preview status.
+- May consult domain agents for additional details when needed, but `/status` itself remains read-only and does not trigger implementations.
+
+Users should call `/status` to inspect the current state; orchestration and data gathering from agents are handled internally.

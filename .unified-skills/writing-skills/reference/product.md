@@ -1,3 +1,0 @@
-# Product
-
-Placeholder content.

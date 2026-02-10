@@ -1,8 +1,9 @@
 ---
+description: Primary methodology for implementing features and bugfixes - enforces
+  test-first approach (RED-GREEN-REFACTOR) using senior-software-developer patterns
+  for code quality. Use for single-task implementations; for multi-step projects,
+  use writing-plans → subagent-driven-development instead.
 name: test-driven-development
-description: Primary methodology for implementing features and bugfixes - enforces test-first approach (RED-GREEN-REFACTOR) using senior-software-developer patterns for code quality. Use for single-task implementations; for multi-step projects, use writing-plans → subagent-driven-development instead.
-metadata:
-  author: "darthlinuxer"
 ---
 
 # Test-Driven Development (TDD)
