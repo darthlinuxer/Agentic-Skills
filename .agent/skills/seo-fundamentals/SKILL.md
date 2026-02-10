@@ -5,6 +5,8 @@ name: seo-fundamentals
 
 # SEO Fundamentals
 
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+
 > Principles for search engine visibility.
 
 ---

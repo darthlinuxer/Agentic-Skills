@@ -7,6 +7,8 @@ name: web-design-guidelines
 
 # Web Interface Guidelines
 
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+
 Review files for compliance with Web Interface Guidelines.
 
 ## How It Works

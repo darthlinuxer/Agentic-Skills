@@ -5,6 +5,8 @@ description: SEO fundamentals, E-E-A-T, Core Web Vitals, and Google algorithm pr
 
 # SEO Fundamentals
 
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+
 > Principles for search engine visibility.
 
 ---

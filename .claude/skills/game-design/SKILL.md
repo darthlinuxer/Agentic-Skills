@@ -6,6 +6,8 @@ description: Game design principles. GDD structure, balancing, player psychology
 
 # Game Design Principles
 
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
+
 > Design thinking for engaging games.
 
 ---

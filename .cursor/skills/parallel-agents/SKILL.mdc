@@ -7,6 +7,8 @@ description: Multi-agent orchestration patterns. Use when multiple independent t
 
 # Native Parallel Agents
 
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
+
 > Orchestration through Antigravity's built-in Agent Tool
 
 ## Overview

@@ -6,6 +6,10 @@ description: Structured task planning with clear breakdowns, dependencies, and v
 
 # Plan Writing
 
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
+
 > Source: obra/superpowers
 
 ## Overview

@@ -7,6 +7,10 @@ license: MIT
 
 # Research
 
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
+
 ## Research Methodology
 
 Always honoring **YAGNI**, **KISS**, and **DRY** principles.

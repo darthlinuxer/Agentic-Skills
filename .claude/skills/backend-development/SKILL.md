@@ -13,6 +13,10 @@ license: MIT
 
 # Backend Development Skill
 
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
+
 Production-ready backend development with modern technologies, best practices, and proven patterns.
 
 ## When to Use

@@ -6,6 +6,8 @@ description: Python development principles and decision-making. Framework select
 
 # Python Patterns
 
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+
 > Python development principles and decision-making for 2025.
 > **Learn to THINK, not memorize patterns.**
 

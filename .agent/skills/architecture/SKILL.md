@@ -7,6 +7,8 @@ name: architecture
 
 # Architecture Decision Framework
 
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
+
 > "Requirements drive architecture. Trade-offs inform decisions. ADRs capture rationale."
 
 ## 🎯 Selective Reading Rule

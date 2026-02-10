@@ -6,6 +6,8 @@ description: Red team tactics principles based on MITRE ATT&CK. Attack phases, d
 
 # Red Team Tactics
 
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
+
 > Adversary simulation principles based on MITRE ATT&CK framework.
 
 ---

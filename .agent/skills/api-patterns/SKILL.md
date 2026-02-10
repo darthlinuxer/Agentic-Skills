@@ -6,6 +6,8 @@ name: api-patterns
 
 # API Patterns
 
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+
 > API design principles and decision-making for 2025.
 > **Learn to THINK, not copy fixed patterns.**
 

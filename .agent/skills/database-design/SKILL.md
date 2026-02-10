@@ -6,6 +6,8 @@ name: database-design
 
 # Database Design
 
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
+
 > **Learn to THINK, not copy SQL patterns.**
 
 ## 🎯 Selective Reading Rule

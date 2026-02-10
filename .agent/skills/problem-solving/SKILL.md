@@ -9,6 +9,8 @@ name: problem-solving
 
 # Problem-Solving Techniques
 
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
+
 Systematic approaches for different types of stuck-ness. Each technique targets specific problem patterns.
 
 ## When to Use

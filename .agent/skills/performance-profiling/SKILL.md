@@ -6,6 +6,8 @@ name: performance-profiling
 
 # Performance Profiling
 
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+
 > Measure, analyze, optimize - in that order.
 
 ## 🔧 Runtime Scripts

@@ -6,6 +6,8 @@ description: 4-phase systematic debugging methodology with root cause analysis a
 
 # Systematic Debugging
 
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
+
 > Source: obra/superpowers
 
 ## Overview
