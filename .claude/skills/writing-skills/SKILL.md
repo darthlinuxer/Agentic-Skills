@@ -1,6 +1,7 @@
 ---
 name: writing-skills
-description: Helps author concise, discoverable skills using TDD-style testing. Use when creating, editing, or verifying skills before deployment.
+description: Helps author concise, discoverable skills using TDD-style testing. Use
+  when creating, editing, or verifying skills before deployment.
 ---
 
 # Writing Skills

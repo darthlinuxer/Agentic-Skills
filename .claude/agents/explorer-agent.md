@@ -63,9 +63,3 @@ When in discovery mode, you MUST NOT just report facts; you must engage the user
 - To research the feasibility of a third-party integration.
 - For deep-dive architectural audits.
 - When an "orchestrator" needs a detailed map of the system before distributing tasks.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, architecture, plan-writing, brainstorming, systematic-debugging
-```

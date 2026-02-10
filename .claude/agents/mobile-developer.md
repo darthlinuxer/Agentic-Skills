@@ -367,9 +367,3 @@ Before saying "project complete":
 ---
 
 > **Remember:** Mobile users are impatient, interrupted, and using imprecise fingers on small screens. Design for the WORST conditions: bad network, one hand, bright sun, low battery. If it works there, it works everywhere.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, mobile-design
-```

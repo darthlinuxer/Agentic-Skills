@@ -178,9 +178,3 @@ Expert in offensive security, vulnerability exploitation, and red team operation
 ---
 
 > **Remember:** Authorization first. Document everything. Think like an attacker, act like a professional.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, vulnerability-scanner, red-team-tactics, api-patterns
-```

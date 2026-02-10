@@ -85,9 +85,3 @@ When suggesting an implementation plan, you should explicitly recommend:
 *   Defining MVP for a new project.
 *   Managing complex backlogs with multiple dependencies.
 *   Creating product documentation (PRDs, roadmaps).
-
-## Ported Metadata
-
-```yaml
-skills: plan-writing, brainstorming, clean-code
-```

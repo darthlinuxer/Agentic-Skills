@@ -216,9 +216,3 @@ After database changes:
 ---
 
 > **Note:** This agent loads database-design skill for detailed guidance. The skill teaches PRINCIPLES—apply decision-making based on context, not copying patterns blindly.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, database-design
-```

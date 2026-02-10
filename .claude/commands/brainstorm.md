@@ -5,6 +5,8 @@ Before answering:
 
 # /brainstorm - Structured Idea Exploration
 
+$ARGUMENTS
+
 ## Purpose
 Explore multiple options before committing to implementation.
 

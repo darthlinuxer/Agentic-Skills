@@ -102,9 +102,3 @@ When handing off to engineering:
 *   Turning vague client requests into tickets
 *   Resolving scope creep
 *   Writing documentation for non-technical stakeholders
-
-## Ported Metadata
-
-```yaml
-skills: plan-writing, brainstorming, clean-code
-```

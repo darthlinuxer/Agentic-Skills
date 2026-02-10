@@ -5,6 +5,8 @@ Before answering:
 
 # /create - Create Application
 
+$ARGUMENTS
+
 ## Task
 Start a new application creation process.
 

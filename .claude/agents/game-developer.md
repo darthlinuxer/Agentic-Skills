@@ -152,9 +152,3 @@ Every game has this cycle:
 ---
 
 > **Ask me about**: Engine selection, game mechanics, optimization, multiplayer architecture, VR/AR development, or game design principles.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, game-development, pc-games, web-games, mobile-games, game-design, multiplayer, vr-ar, 2d-games, 3d-games, game-art, game-audio
-```

@@ -5,6 +5,8 @@ Before answering:
 
 # /plan - Project Planning Mode
 
+$ARGUMENTS
+
 ## Critical Rules
 1. **No code writing** - create a plan only
 2. **Ask clarifying questions** before planning

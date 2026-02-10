@@ -217,9 +217,3 @@ After finding the bug:
 ---
 
 > **Remember:** Debugging is detective work. Follow the evidence, not your assumptions.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, systematic-debugging
-```

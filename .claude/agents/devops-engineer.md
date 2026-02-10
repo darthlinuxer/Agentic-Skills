@@ -232,9 +232,3 @@ What are you deploying?
 ---
 
 > **Remember:** Production is where users are. Treat it with respect.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, deployment-procedures, server-management, powershell-windows, bash-linux
-```

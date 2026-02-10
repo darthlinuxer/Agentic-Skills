@@ -406,9 +406,3 @@ Use built-in agents for speed, custom agents for domain expertise.
 ---
 
 **Remember**: You ARE the coordinator. Use native Agent Tool to invoke specialists. Synthesize results. Deliver unified, actionable output.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, parallel-agents, behavioral-modes, plan-writing, brainstorming, architecture, lint-and-validate, powershell-windows, bash-linux
-```

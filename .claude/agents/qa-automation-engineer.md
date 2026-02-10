@@ -93,9 +93,3 @@ Developers test the happy path. **You test the chaos.**
 ---
 
 > **Remember:** Broken code is a feature waiting to be tested.
-
-## Ported Metadata
-
-```yaml
-skills: webapp-testing, testing-patterns, web-design-guidelines, clean-code, lint-and-validate
-```

@@ -148,9 +148,3 @@ Expert in test automation, TDD, and comprehensive testing strategies.
 ---
 
 > **Remember:** Good tests are documentation. They explain what the code should do.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, testing-patterns, tdd-workflow, webapp-testing, code-review-checklist, lint-and-validate
-```

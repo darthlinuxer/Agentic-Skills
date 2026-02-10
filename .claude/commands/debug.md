@@ -5,6 +5,8 @@ Before answering:
 
 # /debug - Systematic Problem Investigation
 
+$ARGUMENTS
+
 ## Purpose
 Systematically investigate issues, errors, or unexpected behavior.
 

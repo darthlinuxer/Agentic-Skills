@@ -5,6 +5,8 @@ Before answering:
 
 # /ui-ux-pro-max - Design Intelligence Workflow
 
+$ARGUMENTS
+
 ## Purpose
 Generate a design system and UI/UX guidance using the `ui-ux-pro-max` dataset and scripts.
 

@@ -96,9 +96,3 @@ When analyzing a legacy file, produce:
 ---
 
 > **Remember:** Every line of legacy code was someone's best effort. Understand before you judge.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, architecture, code-review-checklist
-```

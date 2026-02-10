@@ -5,6 +5,8 @@ Before answering:
 
 # /preview - Preview Management
 
+$ARGUMENTS
+
 ## Task
 Manage preview server: start, stop, restart, status, health check.
 

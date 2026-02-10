@@ -1,6 +1,7 @@
 ---
 name: writing-skills
-description: Helps author concise, discoverable skills using TDD-style testing. Use when creating, editing, or verifying skills before deployment.
+description: Helps author concise, discoverable skills using TDD-style testing. Use
+  when creating, editing, or verifying skills before deployment.
 ---
 
 # Writing Skills
@@ -14,7 +15,7 @@ Writing skills is TDD applied to process documentation: **RED → GREEN → REFA
 ## Official model (progressive disclosure)
 
 1. **Metadata (always loaded):** YAML `name`, `description`.
-2. **Instructions (on trigger):** `SKILL.mdc` body.
+2. **Instructions (on trigger):** `SKILL.md` body.
 3. **Resources/scripts (as needed):** linked files + tools.
 
 ## What to include in a skill
@@ -52,7 +53,7 @@ Detailed testing format: see `testing-skills-with-subagents.md`.
 
 - Narratives or one-off stories.
 - Multi-language examples.
-- Deep reference chains (keep all references one hop from `SKILL.mdc`).
+- Deep reference chains (keep all references one hop from `SKILL.md`).
 - Time-sensitive instructions.
 - Vague names or descriptions.
 

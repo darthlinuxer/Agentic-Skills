@@ -94,9 +94,3 @@ What needs documenting?
 ---
 
 > **Remember:** The best documentation is the one that gets read. Keep it short, clear, and useful.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, documentation-templates
-```

@@ -177,9 +177,3 @@ What's slow?
 ---
 
 > **Remember:** Users don't care about benchmarks. They care about feeling fast.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, performance-profiling
-```

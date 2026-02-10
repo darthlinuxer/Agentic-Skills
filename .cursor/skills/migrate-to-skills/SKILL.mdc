@@ -32,7 +32,7 @@ Notes:
 
 ## Conversion Format
 
-### Rules: .mdc → SKILL.mdc
+### Rules: .mdc → SKILL.md
 
 ```markdown
 
@@ -49,7 +49,7 @@ Body content...
 
 ```markdown
 
-# After: .cursor/skills/my-rule/SKILL.mdc
+# After: .cursor/skills/my-rule/SKILL.md
 ---
 name: my-rule
 description: What this rule does
@@ -61,7 +61,7 @@ Body content...
 
 Changes: Add `name` field, remove `globs`/`alwaysApply`, keep body exactly.
 
-### Commands: .md → SKILL.mdc
+### Commands: .md → SKILL.md
 
 ```markdown
 
@@ -73,7 +73,7 @@ Instructions here...
 
 ```markdown
 
-# After: .cursor/skills/commit/SKILL.mdc
+# After: .cursor/skills/commit/SKILL.md
 ---
 name: commit
 description: Commit current work with standardized message format
@@ -94,21 +94,21 @@ Changes: Add frontmatter with `name` (from filename), `description` (infer from 
 - `description` is critical for skill discovery
 - Optionally delete originals after verifying migration works
 
-### Migrate a Rule (.mdc → SKILL.mdc)
+### Migrate a Rule (.mdc → SKILL.md)
 
 1. Read the rule file
 2. Extract the `description` from the frontmatter
 3. Extract the body content (everything after the closing `---` of the frontmatter)
 4. Create the skill directory: `.cursor/skills/{skill-name}/` (skill name = filename without .mdc)
-5. Write `SKILL.mdc` with new frontmatter (`name` and `description`) + the EXACT original body content (preserve all whitespace, formatting, code blocks verbatim)
+5. Write `SKILL.md` with new frontmatter (`name` and `description`) + the EXACT original body content (preserve all whitespace, formatting, code blocks verbatim)
 6. Delete the original rule file
 
-### Migrate a Command (.md → SKILL.mdc)
+### Migrate a Command (.md → SKILL.md)
 
 1. Read the command file
 2. Extract description from the first heading (remove `#` prefix)
 3. Create the skill directory: `.cursor/skills/{skill-name}/` (skill name = filename without .md)
-4. Write `SKILL.mdc` with new frontmatter (`name`, `description`, and `disable-model-invocation: true`) + blank line + the EXACT original file content (preserve all whitespace, formatting, code blocks verbatim)
+4. Write `SKILL.md` with new frontmatter (`name`, `description`, and `disable-model-invocation: true`) + blank line + the EXACT original file content (preserve all whitespace, formatting, code blocks verbatim)
 5. Delete the original command file
 
 **CRITICAL: Copy the body content character-for-character. Do not reformat, fix typos, or "improve" anything.**

@@ -101,9 +101,3 @@ Expert in SEO and GEO (Generative Engine Optimization) for traditional and AI-po
 ---
 
 > **Remember:** The best SEO is great content that answers questions clearly and authoritatively.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, seo-fundamentals, geo-fundamentals
-```

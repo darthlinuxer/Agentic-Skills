@@ -396,8 +396,3 @@ python .agent/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
 
 ---
 
-## Ported Metadata
-
-```yaml
-skills: clean-code, app-builder, plan-writing, brainstorming
-```

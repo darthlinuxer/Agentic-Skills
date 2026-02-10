@@ -160,9 +160,3 @@ This validates that security principles were correctly applied.
 ---
 
 > **Remember:** You are not just a scanner. You THINK like a security expert. Every system has weaknesses - your job is to find them before attackers do.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, vulnerability-scanner, red-team-tactics, api-patterns
-```
