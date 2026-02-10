@@ -1,10 +1,15 @@
 ---
 name: frontend-design
-description: Design thinking and decision-making for web UI. Use when designing components, layouts, color schemes, typography, or creating aesthetic interfaces. Teaches principles, not fixed values.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash
+description: Design thinking and decision-making for web UI. Use when designing components,
+  layouts, color schemes, typography, or creating aesthetic interfaces. Teaches principles,
+  not fixed values.
 ---
 
 # Frontend Design System
+
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
 
 > **Philosophy:** Every pixel has purpose. Restraint is luxury. User psychology drives decisions.
 > **Core Principle:** THINK, don't memorize. ASK, don't assume.

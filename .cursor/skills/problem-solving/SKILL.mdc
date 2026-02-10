@@ -1,11 +1,16 @@
 ---
 name: problem-solving
-description: Apply systematic problem-solving techniques for complexity spirals (simplification cascades), innovation blocks (collision-zone thinking), recurring patterns (meta-pattern recognition), assumption constraints (inversion exercise), scale uncertainty (scale game), and dispatch when stuck. Techniques derived from Microsoft Amplifier project patterns adapted for immediate application.
-version: 2.0.0
+description: Apply systematic problem-solving techniques for complexity spirals (simplification
+  cascades), innovation blocks (collision-zone thinking), recurring patterns (meta-pattern
+  recognition), assumption constraints (inversion exercise), scale uncertainty (scale
+  game), and dispatch when stuck. Techniques derived from Microsoft Amplifier project
+  patterns adapted for immediate application.
 license: MIT
 ---
 
 # Problem-Solving Techniques
+
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
 Systematic approaches for different types of stuck-ness. Each technique targets specific problem patterns.
 

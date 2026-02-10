@@ -1,6 +1,3 @@
----
-description: Index of available skills and rules.
----
 
 You have multiple specialized rules organized into **Skills** (comprehensive guides with references) and **Rules** (concise best practices).
 

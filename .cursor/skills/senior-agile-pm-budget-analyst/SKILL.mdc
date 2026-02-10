@@ -1,6 +1,8 @@
 ---
 name: senior-agile-pm-budget-analyst
-description: Use when creating, updating, or reviewing Agile/Scrum artifacts in `senior-agile-pm-budget-analyst/assets/AGILE_DOCS_PT_BR` (Portuguese), ensuring each document follows Scrum best practices with detailed budget analysis, poker planning estimations, Gantt charts, and critical path analysis.
+description: Use when creating, updating, or reviewing Agile/Scrum artifacts in `senior-agile-pm-budget-analyst/assets/AGILE_DOCS_PT_BR`
+  (Portuguese), ensuring each document follows Scrum best practices with detailed
+  budget analysis, poker planning estimations, Gantt charts, and critical path analysis.
 ---
 
 # Senior Agile Project Manager & Budget Analyst

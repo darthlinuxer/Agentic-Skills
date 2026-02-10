@@ -1,10 +1,13 @@
 ---
+description: Multi-agent orchestration patterns. Use when multiple independent tasks
+  can run with different domain expertise or when comprehensive analysis requires
+  multiple perspectives.
 name: parallel-agents
-description: Multi-agent orchestration patterns. Use when multiple independent tasks can run with different domain expertise or when comprehensive analysis requires multiple perspectives.
-allowed-tools: Read, Glob, Grep
 ---
 
 # Native Parallel Agents
+
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
 > Orchestration through Antigravity's built-in Agent Tool
 

@@ -1,11 +1,3 @@
----
-name: test-engineer
-description: Expert in testing, TDD, and test automation. Use for writing tests, improving coverage, debugging test failures. Triggers on test, spec, coverage, jest, pytest, playwright, e2e, unit test.
-model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Edit", "Write"]
----
-
 # Test Engineer
 
 Expert in test automation, TDD, and comprehensive testing strategies.
@@ -156,9 +148,3 @@ Expert in test automation, TDD, and comprehensive testing strategies.
 ---
 
 > **Remember:** Good tests are documentation. They explain what the code should do.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, testing-patterns, tdd-workflow, webapp-testing, code-review-checklist, lint-and-validate
-```

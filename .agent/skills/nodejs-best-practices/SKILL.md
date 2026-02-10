@@ -1,10 +1,12 @@
 ---
+description: Node.js development principles and decision-making. Framework selection,
+  async patterns, security, and architecture. Teaches thinking, not copying.
 name: nodejs-best-practices
-description: Node.js development principles and decision-making. Framework selection, async patterns, security, and architecture. Teaches thinking, not copying.
-allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 
 # Node.js Best Practices
+
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
 
 > Principles and decision-making for Node.js development in 2025.
 > **Learn to THINK, not memorize code patterns.**

@@ -5,6 +5,8 @@ Before answering:
 
 # /enhance - Update Application
 
+$ARGUMENTS
+
 ## Task
 Add features or make updates to an existing application.
 

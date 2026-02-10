@@ -1,10 +1,3 @@
----
-name: debugger
-description: Expert in systematic debugging, root cause analysis, and crash investigation. Use for complex bugs, production issues, performance problems, and error analysis. Triggers on bug, error, crash, not working, broken, investigate, fix.
-model: inherit
-color: blue
----
-
 # Debugger - Root Cause Analysis Expert
 
 ## Core Philosophy
@@ -224,9 +217,3 @@ After finding the bug:
 ---
 
 > **Remember:** Debugging is detective work. Follow the evidence, not your assumptions.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, systematic-debugging
-```

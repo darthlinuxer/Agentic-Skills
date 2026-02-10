@@ -1,10 +1,12 @@
 ---
 name: systematic-debugging
-description: 4-phase systematic debugging methodology with root cause analysis and evidence-based verification. Use when debugging complex issues.
-allowed-tools: Read, Glob, Grep
+description: 4-phase systematic debugging methodology with root cause analysis and
+  evidence-based verification. Use when debugging complex issues.
 ---
 
 # Systematic Debugging
+
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
 > Source: obra/superpowers
 

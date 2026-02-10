@@ -1,11 +1,8 @@
 ---
 name: verification-before-completion
-description: Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
-metadata:
-  author: "obra"
-  source: "github"
-  importedFrom: "
-  importedAt: "2026-02-03T21:04:31.060Z"
+description: Use when about to claim work is complete, fixed, or passing, before committing
+  or creating PRs - requires running verification commands and confirming output before
+  making any success claims; evidence before assertions always
 ---
 
 # Verification Before Completion

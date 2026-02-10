@@ -1,10 +1,12 @@
 ---
 name: database-design
-description: Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases.
-allowed-tools: Read, Write, Edit, Glob, Grep
+description: Database design principles and decision-making. Schema design, indexing
+  strategy, ORM selection, serverless databases.
 ---
 
 # Database Design
+
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
 > **Learn to THINK, not copy SQL patterns.**
 

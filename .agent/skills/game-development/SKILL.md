@@ -1,10 +1,12 @@
 ---
+description: Game development orchestrator. Routes to platform-specific skills based
+  on project needs.
 name: game-development
-description: Game development orchestrator. Routes to platform-specific skills based on project needs.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 
 # Game Development
+
+> **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
 > **Orchestrator skill** that provides core principles and routes to specialized sub-skills.
 

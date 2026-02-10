@@ -1,8 +1,7 @@
 ---
 name: writing-prompts
-description: Use when crafting prompts for LLMs to improve response quality, accuracy, consistency, and task performance
-metadata:
-  author: "darthlinuxer"
+description: Use when crafting prompts for LLMs to improve response quality, accuracy,
+  consistency, and task performance
 ---
 
 # Writing Prompts

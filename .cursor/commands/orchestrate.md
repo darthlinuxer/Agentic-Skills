@@ -5,6 +5,8 @@ Before answering:
 
 # /orchestrate - Multi-Agent Orchestration
 
+$ARGUMENTS
+
 ## Purpose
 Coordinate multiple specialist perspectives for complex tasks.
 

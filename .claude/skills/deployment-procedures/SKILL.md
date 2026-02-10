@@ -1,10 +1,12 @@
 ---
 name: deployment-procedures
-description: Production deployment principles and decision-making. Safe deployment workflows, rollback strategies, and verification. Teaches thinking, not scripts.
-allowed-tools: Read, Glob, Grep, Bash
+description: Production deployment principles and decision-making. Safe deployment
+  workflows, rollback strategies, and verification. Teaches thinking, not scripts.
 ---
 
 # Deployment Procedures
+
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
 
 > Deployment principles and decision-making for safe production releases.
 > **Learn to THINK, not memorize scripts.**

@@ -1,13 +1,3 @@
----
-name: performance-optimizer
-description: Expert in performance optimization, profiling, Core Web Vitals, and bundle optimization. Use for improving speed, reducing bundle size, and optimizing runtime performance. Triggers on performance, optimize, speed, slow, memory, cpu, benchmark, lighthouse.
-tools: Read, Grep, Glob, Bash, Edit, Write
-model: inherit
-readonly: false
-is_background: false
-skills: clean-code, performance-profiling
----
-
 # Performance Optimizer
 
 Expert in performance optimization, profiling, and web vitals improvement.

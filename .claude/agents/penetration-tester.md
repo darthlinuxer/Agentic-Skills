@@ -1,11 +1,3 @@
----
-name: penetration-tester
-description: Expert in offensive security, penetration testing, red team operations, and vulnerability exploitation. Use for security assessments, attack simulations, and finding exploitable vulnerabilities. Triggers on pentest, exploit, attack, hack, breach, pwn, redteam, offensive.
-model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Edit", "Write"]
----
-
 # Penetration Tester
 
 Expert in offensive security, vulnerability exploitation, and red team operations.
@@ -186,9 +178,3 @@ Expert in offensive security, vulnerability exploitation, and red team operation
 ---
 
 > **Remember:** Authorization first. Document everything. Think like an attacker, act like a professional.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, vulnerability-scanner, red-team-tactics, api-patterns
-```

@@ -1,6 +1,8 @@
 ---
 name: create-skill
-description: Guides users through creating effective Agent Skills for Cursor. Use when the user wants to create, write, or author a new skill, or asks about skill structure, best practices, or SKILL.mdc format.
+description: Guides users through creating effective Agent Skills for Cursor. Use
+  when the user wants to create, write, or author a new skill, or asks about skill
+  structure, best practices, or SKILL.mdc format.
 ---
 
 # Creating Skills in Cursor
@@ -12,7 +14,7 @@ This skill guides you through creating effective Agent Skills for Cursor. Skills
 Before creating a skill, gather essential information from the user about:
 
 1. **Purpose and scope**: What specific task or workflow should this skill help with?
-2. **Target location**: Should this be a personal skill (~/.cursor/skills/) or project skill (.cursor/skills/)?
+2. **Target location**: Should this be a personal skill (user-level) or project skill (workspace-level)?
 3. **Trigger scenarios**: When should the agent automatically apply this skill?
 4. **Key domain knowledge**: What specialized information does the agent need that it wouldn't already know?
 5. **Output format preferences**: Are there specific templates, formats, or styles required?
@@ -28,7 +30,7 @@ If you need clarification, use the AskQuestion tool when available:
 
 ```
 Example AskQuestion usage:
-- "Where should this skill be stored?" with options like ["Personal (~/.cursor/skills/)", "Project (.cursor/skills/)"]
+- "Where should this skill be stored?" with options like ["Personal (user-level)", "Project (workspace-level)"]
 - "Should this skill include executable scripts?" with options like ["Yes", "No"]
 ```
 
@@ -40,11 +42,11 @@ If the AskQuestion tool is not available, ask these questions conversationally.
 
 ### Directory Layout
 
-Skills are stored as directories containing a `SKILL.mdc` file:
+Skills are stored as directories containing a `SKILL.md` file:
 
 ```
 skill-name/
-├── SKILL.mdc              # Required - main instructions
+├── SKILL.md              # Required - main instructions
 ├── reference.md          # Optional - detailed documentation
 ├── examples.md           # Optional - usage examples
 └── scripts/              # Optional - utility scripts
@@ -56,14 +58,14 @@ skill-name/
 
 | Type | Path | Scope |
 |------|------|-------|
-| Personal | ~/.cursor/skills/skill-name/ | Available across all your projects |
-| Project | .cursor/skills/skill-name/ | Shared with anyone using the repository |
+| Personal | User-level skills directory | Available across all your projects |
+| Project | Workspace skills directory | Shared with anyone using the repository |
 
-**IMPORTANT**: Never create skills in `~/.cursor/skills-cursor/`. This directory is reserved for Cursor's internal built-in skills and is managed automatically by the system.
+**IMPORTANT**: Never create skills in platform internal directories. These are reserved for the platform's built-in skills and managed automatically.
 
-### SKILL.mdc Structure
+### SKILL.md Structure
 
-Every skill requires a `SKILL.mdc` file with YAML frontmatter and markdown body:
+Every skill requires a `SKILL.md` file with YAML frontmatter and markdown body:
 
 ```markdown
 ---
@@ -166,13 +168,13 @@ use a library. There are many libraries available for PDF processing, but we
 recommend pdfplumber because it's easy to use and handles most cases well...
 ```
 
-### 2. Keep SKILL.mdc Under 500 Lines
+### 2. Keep SKILL.md Under 500 Lines
 
-For optimal performance, the main SKILL.mdc file should be concise. Use progressive disclosure for detailed content.
+For optimal performance, the main SKILL.md file should be concise. Use progressive disclosure for detailed content.
 
 ### 3. Progressive Disclosure
 
-Put essential information in SKILL.mdc; detailed reference material in separate files that the agent reads only when needed.
+Put essential information in SKILL.md; detailed reference material in separate files that the agent reads only when needed.
 
 ```markdown
 
@@ -186,7 +188,7 @@ Put essential information in SKILL.mdc; detailed reference material in separate 
 - For usage examples, see [examples.md](examples.md)
 ```
 
-**Keep references one level deep** - link directly from SKILL.mdc to reference files. Deeply nested references may result in partial reads.
+**Keep references one level deep** - link directly from SKILL.md to reference files. Deeply nested references may result in partial reads.
 
 ### 4. Set Appropriate Degrees of Freedom
 
@@ -418,13 +420,13 @@ If you have access to the AskQuestion tool, use it for efficient structured gath
 ### Phase 3: Implementation
 
 1. Create the directory structure
-2. Write the SKILL.mdc file with frontmatter
+2. Write the SKILL.md file with frontmatter
 3. Create any supporting reference files
 4. Create any utility scripts if needed
 
 ### Phase 4: Verification
 
-1. Verify the SKILL.mdc is under 500 lines
+1. Verify the SKILL.md is under 500 lines
 2. Check that the description is specific and includes trigger terms
 3. Ensure consistent terminology throughout
 4. Verify all file references are one level deep
@@ -439,12 +441,12 @@ Here's a complete example of a well-structured skill:
 **Directory structure:**
 ```
 code-review/
-├── SKILL.mdc
+├── SKILL.md
 ├── STANDARDS.md
 └── examples.md
 ```
 
-**SKILL.mdc:**
+**SKILL.md:**
 ```markdown
 ---
 name: code-review
@@ -494,7 +496,7 @@ Before finalizing a skill, verify:
 - [ ] Description is specific and includes key terms
 - [ ] Description includes both WHAT and WHEN
 - [ ] Written in third person
-- [ ] SKILL.mdc body is under 500 lines
+- [ ] SKILL.md body is under 500 lines
 - [ ] Consistent terminology throughout
 - [ ] Examples are concrete, not abstract
 

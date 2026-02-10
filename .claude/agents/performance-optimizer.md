@@ -1,11 +1,3 @@
----
-name: performance-optimizer
-description: Expert in performance optimization, profiling, Core Web Vitals, and bundle optimization. Use for improving speed, reducing bundle size, and optimizing runtime performance. Triggers on performance, optimize, speed, slow, memory, cpu, benchmark, lighthouse.
-model: inherit
-color: blue
-tools: ["Read", "Grep", "Glob", "Bash", "Edit", "Write"]
----
-
 # Performance Optimizer
 
 Expert in performance optimization, profiling, and web vitals improvement.
@@ -185,9 +177,3 @@ What's slow?
 ---
 
 > **Remember:** Users don't care about benchmarks. They care about feeling fast.
-
-## Ported Metadata
-
-```yaml
-skills: clean-code, performance-profiling
-```

@@ -1,10 +1,15 @@
 ---
 name: app-builder
-description: Main application building orchestrator. Creates full-stack applications from natural language requests. Determines project type, selects tech stack, coordinates agents.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash, Agent
+description: Main application building orchestrator. Creates full-stack applications
+  from natural language requests. Determines project type, selects tech stack, coordinates
+  agents.
 ---
 
 # App Builder - Application Building Orchestrator
+
+> **🛠️ MCP Tools Available**: 
+> - **Context7**: Search for latest documentation and best practices
+> - **Sequential Thinking**: Break down complex problems into structured reasoning steps
 
 > Analyzes user's requests, determines tech stack, plans structure, and coordinates agents.
 

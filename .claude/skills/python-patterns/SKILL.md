@@ -1,10 +1,12 @@
 ---
 name: python-patterns
-description: Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, not copying.
-allowed-tools: Read, Write, Edit, Glob, Grep
+description: Python development principles and decision-making. Framework selection,
+  async patterns, type hints, project structure. Teaches thinking, not copying.
 ---
 
 # Python Patterns
+
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
 
 > Python development principles and decision-making for 2025.
 > **Learn to THINK, not memorize patterns.**

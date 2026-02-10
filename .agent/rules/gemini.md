@@ -1,12 +1,8 @@
----
-trigger: always_on
----
 
 # gemini.md - Antigravity Kit
 
 > This file defines how the AI behaves in this workspace.
 
----
 
 ## CRITICAL: AGENT & SKILL PROTOCOL (START HERE)
 
@@ -25,7 +21,6 @@ Agent activated → Check frontmatter "skills:" → Read SKILL.md (INDEX) → Re
     - ✅ Activate: Read Rules → Check Frontmatter → Load SKILL.md → Apply All.
 2. **Forbidden:** Never skip reading agent rules or skill instructions. "Read → Understand → Apply" is mandatory.
 
----
 
 ## 📥 REQUEST CLASSIFIER (STEP 1)
 
@@ -40,7 +35,6 @@ Agent activated → Check frontmatter "skills:" → Read SKILL.md (INDEX) → Re
 | **DESIGN/UI**    | "design", "UI", "page", "dashboard"        | TIER 0 + TIER 1 + Agent        | **{task-slug}.md Required** |
 | **SLASH CMD**    | /create, /orchestrate, /debug              | Command-specific flow          | Variable                    |
 
----
 
 ## 🤖 INTELLIGENT AGENT ROUTING (STEP 2 - AUTO)
 
@@ -91,7 +85,6 @@ When auto-applying an agent, inform the user:
 > 🔴 **Self-Check Trigger:** Every time you are about to write code or create UI, ask yourself:
 > "Have I completed the Agent Routing Checklist?" If NO → Complete it first.
 
----
 
 ## TIER 0: UNIVERSAL RULES (Always Active)
 
@@ -143,7 +136,6 @@ When user's prompt is NOT in English:
 2. What PRINCIPLES must I apply?
 3. How does this DIFFER from generic output?
 
----
 
 ## TIER 1: CODE RULES (When Writing Code)
 
@@ -234,7 +226,6 @@ When user's prompt is NOT in English:
 
 > 🔴 **Edit mode:** If multi-file or structural change → Offer to create `{task-slug}.md`. For single-file fixes → Proceed directly.
 
----
 
 ## TIER 2: DESIGN RULES (Reference)
 
@@ -254,7 +245,6 @@ When user's prompt is NOT in English:
 
 > 🔴 **For design work:** Open and READ the agent file. Rules are there.
 
----
 
 ## 📁 QUICK REFERENCE
 
@@ -270,4 +260,3 @@ When user's prompt is NOT in English:
 - **Audits**: `ux_audit.py`, `mobile_audit.py`, `lighthouse_audit.py`, `seo_checker.py`
 - **Test**: `playwright_runner.py`, `test_runner.py`
 
----

@@ -1,10 +1,13 @@
 ---
 name: mobile-design
-description: Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform conventions. Teaches principles, not fixed values. Use when building React Native, Flutter, or native mobile apps.
-allowed-tools: Read, Glob, Grep, Bash
+description: Mobile-first design thinking and decision-making for iOS and Android
+  apps. Touch interaction, performance patterns, platform conventions. Teaches principles,
+  not fixed values. Use when building React Native, Flutter, or native mobile apps.
 ---
 
 # Mobile Design System
+
+> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
 
 > **Philosophy:** Touch-first. Battery-conscious. Platform-respectful. Offline-capable.
 > **Core Principle:** Mobile is NOT a small desktop. THINK mobile constraints, ASK platform choice.
