@@ -12,8 +12,8 @@
 
 | Category | Mirror Groups |
 |---|---:|
-| Agents | 20 |
-| Skills | 76 |
+| Agents | 18 |
+| Skills | 68 |
 | Commands/Workflows | 17 |
 | Rules | 4 |
 

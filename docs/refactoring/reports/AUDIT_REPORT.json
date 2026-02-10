@@ -14,16 +14,16 @@
       "low": 0
     },
     "coverage": {
-      "agent_groups": 20,
-      "skill_groups": 76,
+      "agent_groups": 18,
+      "skill_groups": 68,
       "command_groups": 17,
       "rule_groups": 4
     },
     "category_counts": {},
     "code_counts": {},
     "metric_counters": {
-      "agent_groups": 20,
-      "skill_groups": 76,
+      "agent_groups": 18,
+      "skill_groups": 68,
       "command_groups": 17,
       "rule_groups": 4
     }
