@@ -1,6 +1,3 @@
----
-description: Git commit and branching conventions.
----
 
 # Git Conventions
 

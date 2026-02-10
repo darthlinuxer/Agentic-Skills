@@ -1,7 +1,7 @@
 ---
+description: Documentation templates and structure guidelines. README, API docs, code
+  comments, and AI-friendly documentation.
 name: documentation-templates
-description: Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation.
-allowed-tools: Read, Glob, Grep
 ---
 
 # Documentation Templates

@@ -1,11 +1,10 @@
 ---
 name: mcp-builder
-description: "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
-license: "Complete terms in LICENSE.txt"
-author: "anthropics"
-source: "github"
-importedFrom: ""
-importedAt: "2026-02-04T09:22:46.437Z"
+description: Guide for creating high-quality MCP (Model Context Protocol) servers
+  that enable LLMs to interact with external services through well-designed tools.
+  Use when building MCP servers to integrate external APIs or services, whether in
+  Python (FastMCP) or Node/TypeScript (MCP SDK).
+license: Complete terms in LICENSE.txt
 ---
 
 # MCP Server Development Guide

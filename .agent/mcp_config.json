@@ -6,7 +6,7 @@
                 "-y",
                 "@upstash/context7-mcp",
                 "--api-key",
-                "YOUR_API_KEY"
+                "ctx7sk-1333aa81-96e9-448b-9a9c-4fc14f85b476"
             ]
         },
         "shadcn": {

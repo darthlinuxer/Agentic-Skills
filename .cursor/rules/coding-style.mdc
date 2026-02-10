@@ -1,5 +1,6 @@
 ---
-alwaysApply: true
+description: "Coding style and best practices for TypeScript, JavaScript, and Python code"
+globs: "*.ts,*.tsx,*.js,*.jsx,*.py,*.vue,*.svelte"
 ---
 
 - Type safety first: Prefer TypeScript with explicit types on public functions, props, and return values. Avoid any and implicit any.

@@ -1,7 +1,7 @@
 ---
+description: Performance profiling principles. Measurement, analysis, and optimization
+  techniques.
 name: performance-profiling
-description: Performance profiling principles. Measurement, analysis, and optimization techniques.
-allowed-tools: Read, Glob, Grep, Bash
 ---
 
 # Performance Profiling

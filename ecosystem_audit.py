@@ -25,25 +25,25 @@ PLATFORMS = {
         'skill_file': 'SKILL.md',
         'rule_ext': '.md',
         'commands_folder': 'workflows',
-        'required_agent_metadata': ['name', 'description', 'tools', 'model'],
-        'required_skill_metadata': ['name', 'description'],
-        'required_rule_metadata': ['trigger']
+        'required_agent_metadata': [],  # Agents should have NO metadata (plain markdown)
+        'required_skill_metadata': ['description'],  # Only description required (name optional)
+        'required_rule_metadata': []  # Rules should have NO metadata (activation via UI)
     },
     '.claude': {
         'skill_file': 'SKILL.md',
         'rule_ext': '.md',
         'commands_folder': 'commands',
-        'required_agent_metadata': ['name', 'description'],
-        'required_skill_metadata': ['name', 'description'],
-        'required_rule_metadata': []
+        'required_agent_metadata': [],  # Agents should have NO metadata (plain markdown)
+        'required_skill_metadata': ['name', 'description'],  # name and description required
+        'required_rule_metadata': []  # Rules should have NO metadata
     },
     '.cursor': {
         'skill_file': 'SKILL.mdc',
         'rule_ext': '.mdc',
         'commands_folder': 'commands',
-        'required_agent_metadata': ['name', 'description', 'tools', 'model'],
-        'required_skill_metadata': ['name', 'description'],
-        'required_rule_metadata': ['alwaysApply']
+        'required_agent_metadata': [],  # Agents should have NO metadata (plain markdown)
+        'required_skill_metadata': ['name', 'description'],  # name and description required
+        'required_rule_metadata': []  # Rules metadata is optional (alwaysApply, globs, description)
     }
 }
 

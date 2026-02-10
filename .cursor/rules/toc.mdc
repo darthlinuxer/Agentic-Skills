@@ -1,5 +1,6 @@
 ---
-alwaysApply: true
+description: "Navigation and skill routing guide - helps choose the right skills and rules for the task. Use when planning work or organizing project structure."
+alwaysApply: false
 ---
 
 You have multiple specialized rules organized into **Skills** (comprehensive guides with references) and **Rules** (concise best practices).

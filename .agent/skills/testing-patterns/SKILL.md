@@ -1,7 +1,6 @@
 ---
-name: testing-patterns
 description: Testing patterns and principles. Unit, integration, mocking strategies.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash
+name: testing-patterns
 ---
 
 # Testing Patterns

@@ -1,7 +1,8 @@
 ---
 name: create-subagent
-description: Create custom subagents for specialized AI tasks. Use when the user wants to create a new type of subagent, set up task-specific agents, configure code reviewers, debuggers, or domain-specific assistants with custom prompts.
-disable-model-invocation: true
+description: Create custom subagents for specialized AI tasks. Use when the user wants
+  to create a new type of subagent, set up task-specific agents, configure code reviewers,
+  debuggers, or domain-specific assistants with custom prompts.
 ---
 
 # Creating Custom Subagents
