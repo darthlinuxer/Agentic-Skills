@@ -4,6 +4,14 @@ A **multi-platform agentic ecosystem** for AI-assisted development. It provides 
 
 ---
 
+## Quick Start
+
+1. **Pick your platform** — Cursor (`.cursor/commands/`), Claude Code (`.claude/commands/`), or Google Anthropic Agent (`.agent/workflows/`).
+2. **Run a command** — e.g. `/plan`, `/implement`, `/fix`, or `/docs` from the command palette or chat.
+3. **Be specific** — e.g. `/plan e-commerce site with cart and auth`. The orchestrator routes to the right agents and skills.
+
+---
+
 ## What this repo is
 
 - **Entry points**: 17 commands (Cursor/Claude) or workflows (Agent) that you invoke—e.g. `/plan`, `/implement`, `/fix`, `/docs`.
@@ -11,7 +19,7 @@ A **multi-platform agentic ecosystem** for AI-assisted development. It provides 
 - **Agents**: Domain specialists (e.g. backend-specialist, frontend-specialist, documentation-writer, test-engineer) and process roles (e.g. project-planner, verifier). Each has its own skills and a **domain color** so the orchestrator (and logs) can see at a glance which area of responsibility is active.
 - **Skills**: Reusable guidance and patterns (e.g. test-driven-development, writing-plans, frontend-design) used by the orchestrator and agents. Skills never call commands or the orchestrator.
 
-**Contract:** You use **only** the entry points (commands or workflows). They route to the orchestrator; the orchestrator uses agents and skills. No cycles: skills don’t call commands or the orchestrator; agents don’t call commands.
+> **Contract:** You use **only** the entry points (commands or workflows). They route to the orchestrator; the orchestrator uses agents and skills. No cycles: skills don’t call commands or the orchestrator; agents don’t call commands.
 
 ---
 
@@ -35,6 +43,15 @@ Agents are grouped by domain and share a **basic color** across all three platfo
 | Games | emerald | `game-developer` |
 
 On each platform, agents declare this in frontmatter (for example `color: green` on `backend-specialist`), and the orchestrator never asks an agent to work outside its domain.
+
+## Features
+
+- **Plan & create** — Task breakdown, agent/skill assignments; new apps or modules from plan to implementation.
+- **Implement, fix & debug** — Features and bugfixes with tests; systematic root-cause analysis.
+- **Test & review** — Generate and run tests; multi-agent code review.
+- **Deploy & operate** — Staging/production deployment; preview server and status.
+- **Document** — Create or update docs in sync with the codebase.
+- **Explore & design** — Brainstorm, enhance features, explain concepts, UI/UX design intelligence.
 
 ## Platforms and entry points
 
@@ -122,6 +139,12 @@ From the repo root, run `./run-validations.sh` to execute link validation, **dan
 - **Orchestrator and modes:** See the Command Modes (or Workflow Modes) table in the platform’s orchestrator:  
   `.cursor/agents/orchestrator.md`, `.claude/agents/agent-orchestrator.md`, `.agent/agents/orchestrator.md`.
 - **Skills:** Browsable under `.cursor/skills/` (and `.claude/skills/`, `.agent/skills/`). Each skill has a `SKILL.md` describing when and how it’s used.
+
+---
+
+## Contributing
+
+Open an issue or pull request on the repository.
 
 ---
 
