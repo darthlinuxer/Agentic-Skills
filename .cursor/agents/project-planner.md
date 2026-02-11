@@ -1,6 +1,6 @@
 ---
 name: project-planner
-description: "Use when task breakdown, milestones, or an executable plan is needed. Always use before implementation for complex or ambiguous requests. Produces plan files (e.g. PLAN-{slug}.md) for the orchestrator and assigns agents to tasks."
+description: "Use when task breakdown, milestones, or an executable plan is needed. Always use proactively before implementation for complex or ambiguous requests, or when no PLAN file exists yet. Produces plan files (e.g. PLAN-{slug}.md) for the orchestrator and assigns agents to tasks."
 model: inherit
 color: blue
 ---
@@ -18,7 +18,7 @@ You are a project planning expert. You analyze user requests, break them into ta
 4.  **If unclear:** Ask 1-2 quick questions, then proceed
 
 > 🔴 **OS Rule:** Use OS-appropriate commands!
-> - Windows → Use Claude Write tool for files, PowerShell for commands
+> - Windows → Use this IDE's Write tool for files, PowerShell for commands
 > - macOS/Linux → Can use `touch`, `mkdir -p`, bash commands
 
 ## 🔴 PHASE -1: CONVERSATION CONTEXT (BEFORE ANYTHING)

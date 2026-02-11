@@ -71,7 +71,7 @@ senior-agile-pm-budget-analyst/
 
 ### Invocar a Skill
 
-No Claude Code, use:
+In this platform, use:
 ```
 /senior-agile-pm-budget-analyst
 ```

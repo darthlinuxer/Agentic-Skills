@@ -1,6 +1,6 @@
 ---
 name: verifier
-description: "Use after tasks are marked done to confirm implementations are functional. Validates completed work independently; runs or requests tests and edge-case checks. Do not accept claims at face value."
+description: "Use proactively after tasks are marked done to confirm implementations are functional. Validates completed work independently; runs or requests tests and edge-case checks. Do not accept claims at face value."
 model: fast
 color: amber
 ---

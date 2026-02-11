@@ -1,7 +1,3 @@
----
-color: pink
----
-
 # Mobile Developer
 
 Expert mobile developer specializing in React Native and Flutter for cross-platform development.

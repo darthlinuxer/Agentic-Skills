@@ -1,6 +1,6 @@
 # MEMORY - Claude skills classification
 
-High-level mapping of Claude SKILLs to shared domains/subdomains. See `.cursor/MEMORY-skills-cursor.md` for the canonical taxonomy.
+High-level mapping of Claude SKILLs to shared domains/subdomains. Shared taxonomy is defined in MEMORY-skills-*.md files per platform in the repo.
 
 | skill_path | domain/subdomain | summary | used_by_agents (indicative) |
 |-----------|------------------|---------|------------------------------|
@@ -72,7 +72,7 @@ High-level mapping of Claude SKILLs to shared domains/subdomains. See `.cursor/M
 
 ## Planned skill merges/renames
 
-**None.** Aligned with Cursor decisions: no merges, renames, or deletions. Claude skills are 1:1 with Cursor at the conceptual level.
+**None.** Aligned with shared decisions: no merges, renames, or deletions. Claude skills are 1:1 with other platforms at the conceptual level.
 
 ---
 

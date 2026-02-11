@@ -162,7 +162,7 @@ Error Dialogs       -                             ✅ Platform conventions for a
 ### Fitts' Law for Touch
 
 ```
-Desktop: Cursor is precise (1px)
+Desktop: pointer is precise (1px)
 Mobile:  Finger is imprecise (~7mm contact area)
 
 → Touch targets MUST be 44-48px minimum

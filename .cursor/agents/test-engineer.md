@@ -1,6 +1,6 @@
 ---
 name: test-engineer
-description: "Use proactively to run tests and fix failures after code changes. Use when adding tests, practicing TDD, or improving coverage. Reports pass/fail counts and any fixes applied."
+description: "Use proactively to run tests and fix failures after code changes. Always use when code is modified, when adding tests, practicing TDD, or improving coverage. Reports pass/fail counts and any fixes applied; owns test files and test infrastructure."
 model: inherit
 color: amber
 ---

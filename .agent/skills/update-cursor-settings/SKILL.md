@@ -1,19 +1,20 @@
 ---
 name: update-cursor-settings
-description: Modify Cursor/VSCode user settings in settings.json. Use when the user wants to change editor settings, preferences, configuration, themes, font size, tab size, format on save, auto save, keybindings, or any settings.json values.
+description: Modify editor/IDE user settings in settings.json. Use when the user wants to change editor settings, preferences, configuration, themes, font size, tab size, format on save, auto save, keybindings, or any settings.json values.
 ---
 
-# Updating Cursor Settings
+# Updating Editor Settings
 
-This skill guides you through modifying Cursor/VSCode user settings. Use this when the user wants to change editor settings, preferences, configuration, themes, keybindings, or any `settings.json` values.
+This skill guides you through modifying editor/IDE user settings. Use this when the user wants to change editor settings, preferences, configuration, themes, keybindings, or any `settings.json` values. Settings file location is IDE-specific; check your platform's documentation for the correct path.
 
-## Settings File Location
+## Settings File Location (IDE-specific)
 
-| OS | Path |
+Paths vary by IDE. Common patterns:
+| OS | Example path (VSCode-based) |
 |----|------|
-| macOS | ~/Library/Application Support/Cursor/User/settings.json |
-| Linux | ~/.config/Cursor/User/settings.json |
-| Windows | %APPDATA%\Cursor\User\settings.json |
+| macOS | ~/Library/Application Support/[IDE]/User/settings.json |
+| Linux | ~/.config/[IDE]/User/settings.json |
+| Windows | %APPDATA%\[IDE]\User\settings.json |
 
 ## Before Modifying Settings
 
@@ -27,7 +28,7 @@ This skill guides you through modifying Cursor/VSCode user settings. Use this wh
 
 ```typescript
 // Read the settings file first
-const settingsPath = "~/Library/Application Support/Cursor/User/settings.json";
+const settingsPath = "<your-IDE-user-settings-path>";
 // Use the Read tool to get current contents
 ```
 
@@ -38,7 +39,7 @@ Common setting categories:
 - **Workbench**: `workbench.colorTheme`, `workbench.iconTheme`, `workbench.sideBar.location`
 - **Files**: `files.autoSave`, `files.exclude`, `files.associations`
 - **Terminal**: `terminal.integrated.fontSize`, `terminal.integrated.shell.*`
-- **Cursor-specific**: Settings prefixed with `cursor.` or `aipopup.`
+- **IDE-specific**: Settings prefixed with your IDE's namespace (e.g. `cursor.`, `aipopup.`)
 
 ### Step 3: Update the Setting
 
@@ -80,9 +81,9 @@ If user says "use dark theme" or "change my theme":
 
 ## Important Notes
 
-1. **JSON with Comments**: VSCode/Cursor settings.json supports comments (`//` and `/* */`). When reading, be aware comments may exist. When writing, preserve comments if possible.
+1. **JSON with Comments**: Many editors' settings.json supports comments (`//` and `/* */`). When reading, be aware comments may exist. When writing, preserve comments if possible.
 
-2. **Restart May Be Required**: Some settings take effect immediately, others require reloading the window or restarting Cursor. Inform the user if a restart is needed.
+2. **Restart May Be Required**: Some settings take effect immediately, others require reloading the window or restarting the editor. Inform the user if a restart is needed.
 
 3. **Backup**: For significant changes, consider mentioning the user can undo via Ctrl/Cmd+Z in the settings file or by reverting git changes if tracked.
 
@@ -108,7 +109,7 @@ If user says "use dark theme" or "change my theme":
 
 ## Workflow
 
-1. Read ~/Library/Application Support/Cursor/User/settings.json
+1. Read the user's IDE settings file (path is IDE-specific)
 2. Parse the JSON content
 3. Add/modify the requested setting(s)
 4. Write the updated JSON back to the file

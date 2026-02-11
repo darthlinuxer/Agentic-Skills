@@ -73,7 +73,7 @@ Mirror of the shared skill taxonomy for `.agent/skills`. Domains/subdomains matc
 
 ## Planned skill merges/renames
 
-**None.** Aligned with Cursor decisions: no merges, renames, or deletions. Agent skills share the same conceptual roles and domains as Cursor/Claude.
+**None.** Aligned with shared decisions: no merges, renames, or deletions. Agent skills share the same conceptual roles and domains as other platforms.
 
 ---
 

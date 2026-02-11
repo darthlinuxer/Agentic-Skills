@@ -3,7 +3,7 @@ name: gemini
 description: Global behavior rules for the workspace.
 ---
 
-# gemini.md - Antigravity Kit
+# gemini.md - This kit
 
 > This file defines how the AI behaves in this workspace.
 

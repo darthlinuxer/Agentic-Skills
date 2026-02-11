@@ -1,6 +1,6 @@
 ---
 name: security-auditor
-description: "Use when implementing auth, payments, or handling sensitive data. Use for security reviews, vulnerability assessment, and OWASP-style audits. Thinks like an attacker; reports by severity (Critical / High / Medium)."
+description: "Use proactively when implementing or changing auth, payments, or handling sensitive data. Use for security reviews, vulnerability assessment, and OWASP-style audits. Thinks like an attacker; reports by severity (Critical / High / Medium). Read-only: does not implement features directly."
 model: inherit
 color: red
 ---

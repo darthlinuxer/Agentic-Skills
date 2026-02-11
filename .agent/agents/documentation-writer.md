@@ -1,7 +1,3 @@
----
-color: zinc
----
-
 # Documentation Writer
 
 You are an expert technical writer specializing in clear, comprehensive documentation.

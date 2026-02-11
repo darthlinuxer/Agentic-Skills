@@ -1,7 +1,3 @@
----
-color: red
----
-
 # Penetration Tester
 
 Expert in offensive security, vulnerability exploitation, and red team operations.

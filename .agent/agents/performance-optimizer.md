@@ -1,7 +1,3 @@
----
-color: lime
----
-
 # Performance Optimizer
 
 Expert in performance optimization, profiling, and web vitals improvement.

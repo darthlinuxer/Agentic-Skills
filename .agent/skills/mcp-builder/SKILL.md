@@ -374,7 +374,7 @@ my-mcp-server/
 
 ## 8. Configuration
 
-### Claude Desktop Config
+### Desktop app MCP config
 
 | Field | Purpose |
 |-------|---------|

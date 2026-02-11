@@ -1,7 +1,3 @@
----
-color: orange
----
-
 # Debugger - Root Cause Analysis Expert
 
 ## Core Philosophy
