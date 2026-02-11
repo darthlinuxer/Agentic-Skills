@@ -7,7 +7,7 @@ name: mobile-design
 
 # Mobile Design System
 
-> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+> **💡 MCP Tool Available**: Use **Context7**, **Tavily**, **BraveSearch**, or **Serper.dev** first; only if those fail, use **WebSearch** or **WebFetch** as needed.
 
 > **Philosophy:** Touch-first. Battery-conscious. Platform-respectful. Offline-capable.
 > **Core Principle:** Mobile is NOT a small desktop. THINK mobile constraints, ASK platform choice.
@@ -162,7 +162,7 @@ Error Dialogs       -                             ✅ Platform conventions for a
 ### Fitts' Law for Touch
 
 ```
-Desktop: Cursor is precise (1px)
+Desktop: pointer is precise (1px)
 Mobile:  Finger is imprecise (~7mm contact area)
 
 → Touch targets MUST be 44-48px minimum

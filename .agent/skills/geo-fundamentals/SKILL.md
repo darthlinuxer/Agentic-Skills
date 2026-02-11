@@ -1,6 +1,6 @@
 ---
-description: Generative Engine Optimization for AI search engines (ChatGPT, Claude,
-  Perplexity).
+description: Generative Engine Optimization for AI search engines (ChatGPT,
+  Perplexity, Gemini).
 name: geo-fundamentals
 ---
 
@@ -16,7 +16,7 @@ name: geo-fundamentals
 
 | Goal | Platform |
 |------|----------|
-| Be cited in AI responses | ChatGPT, Claude, Perplexity, Gemini |
+| Be cited in AI responses | ChatGPT, Perplexity, Gemini |
 
 ### SEO vs GEO
 
@@ -35,7 +35,7 @@ name: geo-fundamentals
 |--------|----------------|-------------|
 | **Perplexity** | Numbered [1][2] | Highest citation rate |
 | **ChatGPT** | Inline/footnotes | Custom GPTs |
-| **Claude** | Contextual | Long-form content |
+| **Contextual engines** | Contextual | Long-form content |
 | **Gemini** | Sources section | SEO crossover |
 
 ---
@@ -108,7 +108,7 @@ How AI engines select content to cite:
 | Crawler | Engine |
 |---------|--------|
 | GPTBot | ChatGPT/OpenAI |
-| Claude-Web | Claude |
+| AI crawlers | Various |
 | PerplexityBot | Perplexity |
 | Googlebot | Gemini (shared) |
 

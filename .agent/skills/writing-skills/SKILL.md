@@ -32,7 +32,7 @@ Writing skills is TDD applied to process documentation: **RED → GREEN → REFA
 - `description`: third-person, **what + when**, max 1024 chars. Start with “Use when…”.
 - Avoid workflow summaries in `description` (they become shortcuts and skip the body).
 
-**Claude Code extensions** (optional): `disable-model-invocation`, `allowed-tools`, `context`, `agent`, etc. Use only when targeting Claude Code.
+**Platform extensions** (optional): `disable-model-invocation`, `allowed-tools`, `context`, `agent`, etc. Use only when targeting another platform.
 
 ## TDD loop for skills (essentials)
 

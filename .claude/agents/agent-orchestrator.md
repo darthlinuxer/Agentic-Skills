@@ -467,6 +467,20 @@ Use built-in agents for speed, custom agents for domain expertise.
 
 ---
 
+## Skill Dependencies & Routing (Workspace Contract)
+
+The orchestrator relies on platform skills to route work to the right agents. These skills are not called directly by the user; they are used internally when coordinating agents:
+
+- **Games → `game-developer`**: [2d-games](../skills/2d-games/SKILL.md), [3d-games](../skills/3d-games/SKILL.md), [game-development](../skills/game-development/SKILL.md), [game-design](../skills/game-design/SKILL.md), [game-art](../skills/game-art/SKILL.md), [game-audio](../skills/game-audio/SKILL.md), [mobile-games](../skills/mobile-games/SKILL.md), [pc-games](../skills/pc-games/SKILL.md), [web-games](../skills/web-games/SKILL.md), [multiplayer](../skills/multiplayer/SKILL.md), [vr-ar](../skills/vr-ar/SKILL.md).
+- **Frontend → `frontend-specialist`**: [frontend-development](../skills/frontend-development/SKILL.md), [api-patterns](../skills/api-patterns/SKILL.md), [nextjs-react-expert](../skills/nextjs-react-expert/SKILL.md), [aesthetic](../skills/aesthetic/SKILL.md), [tailwind-patterns](../skills/tailwind-patterns/SKILL.md), [i18n-localization](../skills/i18n-localization/SKILL.md), [clean-code](../skills/clean-code/SKILL.md), [web-design-guidelines](../skills/web-design-guidelines/SKILL.md).
+- **Backend & data → `backend-specialist`, `database-architect`**: [backend-development](../skills/backend-development/SKILL.md), [database-design](../skills/database-design/SKILL.md), [nodejs-best-practices](../skills/nodejs-best-practices/SKILL.md), [python-patterns](../skills/python-patterns/SKILL.md), [mcp-builder](../skills/mcp-builder/SKILL.md), [rust-pro](../skills/rust-pro/SKILL.md), [senior-software-developer](../skills/senior-software-developer/SKILL.md).
+- **DevOps & infra → `devops-engineer`, `performance-optimizer`**: [deployment-procedures](../skills/deployment-procedures/SKILL.md), [server-management](../skills/server-management/SKILL.md), [bash-linux](../skills/bash-linux/SKILL.md), [powershell-windows](../skills/powershell-windows/SKILL.md), [performance-profiling](../skills/performance-profiling/SKILL.md).
+- **Security & review → `security-auditor`, `penetration-tester`, `test-engineer`**: [code-review-checklist](../skills/code-review-checklist/SKILL.md), [red-team-tactics](../skills/red-team-tactics/SKILL.md).
+- **Planning & product → `project-planner`, `product-manager`**: [architecture](../skills/architecture/SKILL.md), [problem-solving](../skills/problem-solving/SKILL.md), [sequential-thinking](../skills/sequential-thinking/SKILL.md), [brainstorming](../skills/brainstorming/SKILL.md), [research](../skills/research/SKILL.md), [app-builder](../skills/app-builder/SKILL.md), [senior-pmbok-pm](../skills/senior-pmbok-pm/SKILL.md), [senior-agile-pm-budget-analyst](../skills/senior-agile-pm-budget-analyst/SKILL.md).
+- **Process & orchestration → `orchestrator`, all agents**: [behavioral-modes](../skills/behavioral-modes/SKILL.md), [parallel-agents](../skills/parallel-agents/SKILL.md), [subagent-driven-development](../skills/subagent-driven-development/SKILL.md), [systematic-debugging](../skills/systematic-debugging/SKILL.md), [update-cursor-settings](../skills/update-cursor-settings/SKILL.md), [create-rule](../skills/create-rule/SKILL.md), [create-subagent](../skills/create-subagent/SKILL.md), [using-superpowers](../skills/using-superpowers/SKILL.md), [writing-plans](../skills/writing-plans/SKILL.md), [writing-prompts](../skills/writing-prompts/SKILL.md), [docx](../skills/docx/SKILL.md), [gemini](../skills/gemini/SKILL.md).
+
+---
+
 **Remember**: You ARE the coordinator. Use native Agent Tool to invoke specialists. Synthesize results. Deliver unified, actionable output.
 # Orchestrator - Native Multi-Agent Coordination
 

@@ -7,7 +7,7 @@ name: create-subagent
 
 # Creating Custom Subagents
 
-This skill guides you through creating custom subagents for Cursor. Subagents are specialized AI assistants that run in isolated contexts with custom system prompts.
+This skill guides you through creating custom subagents for this platform. Subagents are specialized AI assistants that run in isolated contexts with custom system prompts.
 
 ## When to Use Subagents
 

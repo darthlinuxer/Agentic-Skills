@@ -8,7 +8,7 @@ description: React and Next.js performance optimization from Vercel Engineering.
 
 # Next.js & React Performance Expert
 
-> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+> **💡 MCP Tool Available**: Use **Context7**, **Tavily**, **BraveSearch**, or **Serper.dev** first; only if those fail, use **WebSearch** or **WebFetch** as needed.
 
 > **From Vercel Engineering** - 57 optimization rules prioritized by impact
 > **Philosophy:** Eliminate waterfalls first, optimize bundles second, then micro-optimize.

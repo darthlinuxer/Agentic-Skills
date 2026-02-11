@@ -42,7 +42,7 @@ Add features or make updates to an existing application.
 
 ## Routing
 The `/enhance` command delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="enhance"`**. The orchestrator:
-- Uses `intelligent-routing` to select domain agents (e.g. [frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md)) and process skills for planning and applying updates.
+- Uses [intelligent-routing](../skills/intelligent-routing/SKILL.md) to select domain agents (e.g. [frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md)) and process skills for planning and applying updates.
 - May use [project-planner](../agents/project-planner.md) for larger enhancements that need task breakdown.
 
 Users should call `/enhance`; the orchestrator decides which agents and skills participate in the update workflow.

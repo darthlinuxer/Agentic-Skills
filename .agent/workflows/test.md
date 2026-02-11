@@ -74,7 +74,7 @@ START: Paste the code you want tests for.
 
 ## Routing
 This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="test"`**. The orchestrator:
-- Uses `intelligent-routing` to select [test-engineer](../agents/test-engineer.md) as the primary agent and may involve other domain agents to clarify behavior where necessary.
-- Uses process and verification skills (such as `test-driven-development`, `testing-patterns`, `webapp-testing`, and `verification-before-completion`) to ensure tests are aligned with the project's quality standards.
+- Uses [intelligent-routing](../skills/intelligent-routing/SKILL.md) to select [test-engineer](../agents/test-engineer.md) as the primary agent and may involve other domain agents to clarify behavior where necessary.
+- Uses process and verification skills (such as [test-driven-development](../skills/test-driven-development/SKILL.md), [testing-patterns](../skills/testing-patterns/SKILL.md), [webapp-testing](../skills/webapp-testing/SKILL.md), and [verification-before-completion](../skills/verification-before-completion/SKILL.md)) to ensure tests are aligned with the project's quality standards.
 
 Users should invoke this workflow; the orchestrator determines how tests are generated, run, and verified via agents and skills.

@@ -8,7 +8,7 @@ name: mcp-builder
 
 # MCP Server Development Guide
 
-> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+> **💡 MCP Tool Available**: Use **Context7**, **Tavily**, **BraveSearch**, or **Serper.dev** first; only if those fail, use **WebSearch** or **WebFetch** as needed.
 
 ## Overview
 
@@ -42,9 +42,7 @@ Error messages should guide agents toward solutions with specific suggestions an
 
 **Navigate the MCP specification:**
 
-Start with the sitemap to find relevant pages: `
-
-Then fetch specific pages with `.md` suffix for markdown format (e.g., `
+Use Context7, Tavily, BraveSearch, or Serper.dev to search the MCP specification; only if those fail, use WebSearch or WebFetch as needed. Start with the sitemap to find relevant pages, then load specific pages as needed.
 
 Key pages to review:
 - Specification overview and architecture
@@ -62,17 +60,17 @@ Key pages to review:
 - **MCP Best Practices**: [📋 View Best Practices](./reference/mcp_best_practices.md) - Core guidelines
 
 **For TypeScript (recommended):**
-- **TypeScript SDK**: Use WebFetch to load `
+- **TypeScript SDK**: Use Context7, Tavily, BraveSearch, or Serper.dev to query the TypeScript SDK documentation; only if those fail, use WebSearch or WebFetch as needed.
 - [⚡ TypeScript Guide](./reference/node_mcp_server.md) - TypeScript patterns and examples
 
 **For Python:**
-- **Python SDK**: Use WebFetch to load `
+- **Python SDK**: Use Context7, Tavily, BraveSearch, or Serper.dev to query the Python SDK documentation; only if those fail, use WebSearch or WebFetch as needed.
 - [🐍 Python Guide](./reference/python_mcp_server.md) - Python patterns and examples
 
 #### 1.4 Plan Your Implementation
 
 **Understand the API:**
-Review the service's API documentation to identify key endpoints, authentication requirements, and data models. Use web search and WebFetch as needed.
+Review the service's API documentation to identify key endpoints, authentication requirements, and data models. Use Context7, Tavily, BraveSearch, or Serper.dev first; only if those fail, use WebSearch or WebFetch as needed.
 
 **Tool Selection:**
 Prioritize comprehensive API coverage. List endpoints to implement, starting with the most common operations.
@@ -204,7 +202,7 @@ Create an XML file with this structure:
 Load these resources as needed during development:
 
 ### Core MCP Documentation (Load First)
-- **MCP Protocol**: Start with sitemap at ` then fetch specific pages with `.md` suffix
+- **MCP Protocol**: Use Context7, Tavily, BraveSearch, or Serper.dev to search the MCP specification; only if those fail, use WebSearch or WebFetch; load specific pages as needed
 - [📋 MCP Best Practices](./reference/mcp_best_practices.md) - Universal MCP guidelines including:
   - Server and tool naming conventions
   - Response format guidelines (JSON vs Markdown)
@@ -213,8 +211,8 @@ Load these resources as needed during development:
   - Security and error handling standards
 
 ### SDK Documentation (Load During Phase 1/2)
-- **Python SDK**: Fetch from `
-- **TypeScript SDK**: Fetch from `
+- **Python SDK**: Use Context7, Tavily, BraveSearch, or Serper.dev to query the Python SDK documentation; only if those fail, use WebSearch or WebFetch
+- **TypeScript SDK**: Use Context7, Tavily, BraveSearch, or Serper.dev to query the TypeScript SDK documentation; only if those fail, use WebSearch or WebFetch
 
 ### Language-Specific Implementation Guides (Load During Phase 2)
 - [🐍 Python Implementation Guide](./reference/python_mcp_server.md) - Complete Python/FastMCP guide with:
@@ -374,7 +372,7 @@ my-mcp-server/
 
 ## 8. Configuration
 
-### Claude Desktop Config
+### Desktop app MCP config
 
 | Field | Purpose |
 |-------|---------|

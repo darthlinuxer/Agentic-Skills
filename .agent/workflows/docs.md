@@ -37,7 +37,7 @@ START: What would you like me to document?
 
 ## Routing
 This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="docs"`**. The orchestrator:
-- Uses `intelligent-routing` to select [documentation-writer](../agents/documentation-writer.md) as the primary agent and may consult other domain agents to ensure docs match real behavior.
-- Ensures documentation-related skills are applied through the documentation-writer agent.
+- Uses [intelligent-routing](../skills/intelligent-routing/SKILL.md) to select [documentation-writer](../agents/documentation-writer.md) as the primary agent and may consult other domain agents to ensure docs match real behavior.
+- Ensures documentation-related skills (such as [documentation-templates](../skills/documentation-templates/SKILL.md), [writing-skills](../skills/writing-skills/SKILL.md), [geo-fundamentals](../skills/geo-fundamentals/SKILL.md), and [seo-fundamentals](../skills/seo-fundamentals/SKILL.md) when appropriate) are applied through the documentation-writer agent.
 
 Users should invoke this workflow; the orchestrator coordinates which agents and skills are involved in documentation work.

@@ -177,7 +177,7 @@ Create 10 human-readable questions requiring ONLY READ-ONLY, INDEPENDENT, NON-DE
 
 Read the documentation of the target API to understand:
 - Available endpoints and functionality
-- If ambiguity exists, fetch additional information from the web
+- If ambiguity exists, use Context7, Tavily, BraveSearch, or Serper.dev to resolve; only if those fail, use WebSearch or WebFetch as needed
 - Parallelize this step AS MUCH AS POSSIBLE
 - Ensure each subagent is ONLY examining documentation from the file system or on the web
 
@@ -485,7 +485,7 @@ positional arguments:
 optional arguments:
   -h, --help            Show help message
   -t, --transport       Transport type: stdio, sse, or http (default: stdio)
-  -m, --model           Claude model to use (default: claude-3-7-sonnet-20250219)
+  -m, --model           Model to use (default: claude-3-7-sonnet-20250219)
   -o, --output          Output file for report (default: print to stdout)
 
 stdio options:

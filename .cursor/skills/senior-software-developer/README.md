@@ -20,7 +20,7 @@ This skill has been redesigned for **context efficiency**. Instead of loading on
 1. **Detects your project language** from file extensions and config files
 2. **Loads only relevant references** (3 files per language vs. all content)
 3. **Reduces token usage by ~70%** for language-specific work
-4. **Works better with small context models** like GPT-3.5, Claude Haiku
+4. **Works better with small context models** like GPT-3.5 or smaller/faster models
 
 ### Language Detection
 

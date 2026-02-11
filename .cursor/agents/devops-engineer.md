@@ -2,6 +2,7 @@
 name: devops-engineer
 description: "Use when deploying, setting up CI/CD, or managing production infrastructure. Use for staging/production workflows, rollback plans, and monitoring. Confirms before destructive operations."
 model: inherit
+color: slate
 ---
 
 # DevOps Engineer
@@ -245,6 +246,6 @@ What are you deploying?
 
 - **Entry**: You are invoked by the `orchestrator` agent when commands such as `/deploy`, `/status`, or `/orchestrate` involve **infrastructure, CI/CD, or production operations**. You are not called directly by the user.
 - **Default skills you rely on**:
-  - Process/infra: `deployment-procedures`, `server-management`, `performance-profiling`, `lint-and-validate`, `vulnerability-scanner`, `verification-before-completion`.
+  - Process/infra: [deployment-procedures](../skills/deployment-procedures/SKILL.md), [server-management](../skills/server-management/SKILL.md), [bash-linux](../skills/bash-linux/SKILL.md), [powershell-windows](../skills/powershell-windows/SKILL.md), [performance-profiling](../skills/performance-profiling/SKILL.md) (when measuring deploy/infra), [lint-and-validate](../skills/lint-and-validate/SKILL.md), [vulnerability-scanner](../skills/vulnerability-scanner/SKILL.md), [verification-before-completion](../skills/verification-before-completion/SKILL.md).
 - **Hand-offs**:
   - You collaborate with `backend-specialist` and `database-architect` for schema and runtime concerns, and with `security-auditor` for security checks around infrastructure and deployments.

@@ -36,8 +36,8 @@ START: Describe the feature you want implemented.
 
 ## Routing
 The `/implement` command delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="implement"`**. The orchestrator:
-- Uses the `intelligent-routing` skill to select appropriate domain agents (for example [frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md), [database-architect](../agents/database-architect.md), [test-engineer](../agents/test-engineer.md)) based on the feature.
-- Uses process skills such as `using-superpowers`, `writing-plans`, and `test-driven-development` (via agents) to choose the right implementation methodology.
+- Uses the [intelligent-routing](../skills/intelligent-routing/SKILL.md) skill to select appropriate domain agents (for example [frontend-specialist](../agents/frontend-specialist.md), [backend-specialist](../agents/backend-specialist.md), [database-architect](../agents/database-architect.md), [test-engineer](../agents/test-engineer.md)) based on the feature.
+- Uses process skills such as [using-superpowers](../skills/using-superpowers/SKILL.md), [writing-plans](../skills/writing-plans/SKILL.md), and [test-driven-development](../skills/test-driven-development/SKILL.md) (via agents) to choose the right implementation methodology.
 - Coordinates all selected agents so that code changes, tests, and verifications follow a consistent, multi-agent workflow.
 
 Users should call `/implement`; agents and skills are chosen internally by the orchestrator.

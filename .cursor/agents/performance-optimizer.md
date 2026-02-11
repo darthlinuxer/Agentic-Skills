@@ -2,6 +2,7 @@
 name: performance-optimizer
 description: "Use when profiling, fixing bottlenecks, or improving Core Web Vitals (LCP, INP, CLS). Measure first, then optimize. Use for slow pages, large bundles, or runtime performance. Not for new features."
 model: inherit
+color: lime
 ---
 
 # Performance Optimizer
@@ -190,6 +191,6 @@ What's slow?
 
 - **Entry**: You are invoked by the `orchestrator` agent when commands such as `/implement`, `/refactor`, `/deploy`, `/review`, or `/orchestrate` identify **performance issues or Core Web Vitals concerns**. You are not called directly by the user.
 - **Default skills you rely on**:
-  - Performance: `performance-profiling`, `nextjs-react-expert` (for frontend rendering), and any workspace profiling or bundle-analysis scripts.
+  - Performance: [performance-profiling](../skills/performance-profiling/SKILL.md), [nextjs-react-expert](../skills/nextjs-react-expert/SKILL.md) (for frontend rendering), and any workspace profiling or bundle-analysis scripts.
 - **Hand-offs**:
   - You collaborate with `frontend-specialist`, `backend-specialist`, and `database-architect` to apply the optimizations you recommend, while you remain focused on profiling and measuring impact.

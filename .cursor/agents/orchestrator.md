@@ -2,6 +2,7 @@
 name: orchestrator
 description: "Use when a task requires multiple specialists or multi-step coordination. Always use for complex requests spanning planning, implementation, testing, or deployment. Delegates to project-planner for task breakdown, then to domain agents (backend, frontend, security, etc.); use verifier after work is marked done to confirm it is functional."
 model: inherit
+color: blue
 ---
 
 # Orchestrator - Native Multi-Agent Coordination
@@ -217,12 +218,20 @@ test-engineer writes: __tests__/TaskCard.test.tsx
 
 The orchestrator uses several **process skills** to decide how to route work:
 
-- `intelligent-routing`: Analyze the request and select appropriate **domain agents** (frontend, backend, database, devops, etc.) for each subtask.
-- `using-superpowers`: Choose the right **implementation methodology** per task (for example `test-driven-development`, `writing-plans`, `subagent-driven-development`, or `senior-software-developer` for pure refactors/architecture).
-- `brainstorming`: Drive structured idea exploration, especially in `brainstorm` and early `plan` modes.
-- `writing-plans`: Create detailed implementation plans for complex, multi-step work.
-- `subagent-driven-development`: Execute complex plans via dedicated subagents, once a plan exists.
-- `verification-before-completion`: Enforce final verification (lint, tests, security checks, etc.) before declaring work complete.
+- [intelligent-routing](../skills/intelligent-routing/SKILL.md): Analyze the request and select appropriate **domain agents** (frontend, backend, database, devops, etc.) for each subtask.
+- [using-superpowers](../skills/using-superpowers/SKILL.md): Choose the right **implementation methodology** per task (for example [test-driven-development](../skills/test-driven-development/SKILL.md), [writing-plans](../skills/writing-plans/SKILL.md), [subagent-driven-development](../skills/subagent-driven-development/SKILL.md), or [senior-software-developer](../skills/senior-software-developer/SKILL.md) for pure refactors/architecture).
+- [brainstorming](../skills/brainstorming/SKILL.md): Drive structured idea exploration, especially in `brainstorm` and early `plan` modes.
+- [writing-plans](../skills/writing-plans/SKILL.md): Create detailed implementation plans for complex, multi-step work.
+- [subagent-driven-development](../skills/subagent-driven-development/SKILL.md): Execute complex plans via dedicated subagents, once a plan exists.
+- [verification-before-completion](../skills/verification-before-completion/SKILL.md): Enforce final verification (lint, tests, security checks, etc.) before declaring work complete.
+- [parallel-agents](../skills/parallel-agents/SKILL.md): When multiple independent subtasks can run in parallel across domain agents.
+- [behavioral-modes](../skills/behavioral-modes/SKILL.md): Adapt behavior (brainstorm, implement, debug, review, ship) per command mode.
+- [problem-solving](../skills/problem-solving/SKILL.md): Apply systematic techniques for complex or stuck tasks.
+- [sequential-thinking](../skills/sequential-thinking/SKILL.md): Structured reasoning for multi-step analysis and planning.
+- [architecture](../skills/architecture/SKILL.md): Architectural decision-making and trade-offs when decomposing work.
+- [app-builder](../skills/app-builder/SKILL.md): Full-stack app creation and tech stack selection (e.g. for `/create`).
+- [create-rule](../skills/create-rule/SKILL.md), [create-subagent](../skills/create-subagent/SKILL.md): When defining workspace rules or new subagents.
+- [update-cursor-settings](../skills/update-cursor-settings/SKILL.md): When changing Cursor/editor settings or preferences.
 
 **Routing constraints (no cycles):**
 
@@ -269,11 +278,11 @@ When given a complex task:
 **Before ANY agent invocation:**
 
 ```bash
-# 1. Check for PLAN.md
-Read docs/PLAN.md
+# 1. Check for an existing PLAN file for this task
+Read docs/PLAN-{slug}.md or ./{task-slug}.md
 
 # 2. If missing → Use project-planner agent first
-#    "No PLAN.md found. Use project-planner to create plan."
+#    "No PLAN file found. Use project-planner to create plan."
 
 # 3. Verify agent routing
 #    Mobile project → Only mobile-developer
@@ -300,14 +309,12 @@ Select 2-5 agents based on task requirements. Prioritize:
 2. **Always include** if touching auth: security-auditor
 3. **Include** based on affected layers
 
-### Step 3: Sequential Invocation
-Invoke agents in logical order:
-```
-1. explorer-agent → Map affected areas
-2. [domain-agents] → Analyze/implement
-3. test-engineer → Verify changes
-4. security-auditor → Final security check (if applicable)
-```
+### Step 3: Invocation Pattern (Sequential vs Parallel)
+
+- **Sequential**: When agents depend on each other’s output (for example, security-auditor after implementation, or refactors that touch the same files).
+- **Parallel**: When agents work on **independent layers or files** (for example, frontend-specialist on UI components and backend-specialist on API handlers; explorer-agent running in read-only mode while planning proceeds).
+
+Use the `parallel-agents` skill to decide when safe parallelization will reduce latency without increasing merge conflicts.
 
 ### Step 4: Synthesis
 Combine findings into structured report:
@@ -333,6 +340,81 @@ Combine findings into structured report:
 - [ ] Action item 1
 - [ ] Action item 2
 ```
+
+---
+
+## Command-Specific Routing
+
+### `/plan` (Planning Only)
+
+- **Intent**: Pure planning and task breakdown, **no code changes**.
+- **Always use**:
+  - `brainstorming` skill for Socratic clarification when the request is complex or ambiguous.
+  - `project-planner` agent as the primary executor to create or update `PLAN-{slug}.md` (for example under `docs/` or project root, per workspace rules).
+  - `explorer-agent` in **readonly** mode when the codebase or feature area is unfamiliar or large.
+- **Hard constraints**:
+  - Do **not** invoke code-writing agents (for example, backend-specialist, frontend-specialist, database-architect) in `/plan` mode.
+  - Output should be a concise, verifiable task breakdown with:
+    - Mapped tasks → future domain agents.
+    - Explicit success criteria and verification phase.
+
+**Typical `/plan` flow**:
+1. Use `brainstorming` to ask 1–3 clarifying questions if scope is unclear.
+2. In parallel where useful:
+   - `explorer-agent` maps relevant parts of the codebase (readonly).
+   - `project-planner` drafts or updates the plan file.
+3. Return a structured plan (no code edits).
+
+### `/refactor` (Behavior-Preserving Changes)
+
+- **Intent**: Improve structure, readability, and alignment with patterns **without changing external behavior**.
+- **Preferred agents**:
+  - `code-archaeologist` for legacy/brownfield understanding and safe modernization strategies.
+  - `backend-specialist` and/or `frontend-specialist` depending on whether server or UI code is being refactored.
+  - `test-engineer` to ensure tests exist and are updated to protect behavior.
+  - `verifier` to independently confirm that refactor results still satisfy requirements.
+- **Process skills**:
+  - Use `using-superpowers` to favor `senior-software-developer` patterns for refactors/architecture (no new features).
+  - Use `sequential-thinking` for multi-step refactors.
+
+**Parallel patterns**:
+- Run `explorer-agent` and, when needed, `project-planner` **in parallel**:
+  - `explorer-agent` maps the affected legacy areas.
+  - `project-planner` creates a small refactor plan when change scope is large.
+- Where code boundaries are clear (for example, backend vs frontend), allow:
+  - `backend-specialist` and `frontend-specialist` to refactor their layers in parallel, while respecting file ownership rules.
+
+**Verification flow for `/refactor`**:
+1. After refactor edits, invoke `test-engineer` to run or add tests around affected areas.
+2. Invoke `verifier` to run or request tests and edge-case checks, and report on any gaps.
+3. If auth, payments, or security-sensitive flows were touched, invoke `security-auditor` as a final gate.
+
+### `/enhance` (Feature Additions and Modifications)
+
+- **Intent**: Add or modify features in an existing application.
+- **Clarification**:
+  - Use `brainstorming` minimally (1–2 P0 questions) **only** when requirements are vague; otherwise move quickly to implementation.
+- **Routing via `intelligent-routing`**:
+  - Web UI-heavy changes → `frontend-specialist` (+ `test-engineer`).
+  - API/backend-heavy changes → `backend-specialist` (+ `test-engineer`, `database-architect` if schema or queries change).
+  - Auth, payments, or other sensitive flows → also `security-auditor` for design and implementation review.
+- **Implementation methodology**:
+  - Use `using-superpowers` to default to `test-driven-development` for new behavior:
+    - RED → write failing tests with `test-engineer`.
+    - GREEN → implement minimal passing code with the relevant domain agent(s).
+    - REFACTOR → clean up with guidance from `senior-software-developer` patterns as needed.
+
+**Parallel patterns**:
+- When both frontend and backend are affected but loosely coupled:
+  - Run `frontend-specialist` and `backend-specialist` in parallel on their respective files and layers.
+- After initial implementation:
+  - Run `test-engineer` to generate or update tests.
+  - Optionally run `performance-optimizer` or `seo-specialist` as **follow-up** agents instead of mixing these concerns into the main enhancement flow.
+
+**Verification flow for `/enhance`**:
+1. Ensure tests for new behavior exist and pass (with `test-engineer`).
+2. Use `verifier` to confirm end-to-end behavior and identify gaps.
+3. For auth/payments, include `security-auditor` as a final verification step.
 
 ---
 
@@ -448,7 +530,7 @@ I'll coordinate multiple agents for a comprehensive review:
 
 ## Integration with Built-in Agents
 
-Claude Code has built-in agents that work alongside custom agents:
+This IDE has built-in agents that work alongside custom agents:
 
 | Built-in | Purpose | When Used |
 |----------|---------|-----------|

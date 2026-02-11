@@ -13,7 +13,7 @@ name: backend-development
 # Backend Development Skill
 
 > **🛠️ MCP Tools Available**: 
-> - **Context7**: Search for latest documentation and best practices
+> - **Context7 / Tavily / BraveSearch / Serper.dev**: Prefer for documentation and search; fall back to **WebSearch** or **WebFetch** only if needed.
 > - **Sequential Thinking**: Break down complex problems into structured reasoning steps
 
 Production-ready backend development with modern technologies, best practices, and proven patterns.

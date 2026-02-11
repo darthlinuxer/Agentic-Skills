@@ -94,7 +94,7 @@ What direction would you like to explore?
 
 ## Routing
 The `/brainstorm` command delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="brainstorm"`**. The orchestrator:
-- Uses the `brainstorming` and `research` skills (and may consult [project-planner](../agents/project-planner.md) or domain agents) to explore options without committing to implementation.
+- Uses the [brainstorming](../skills/brainstorming/SKILL.md) and [research](../skills/research/SKILL.md) skills (and may consult [project-planner](../agents/project-planner.md) or domain agents) to explore options without committing to implementation.
 - Keeps the outcome as options and recommendations that can later be fed into `/plan`, `/implement`, or `/orchestrate` commands as needed.
 
 Users should call `/brainstorm` for idea exploration; orchestration and skill usage remain internal.

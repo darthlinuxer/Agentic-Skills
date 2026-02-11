@@ -71,7 +71,7 @@ senior-agile-pm-budget-analyst/
 
 ### Invocar a Skill
 
-No Claude Code, use:
+In this IDE, use:
 ```
 /senior-agile-pm-budget-analyst
 ```

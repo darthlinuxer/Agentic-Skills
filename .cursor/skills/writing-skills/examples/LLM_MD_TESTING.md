@@ -1,4 +1,4 @@
-# Testing CLAUDE.md Skills Documentation
+# Testing LLM Skills Documentation
 
 Testing different documentation variants to find what actually makes agents discover and use skills under pressure.
 
@@ -64,7 +64,7 @@ B) Just refactor it - you know what you're doing
 ## Documentation Variants to Test
 
 ### NULL (Baseline - no skills doc)
-No mention of skills in CLAUDE.md at all.
+No mention of skills in the platform skills doc at all.
 
 ### Variant A: Soft Suggestion
 ```markdown
@@ -85,7 +85,7 @@ Browse: `ls ~/.local/share/com.talkcody/skills`
 Search: `grep -r "keyword" ~/.local/share/com.talkcody/skills`
 ```
 
-### Variant C: Claude.AI Emphatic Style
+### Variant C: Emphatic Style
 ```xml
 <available_skills>
 Your personal library of proven techniques, patterns, and tools
@@ -98,7 +98,7 @@ Instructions: `skills/using-skills`
 </available_skills>
 
 <important_info_about_skills>
-Claude might think it knows how to approach tasks, but the skills
+The model might think it knows how to approach tasks, but the skills
 library contains battle-tested approaches that prevent common mistakes.
 
 THIS IS EXTREMELY IMPORTANT. BEFORE ANY TASK, CHECK FOR SKILLS!

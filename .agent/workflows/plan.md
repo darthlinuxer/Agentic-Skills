@@ -43,6 +43,6 @@ Next steps:
 ## Routing
 This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="plan"`**. The orchestrator:
 - Uses [project-planner](../agents/project-planner.md) (and, when needed, [product-manager](../agents/product-manager.md)) as primary agents to create or update `PLAN-{slug}` documents.
-- May use `intelligent-routing` to identify which domain agents will later own each part of the plan, but does not execute implementation in this mode.
+- May use [intelligent-routing](../skills/intelligent-routing/SKILL.md) to identify which domain agents will later own each part of the plan, but does not execute implementation in this mode.
 
 Users should invoke this workflow to create or refine plans; orchestration and skill usage happen internally.
