@@ -115,7 +115,7 @@ Layout is parallel across the three platforms; only the top-level folder and “
 | **`.cursor/`** | Cursor IDE: commands, agents, rules, skills, scripts. |
 | **`.claude/`** | Claude Code: commands, agents, skills, scripts. |
 | **`.agent/`** | Google Anthropic Agent: workflows (no commands dir), agents, skills, scripts. |
-| **`docs/`** | Project docs, plans (`docs/PLAN-*.md`), and ecosystem review artifacts. |
+| **`docs/`** | Project docs and plans (e.g. `docs/PLAN-*.md`). |
 
 Under each platform:
 
@@ -129,14 +129,13 @@ Under each platform:
 
 ## Validations
 
-From the repo root, run `./run-validations.sh` to execute link validation, **dangling skills check**, platform isolation, and docs secrets check. See [docs/DANGLING-SKILLS-CHECK.md](docs/DANGLING-SKILLS-CHECK.md) for how the dangling-skills check works and how to fix reported issues.
+From the repo root, run `./run-validations.sh` to execute link validation, **dangling skills check**, platform isolation, and docs secrets check. Reports are written to `.reports/`.
 
 ---
 
 ## More detail
 
-- **Ecosystem flow and review:** [docs/REVIEW-ECOSYSTEM-FLOW.md](docs/REVIEW-ECOSYSTEM-FLOW.md) (review prompt) and [docs/ECOSYSTEM-FLOW-REVIEW-REPORT.md](docs/ECOSYSTEM-FLOW-REVIEW-REPORT.md) (latest report).
-- **Orchestrator and modes:** See the Command Modes (or Workflow Modes) table in the platform’s orchestrator:  
+ **Orchestrator and modes:** See the Command Modes (or Workflow Modes) table in the platform’s orchestrator:  
   `.cursor/agents/orchestrator.md`, `.claude/agents/agent-orchestrator.md`, `.agent/agents/orchestrator.md`.
 - **Skills:** Browsable under `.cursor/skills/` (and `.claude/skills/`, `.agent/skills/`). Each skill has a `SKILL.md` describing when and how it’s used.
 
