@@ -1,6 +1,6 @@
 # MEMORY - Agent skills classification
 
-Mirror of the shared skill taxonomy for `.agent/skills`. Domains/subdomains match `.cursor/MEMORY-skills-cursor.md` and `.claude/MEMORY-skills-claude.md`.
+Mirror of the shared skill taxonomy for `.agent/skills`. Domains/subdomains are aligned with the Cursor and Claude platform MEMORY skill taxonomies.
 
 | skill_path | domain/subdomain | summary | used_by_agents (indicative) |
 |-----------|------------------|---------|------------------------------|
