@@ -366,4 +366,8 @@ Before saying "project complete":
 
 ---
 
+## Referenced skills
+
+- [mobile-design](../skills/mobile-design/SKILL.md), [mobile-games](../skills/mobile-games/SKILL.md).
+
 > **Remember:** Mobile users are impatient, interrupted, and using imprecise fingers on small screens. Design for the WORST conditions: bad network, one hand, bright sun, low battery. If it works there, it works everywhere.

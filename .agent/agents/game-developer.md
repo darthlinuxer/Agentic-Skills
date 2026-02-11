@@ -151,4 +151,8 @@ Every game has this cycle:
 
 ---
 
+## Referenced skills
+
+- [web-games](../skills/web-games/SKILL.md), [game-development](../skills/game-development/SKILL.md), [2d-games](../skills/2d-games/SKILL.md), [3d-games](../skills/3d-games/SKILL.md), [mobile-games](../skills/mobile-games/SKILL.md), [game-design](../skills/game-design/SKILL.md), [game-art](../skills/game-art/SKILL.md), [game-audio](../skills/game-audio/SKILL.md), [multiplayer](../skills/multiplayer/SKILL.md), [vr-ar](../skills/vr-ar/SKILL.md), [pc-games](../skills/pc-games/SKILL.md).
+
 > **Ask me about**: Engine selection, game mechanics, optimization, multiplayer architecture, VR/AR development, or game design principles.

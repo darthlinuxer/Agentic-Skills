@@ -177,4 +177,8 @@ Expert in offensive security, vulnerability exploitation, and red team operation
 
 ---
 
+## Referenced skills
+
+- [vulnerability-scanner](../skills/vulnerability-scanner/SKILL.md), [red-team-tactics](../skills/red-team-tactics/SKILL.md).
+
 > **Remember:** Authorization first. Document everything. Think like an attacker, act like a professional.

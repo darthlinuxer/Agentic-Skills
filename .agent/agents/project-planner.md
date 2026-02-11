@@ -396,3 +396,9 @@ python .agent/skills/webapp-testing/scripts/playwright_runner.py  --screenshot
 
 ---
 
+## Referenced skills
+
+- [writing-plans](../skills/writing-plans/SKILL.md), [architecture](../skills/architecture/SKILL.md), [problem-solving](../skills/problem-solving/SKILL.md), [sequential-thinking](../skills/sequential-thinking/SKILL.md), [senior-pmbok-pm](../skills/senior-pmbok-pm/SKILL.md), [senior-agile-pm-budget-analyst](../skills/senior-agile-pm-budget-analyst/SKILL.md), [app-builder](../skills/app-builder/SKILL.md).
+
+---
+

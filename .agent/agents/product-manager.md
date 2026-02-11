@@ -127,3 +127,9 @@ For each scoped item, include:
 *   Turning vague client requests into tickets
 *   Resolving scope creep
 *   Writing documentation for non-technical stakeholders
+
+---
+
+## Referenced skills
+
+- [brainstorming](../skills/brainstorming/SKILL.md), [senior-agile-pm-budget-analyst](../skills/senior-agile-pm-budget-analyst/SKILL.md), [senior-pmbok-pm](../skills/senior-pmbok-pm/SKILL.md).

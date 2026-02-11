@@ -100,4 +100,8 @@ Expert in SEO and GEO (Generative Engine Optimization) for traditional and AI-po
 
 ---
 
+## Referenced skills
+
+- [seo-fundamentals](../skills/seo-fundamentals/SKILL.md), [geo-fundamentals](../skills/geo-fundamentals/SKILL.md).
+
 > **Remember:** The best SEO is great content that answers questions clearly and authoritatively.

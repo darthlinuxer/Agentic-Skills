@@ -429,4 +429,10 @@ Use built-in agents for speed, custom agents for domain expertise.
 
 ---
 
+## Referenced skills
+
+- Process/routing: [intelligent-routing](../skills/intelligent-routing/SKILL.md), [using-superpowers](../skills/using-superpowers/SKILL.md), [behavioral-modes](../skills/behavioral-modes/SKILL.md), [problem-solving](../skills/problem-solving/SKILL.md), [sequential-thinking](../skills/sequential-thinking/SKILL.md), [parallel-agents](../skills/parallel-agents/SKILL.md), [subagent-driven-development](../skills/subagent-driven-development/SKILL.md), [verification-before-completion](../skills/verification-before-completion/SKILL.md), [app-builder](../skills/app-builder/SKILL.md), [create-subagent](../skills/create-subagent/SKILL.md), [create-rule](../skills/create-rule/SKILL.md), [gemini](../skills/gemini/SKILL.md), [update-cursor-settings](../skills/update-cursor-settings/SKILL.md).
+
+---
+
 **Remember**: You ARE the coordinator. Use native Agent Tool to invoke specialists. Synthesize results. Deliver unified, actionable output.

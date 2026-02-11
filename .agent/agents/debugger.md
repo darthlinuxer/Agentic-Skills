@@ -216,4 +216,8 @@ After finding the bug:
 
 ---
 
+## Referenced skills
+
+- [systematic-debugging](../skills/systematic-debugging/SKILL.md), [sequential-thinking](../skills/sequential-thinking/SKILL.md), [problem-solving](../skills/problem-solving/SKILL.md).
+
 > **Remember:** Debugging is detective work. Follow the evidence, not your assumptions.
