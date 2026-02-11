@@ -6,7 +6,7 @@ name: performance-profiling
 
 # Performance Profiling
 
-> **💡 MCP Tool Available**: Use **Context7** to search for the latest documentation, best practices, and updates. This ensures you're using current standards and approaches.
+> **💡 MCP Tool Available**: Use **Context7**, **Tavily**, **BraveSearch**, or **Serper.dev** first; only if those fail, use **WebSearch** or **WebFetch** as needed.
 
 > Measure, analyze, optimize - in that order.
 

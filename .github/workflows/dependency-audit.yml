@@ -1,0 +1,58 @@
+# Run pip audit and npm audit to catch known vulnerabilities.
+# Resolve any Dependabot alerts via the GitHub Security tab and keep deps updated.
+name: Dependency audit
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "REQUIREMENTS.txt"
+      - "**/package.json"
+      - "**/package-lock.json"
+      - ".github/workflows/dependency-audit.yml"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "REQUIREMENTS.txt"
+      - "**/package.json"
+      - "**/package-lock.json"
+      - ".github/workflows/dependency-audit.yml"
+
+jobs:
+  pip-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install pip-audit
+        run: pip install pip-audit
+
+      - name: Run pip audit (root)
+        run: pip audit -r REQUIREMENTS.txt
+
+  npm-audit:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [.cursor, .agent, .claude]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install and run npm audit (${{ matrix.platform }})
+        run: |
+          dir="${{ matrix.platform }}/skills/sequential-thinking"
+          if [ -f "$dir/package.json" ]; then
+            cd "$dir" && npm install && npm audit --audit-level=high
+          else
+            echo "No package.json in $dir, skipping"
+          fi

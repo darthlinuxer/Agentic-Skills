@@ -58,6 +58,9 @@ run_step "Dangling skills check (.cursor, .agent, .claude)" \
 run_step "Platform isolation" \
   bash .github/scripts/check-platform-isolation.sh .
 
+run_step "External HTTP policy (no direct external access)" \
+  "$PYTHON" .github/scripts/check-external-http-policy.py
+
 run_step "Docs secrets check" \
   "$PYTHON" .github/scripts/sanitize-docs-secrets.py --check .
 
