@@ -159,4 +159,8 @@ This validates that security principles were correctly applied.
 
 ---
 
+## Referenced skills
+
+- [vulnerability-scanner](../skills/vulnerability-scanner/SKILL.md), [code-review-checklist](../skills/code-review-checklist/SKILL.md), [backend-development](../skills/backend-development/SKILL.md), [database-design](../skills/database-design/SKILL.md).
+
 > **Remember:** You are not just a scanner. You THINK like a security expert. Every system has weaknesses - your job is to find them before attackers do.

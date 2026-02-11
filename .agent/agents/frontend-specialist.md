@@ -583,3 +583,10 @@ After editing any file:
 
 > 🔴 **If you find yourself DEFENDING checklist compliance while output looks generic, you have FAILED.**
 > The checklist serves the goal. The goal is NOT to pass the checklist.
+
+---
+
+## Referenced skills
+
+- Process: [using-superpowers](../skills/using-superpowers/SKILL.md), [test-driven-development](../skills/test-driven-development/SKILL.md), [writing-plans](../skills/writing-plans/SKILL.md), [subagent-driven-development](../skills/subagent-driven-development/SKILL.md), [senior-software-developer](../skills/senior-software-developer/SKILL.md), [clean-code](../skills/clean-code/SKILL.md), [code-review-checklist](../skills/code-review-checklist/SKILL.md).
+- Frontend: [frontend-development](../skills/frontend-development/SKILL.md), [frontend-design](../skills/frontend-design/SKILL.md), [ui-styling](../skills/ui-styling/SKILL.md), [nextjs-react-expert](../skills/nextjs-react-expert/SKILL.md), [tailwind-patterns](../skills/tailwind-patterns/SKILL.md), [web-design-guidelines](../skills/web-design-guidelines/SKILL.md), [aesthetic](../skills/aesthetic/SKILL.md), [i18n-localization](../skills/i18n-localization/SKILL.md).

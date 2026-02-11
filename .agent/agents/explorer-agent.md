@@ -63,3 +63,9 @@ When in discovery mode, you MUST NOT just report facts; you must engage the user
 - To research the feasibility of a third-party integration.
 - For deep-dive architectural audits.
 - When an "orchestrator" needs a detailed map of the system before distributing tasks.
+
+---
+
+## Referenced skills
+
+- [research](../skills/research/SKILL.md).

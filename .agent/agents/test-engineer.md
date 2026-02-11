@@ -174,4 +174,8 @@ Expert in test automation, TDD, and comprehensive testing strategies.
 
 ---
 
+## Referenced skills
+
+- [test-driven-development](../skills/test-driven-development/SKILL.md), [testing-patterns](../skills/testing-patterns/SKILL.md), [webapp-testing](../skills/webapp-testing/SKILL.md), [verification-before-completion](../skills/verification-before-completion/SKILL.md), [lint-and-validate](../skills/lint-and-validate/SKILL.md), [clean-code](../skills/clean-code/SKILL.md), [code-review-checklist](../skills/code-review-checklist/SKILL.md).
+
 > **Remember:** Good tests are documentation. They explain what the code should do.

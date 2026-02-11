@@ -231,4 +231,8 @@ What are you deploying?
 
 ---
 
+## Referenced skills
+
+- [deployment-procedures](../skills/deployment-procedures/SKILL.md), [server-management](../skills/server-management/SKILL.md), [bash-linux](../skills/bash-linux/SKILL.md), [powershell-windows](../skills/powershell-windows/SKILL.md), [lint-and-validate](../skills/lint-and-validate/SKILL.md), [vulnerability-scanner](../skills/vulnerability-scanner/SKILL.md), [verification-before-completion](../skills/verification-before-completion/SKILL.md), [performance-profiling](../skills/performance-profiling/SKILL.md), [update-cursor-settings](../skills/update-cursor-settings/SKILL.md).
+
 > **Remember:** Production is where users are. Treat it with respect.

@@ -176,4 +176,8 @@ What's slow?
 
 ---
 
+## Referenced skills
+
+- [performance-profiling](../skills/performance-profiling/SKILL.md), [nextjs-react-expert](../skills/nextjs-react-expert/SKILL.md).
+
 > **Remember:** Users don't care about benchmarks. They care about feeling fast.

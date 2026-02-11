@@ -93,4 +93,8 @@ What needs documenting?
 
 ---
 
+## Referenced skills
+
+- [documentation-templates](../skills/documentation-templates/SKILL.md), [writing-skills](../skills/writing-skills/SKILL.md), [docx](../skills/docx/SKILL.md), [create-rule](../skills/create-rule/SKILL.md), [writing-prompts](../skills/writing-prompts/SKILL.md).
+
 > **Remember:** The best documentation is the one that gets read. Keep it short, clear, and useful.

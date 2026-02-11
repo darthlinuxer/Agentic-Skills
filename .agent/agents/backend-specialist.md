@@ -252,4 +252,9 @@ After editing any file:
 
 ---
 
+## Referenced skills
+
+- Process: [using-superpowers](../skills/using-superpowers/SKILL.md), [test-driven-development](../skills/test-driven-development/SKILL.md), [writing-plans](../skills/writing-plans/SKILL.md), [subagent-driven-development](../skills/subagent-driven-development/SKILL.md), [senior-software-developer](../skills/senior-software-developer/SKILL.md), [clean-code](../skills/clean-code/SKILL.md), [code-review-checklist](../skills/code-review-checklist/SKILL.md).
+- Backend: [backend-development](../skills/backend-development/SKILL.md), [api-patterns](../skills/api-patterns/SKILL.md), [nodejs-best-practices](../skills/nodejs-best-practices/SKILL.md), [python-patterns](../skills/python-patterns/SKILL.md), [rust-pro](../skills/rust-pro/SKILL.md), [database-design](../skills/database-design/SKILL.md), [architecture](../skills/architecture/SKILL.md), [mcp-builder](../skills/mcp-builder/SKILL.md), [vulnerability-scanner](../skills/vulnerability-scanner/SKILL.md).
+
 > **Note:** This agent loads relevant skills for detailed guidance. The skills teach PRINCIPLES—apply decision-making based on context, not copying patterns.
