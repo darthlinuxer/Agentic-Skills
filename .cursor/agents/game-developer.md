@@ -2,6 +2,7 @@
 name: game-developer
 description: "Use when building games (2D/3D, web or native). Use for engine choice (Unity, Godot, Phaser, etc.), gameplay loop, and performance. Not for general web or mobile app UI."
 model: inherit
+color: emerald
 ---
 
 # Game Developer Agent
@@ -165,7 +166,7 @@ Every game has this cycle:
 
 - **Entry**: You are invoked by the `orchestrator` agent when commands such as `/implement`, `/create`, or `/orchestrate` involve **game development work**. You are not called directly by the user.
 - **Default skills you rely on**:
-  - Games: `game-development`, `2d-games`, `3d-games`, `web-games`, `pc-games`, `mobile-games`, `multiplayer`, `game-design`, `game-art`, `game-audio`, `vr-ar` as appropriate.
+  - Game platforms and design: [2d-games](../skills/2d-games/SKILL.md), [3d-games](../skills/3d-games/SKILL.md), [game-development](../skills/game-development/SKILL.md), [game-design](../skills/game-design/SKILL.md), [game-art](../skills/game-art/SKILL.md), [game-audio](../skills/game-audio/SKILL.md), [mobile-games](../skills/mobile-games/SKILL.md), [pc-games](../skills/pc-games/SKILL.md), [web-games](../skills/web-games/SKILL.md), [multiplayer](../skills/multiplayer/SKILL.md), [vr-ar](../skills/vr-ar/SKILL.md).
   - Process: `using-superpowers` to select appropriate implementation workflows for game-related features.
 - **Hand-offs**:
   - You coordinate with other domain agents (for example `backend-specialist` for backend services, `devops-engineer` for deployment) when game projects require cross-domain support.

@@ -8,12 +8,33 @@ A **multi-platform agentic ecosystem** for AI-assisted development. It provides 
 
 - **Entry points**: 17 commands (Cursor/Claude) or workflows (Agent) that you invoke—e.g. `/plan`, `/implement`, `/fix`, `/docs`.
 - **Orchestrator**: A single coordinator per platform that receives your request by *mode*, selects the right agents and skills, and runs the workflow. You don’t call agents or skills directly.
-- **Agents**: Domain specialists (e.g. backend-specialist, frontend-specialist, documentation-writer, test-engineer) and process roles (e.g. project-planner, verifier). Each has its own skills.
+- **Agents**: Domain specialists (e.g. backend-specialist, frontend-specialist, documentation-writer, test-engineer) and process roles (e.g. project-planner, verifier). Each has its own skills and a **domain color** so the orchestrator (and logs) can see at a glance which area of responsibility is active.
 - **Skills**: Reusable guidance and patterns (e.g. test-driven-development, writing-plans, frontend-design) used by the orchestrator and agents. Skills never call commands or the orchestrator.
 
 **Contract:** You use **only** the entry points (commands or workflows). They route to the orchestrator; the orchestrator uses agents and skills. No cycles: skills don’t call commands or the orchestrator; agents don’t call commands.
 
 ---
+
+## Agent domains and colors
+
+Agents are grouped by domain and share a **basic color** across all three platforms. This keeps roles non-overlapping and makes it easy for the orchestrator (and future colored logs) to see who owns what:
+
+| Domain | Color | Cursor / Claude / Agent agents (examples) |
+|--------|--------|-------------------------------------------|
+| Orchestration & planning | blue / violet | `orchestrator`, `project-planner`, `product-manager` |
+| Discovery & legacy | cyan | `explorer-agent`, `code-archaeologist` |
+| Verification & QA | amber | `test-engineer`, `verifier` (Cursor) |
+| Security | red | `security-auditor`, `penetration-tester` |
+| Backend & data | green | `backend-specialist`, `database-architect` |
+| Frontend | indigo | `frontend-specialist` |
+| DevOps & infra | slate | `devops-engineer` |
+| Mobile | pink | `mobile-developer` |
+| Documentation | zinc | `documentation-writer` |
+| Performance | lime | `performance-optimizer` |
+| SEO / marketing | yellow | `seo-specialist` |
+| Games | emerald | `game-developer` |
+
+On each platform, agents declare this in frontmatter (for example `color: green` on `backend-specialist`), and the orchestrator never asks an agent to work outside its domain.
 
 ## Platforms and entry points
 
@@ -86,6 +107,12 @@ Under each platform:
 - **`skills/`** — Reusable skills (e.g. `documentation-templates`, `writing-plans`, `test-driven-development`). Agents reference skills; skills do not call commands or the orchestrator.
 - **`rules/`** (Cursor/Agent) — Workspace rules (e.g. entry-point, coding-style, git).
 - **`scripts/`** — Helper scripts (e.g. preview, verification).
+
+---
+
+## Validations
+
+From the repo root, run `./run-validations.sh` to execute link validation, **dangling skills check**, platform isolation, and docs secrets check. See [docs/DANGLING-SKILLS-CHECK.md](docs/DANGLING-SKILLS-CHECK.md) for how the dangling-skills check works and how to fix reported issues.
 
 ---
 

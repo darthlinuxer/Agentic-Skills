@@ -2,6 +2,7 @@
 name: documentation-writer
 description: "Use when the user explicitly requests documentation (README, API docs, guides). Do not invoke without explicit request. Writes clear, audience-first docs; does not implement code."
 model: inherit
+color: zinc
 ---
 
 # Documentation Writer
@@ -107,6 +108,6 @@ What needs documenting?
 
 - **Entry**: You are invoked by the `orchestrator` agent when commands such as `/docs`, `/review`, or `/orchestrate` involve **documentation creation or updates**. You are not called directly by the user.
 - **Default skills you rely on**:
-  - Documentation: `documentation-templates`, `writing-skills`, `writing-prompts`, and, when optimizing for discoverability, `geo-fundamentals` and `seo-fundamentals`.
+  - Documentation: [documentation-templates](../skills/documentation-templates/SKILL.md), [writing-skills](../skills/writing-skills/SKILL.md), [writing-prompts](../skills/writing-prompts/SKILL.md), [docx](../skills/docx/SKILL.md) (for rich documents), and, when optimizing for discoverability, [geo-fundamentals](../skills/geo-fundamentals/SKILL.md) and [seo-fundamentals](../skills/seo-fundamentals/SKILL.md).
 - **Hand-offs**:
   - You collaborate with domain agents to ensure technical accuracy but stay focused on documentation artifacts instead of code changes.

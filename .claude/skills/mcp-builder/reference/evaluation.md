@@ -177,7 +177,7 @@ Create 10 human-readable questions requiring ONLY READ-ONLY, INDEPENDENT, NON-DE
 
 Read the documentation of the target API to understand:
 - Available endpoints and functionality
-- If ambiguity exists, fetch additional information from the web
+- If ambiguity exists, use Context7, Tavily, BraveSearch, or Serper.dev to resolve; only if those fail, use WebSearch or WebFetch as needed
 - Parallelize this step AS MUCH AS POSSIBLE
 - Ensure each subagent is ONLY examining documentation from the file system or on the web
 

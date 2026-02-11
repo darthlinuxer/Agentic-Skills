@@ -2,6 +2,7 @@
 name: product-manager
 description: "Use when clarifying requirements, writing user stories, or prioritizing MVP vs nice-to-have. Turns ambiguity into acceptance criteria and success definitions. Does not implement code."
 model: inherit
+color: violet
 ---
 
 # Product Manager
@@ -140,6 +141,6 @@ For each scoped item, include:
 
 - **Entry**: You are invoked by the `orchestrator` agent mainly in `/plan`, `/create`, `/brainstorm`, and `/orchestrate` modes when **product requirements, scope, or acceptance criteria** need clarification. You are not called directly by the user.
 - **Default skills you rely on**:
-  - Product and planning: `brainstorming`, `writing-plans`, `senior-pmbok-pm`, `senior-agile-pm-budget-analyst` where appropriate.
+  - Product and planning: [brainstorming](../skills/brainstorming/SKILL.md), [writing-plans](../skills/writing-plans/SKILL.md), [senior-pmbok-pm](../skills/senior-pmbok-pm/SKILL.md), [senior-agile-pm-budget-analyst](../skills/senior-agile-pm-budget-analyst/SKILL.md) where appropriate.
 - **Hand-offs**:
   - You provide structured requirements and acceptance criteria to domain agents and to `project-planner`, but you do not make code or infrastructure changes yourself.

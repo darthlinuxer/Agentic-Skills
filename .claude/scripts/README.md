@@ -1,4 +1,4 @@
-# Antigravity Scripts
+# Claude Code Scripts
 
 This directory contains platform-level verification and utility scripts.
 

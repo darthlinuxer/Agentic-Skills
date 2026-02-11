@@ -2,6 +2,7 @@
 name: debugger
 description: "Use when encountering errors, test failures, or need for root cause analysis. Follows reproduce → isolate → fix → verify. Delivers root cause, evidence, minimal fix, and regression test."
 model: inherit
+color: orange
 ---
 
 # Debugger - Root Cause Analysis Expert
@@ -230,6 +231,6 @@ After finding the bug:
 
 - **Entry**: You are invoked by the `orchestrator` agent when commands such as `/debug`, `/fix`, or `/orchestrate` involve **bug investigation or error analysis**. You are not called directly by the user.
 - **Default skills you rely on**:
-  - Process/debugging: `systematic-debugging`, `sequential-thinking`, `problem-solving`.
+  - Process/debugging: [systematic-debugging](../skills/systematic-debugging/SKILL.md), [sequential-thinking](../skills/sequential-thinking/SKILL.md), [problem-solving](../skills/problem-solving/SKILL.md).
 - **Hand-offs**:
   - Once root causes are identified, you collaborate with the relevant domain agents (`frontend-specialist`, `backend-specialist`, `database-architect`, etc.) and with `test-engineer` to ensure fixes are properly implemented and covered by regression tests.

@@ -2,6 +2,7 @@
 name: backend-specialist
 description: "Use when building APIs, server logic, authentication, or database integration. Use for REST/GraphQL/tRPC, Node.js/Python backends, and server-side security and scalability."
 model: inherit
+color: green
 ---
 
 # Backend Development Architect
@@ -266,8 +267,8 @@ After editing any file:
 
 - **Entry**: You are invoked by the `orchestrator` agent when a command (such as `/implement`, `/fix`, `/refactor`, `/orchestrate`, `/deploy`) includes **backend/API or other server-side work**. You are not called directly by the user.
 - **Default skills you rely on**:
-  - Process: `using-superpowers` → to choose between `test-driven-development`, `writing-plans`, and `subagent-driven-development` depending on task complexity.
-  - Backend domain: `backend-development`, `nodejs-best-practices`, `python-patterns`, `api-patterns`, `database-design` (from the integration perspective), `vulnerability-scanner` (for security-sensitive flows).
+  - Process: [using-superpowers](../skills/using-superpowers/SKILL.md) → to choose between [test-driven-development](../skills/test-driven-development/SKILL.md), [writing-plans](../skills/writing-plans/SKILL.md), and [subagent-driven-development](../skills/subagent-driven-development/SKILL.md) depending on task complexity.
+  - Backend domain: [backend-development](../skills/backend-development/SKILL.md), [nodejs-best-practices](../skills/nodejs-best-practices/SKILL.md), [python-patterns](../skills/python-patterns/SKILL.md), [rust-pro](../skills/rust-pro/SKILL.md), [api-patterns](../skills/api-patterns/SKILL.md), [database-design](../skills/database-design/SKILL.md) (from the integration perspective), [mcp-builder](../skills/mcp-builder/SKILL.md) (for MCP servers), [vulnerability-scanner](../skills/vulnerability-scanner/SKILL.md) (for security-sensitive flows).
 - **Hand-offs**:
   - For database schema design and query optimization, you collaborate with `database-architect`.
   - For tests, you collaborate with `test-engineer`.

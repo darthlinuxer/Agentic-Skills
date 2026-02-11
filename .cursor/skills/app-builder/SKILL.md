@@ -8,7 +8,7 @@ description: Main application building orchestrator. Creates full-stack applicat
 # App Builder - Application Building Orchestrator
 
 > **🛠️ MCP Tools Available**: 
-> - **Context7**: Search for latest documentation and best practices
+> - **Context7 / Tavily / BraveSearch / Serper.dev**: Prefer for documentation and search; fall back to **WebSearch** or **WebFetch** only if needed.
 > - **Sequential Thinking**: Break down complex problems into structured reasoning steps
 
 > Analyzes user's requests, determines tech stack, plans structure, and coordinates agents.

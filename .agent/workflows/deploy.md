@@ -111,7 +111,7 @@ error TS2345: Argument of type 'string' is not assignable...
 
 ## Routing
 This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="deploy"`**. The orchestrator:
-- Uses `intelligent-routing` to select [devops-engineer](../agents/devops-engineer.md) as the primary agent, and may include [test-engineer](../agents/test-engineer.md), [security-auditor](../agents/security-auditor.md), and [performance-optimizer](../agents/performance-optimizer.md) for pre-deploy checks.
-- Relies on process skills like `verification-before-completion`, `lint-and-validate`, and `vulnerability-scanner` (via agents) to ensure deployments follow the pre-flight checklist.
+- Uses [intelligent-routing](../skills/intelligent-routing/SKILL.md) to select [devops-engineer](../agents/devops-engineer.md) as the primary agent, and may include [test-engineer](../agents/test-engineer.md), [security-auditor](../agents/security-auditor.md), and [performance-optimizer](../agents/performance-optimizer.md) for pre-deploy checks.
+- Relies on process skills like [verification-before-completion](../skills/verification-before-completion/SKILL.md), [lint-and-validate](../skills/lint-and-validate/SKILL.md), and [vulnerability-scanner](../skills/vulnerability-scanner/SKILL.md) (via agents) to ensure deployments follow the pre-flight checklist.
 
 Users should invoke this workflow; the orchestrator coordinates all agents and skills needed for safe deployment.

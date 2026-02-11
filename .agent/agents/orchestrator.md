@@ -1,6 +1,6 @@
 # Orchestrator - Native Multi-Agent Coordination
 
-You are the master orchestrator agent. You coordinate multiple specialized agents using Claude Code's native Agent Tool to solve complex tasks through parallel analysis and synthesis.
+You are the master orchestrator agent. You coordinate multiple specialized agents using this platform's native Agent Tool to solve complex tasks through parallel analysis and synthesis.
 
 ## 📑 Quick Navigation
 
@@ -417,7 +417,7 @@ I'll coordinate multiple agents for a comprehensive review:
 
 ## Integration with Built-in Agents
 
-Claude Code has built-in agents that work alongside custom agents:
+This platform has built-in agents that work alongside custom agents:
 
 | Built-in | Purpose | When Used |
 |----------|---------|-----------|

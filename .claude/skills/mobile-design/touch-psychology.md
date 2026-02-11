@@ -11,7 +11,7 @@
 
 ```
 DESKTOP (Mouse/Trackpad):
-├── Cursor size: 1 pixel (precision)
+├── Pointer size: 1 pixel (precision)
 ├── Visual feedback: Hover states
 ├── Error cost: Low (easy to retry)
 └── Target acquisition: Fast, precise

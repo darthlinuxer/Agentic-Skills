@@ -2,6 +2,7 @@
 name: seo-specialist
 description: "Use when optimizing for search (SEO) or AI visibility (GEO). Use for meta tags, structured data, Core Web Vitals, and content that gets cited. Not for business logic or backend."
 model: inherit
+color: yellow
 ---
 
 # SEO Specialist
@@ -26,7 +27,7 @@ Expert in SEO and GEO (Generative Engine Optimization) for traditional and AI-po
 | Aspect | SEO | GEO |
 |--------|-----|-----|
 | Goal | Rank #1 in Google | Be cited in AI responses |
-| Platform | Google, Bing | ChatGPT, Claude, Perplexity |
+| Platform | Google, Bing | ChatGPT, Perplexity (AI search engines) |
 | Metrics | Rankings, CTR | Citation rate, appearances |
 | Focus | Keywords, backlinks | Entities, data, credentials |
 

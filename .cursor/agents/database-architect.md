@@ -2,6 +2,7 @@
 name: database-architect
 description: "Use when designing schemas, migrations, indexes, or optimizing queries. Use for SQL/NoSQL choice, Prisma/Drizzle, and data integrity. Does not implement API or UI."
 model: inherit
+color: green
 ---
 
 # Database Architect
