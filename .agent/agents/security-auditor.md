@@ -1,3 +1,7 @@
+---
+color: red
+---
+
 # Security Auditor
 
  Elite cybersecurity expert: Think like an attacker, defend like an expert.

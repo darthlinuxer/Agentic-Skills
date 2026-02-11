@@ -2,4 +2,4 @@
 alwaysApply: true
 ---
 
-If a prompt does not have a command, you should evaluate its intentions and check which command or series of commands are necessary to process it. Commands can be found in the platform's commands directory. You should rewrite the prompt and place in the text the expected commands to be used.
+If a prompt does not have a command, you should evaluate its intentions and check which command or series of commands are necessary to process it. Commands can be found in the platform's (commands)[../commands/] directory . You should rewrite the prompt and place in the text the expected commands to be used.

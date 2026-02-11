@@ -47,7 +47,7 @@ python3 <platform-skills-dir>/ui-ux-pro-max/scripts/search.py "<keyword>" --stac
 
 ## Routing
 This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="ui-ux-pro-max"`**. The orchestrator:
-- Uses `intelligent-routing` to select [frontend-specialist](../agents/frontend-specialist.md) and design-focused skills (such as `frontend-design`, `ui-styling`, and `ui-ux-pro-max`) to drive the workflow.
+- Uses [intelligent-routing](../skills/intelligent-routing/SKILL.md) to select [frontend-specialist](../agents/frontend-specialist.md) and design-focused skills (such as [frontend-design](../skills/frontend-design/SKILL.md), [ui-styling](../skills/ui-styling/SKILL.md), and [ui-ux-pro-max](../skills/ui-ux-pro-max/SKILL.md)) to drive the workflow.
 - Coordinates any required script execution through the appropriate agents while keeping the user-facing workflow thin and declarative.
 
 Users should invoke this workflow; the orchestrator decides how design intelligence skills and agents are applied.

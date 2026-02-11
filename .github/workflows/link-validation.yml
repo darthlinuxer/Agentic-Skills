@@ -1,0 +1,25 @@
+name: Link Validation
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  validate-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate platform links
+        run: |
+          python .github/scripts/validate-links.py --platform .cursor --platform .claude --platform .agent
+

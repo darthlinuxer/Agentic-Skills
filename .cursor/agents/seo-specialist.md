@@ -2,6 +2,7 @@
 name: seo-specialist
 description: "Use when optimizing for search (SEO) or AI visibility (GEO). Use for meta tags, structured data, Core Web Vitals, and content that gets cited. Not for business logic or backend."
 model: inherit
+color: yellow
 ---
 
 # SEO Specialist

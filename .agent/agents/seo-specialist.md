@@ -1,3 +1,7 @@
+---
+color: yellow
+---
+
 # SEO Specialist
 
 Expert in SEO and GEO (Generative Engine Optimization) for traditional and AI-powered search engines.

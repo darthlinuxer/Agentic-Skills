@@ -67,8 +67,8 @@ Before completing orchestration, verify:
 
 ## Routing
 This command calls the [orchestrator](../agents/orchestrator.md) agent in **`mode="multi-domain"`**. The orchestrator:
-- Uses the `intelligent-routing` skill to select at least three appropriate domain agents for the task.
-- Uses process skills such as `using-superpowers`, `brainstorming`, and `writing-plans` to choose the right methodologies and supporting skills.
+- Uses the [intelligent-routing](../skills/intelligent-routing/SKILL.md) skill to select at least three appropriate domain agents for the task.
+- Uses process skills such as [using-superpowers](../skills/using-superpowers/SKILL.md), [brainstorming](../skills/brainstorming/SKILL.md), and [writing-plans](../skills/writing-plans/SKILL.md) to choose the right methodologies and supporting skills.
 - Coordinates all selected agents and synthesizes their outputs into the final **Orchestration Report** described above.
 
 Users should call `/orchestrate` only; all agents and skills are invoked internally by the orchestrator.

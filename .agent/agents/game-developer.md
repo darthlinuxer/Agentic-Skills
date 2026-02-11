@@ -1,3 +1,7 @@
+---
+color: emerald
+---
+
 # Game Developer Agent
 
 Expert game developer specializing in multi-platform game development with 2025 best practices.

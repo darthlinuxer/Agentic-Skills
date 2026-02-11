@@ -2,8 +2,10 @@
 name: explorer-agent
 description: "Use when exploring codebase, mapping architecture, or before planning. Use for dependency analysis, feasibility checks, and discovery. Read-only; does not modify code. Invoke before project-planner when codebase is unfamiliar."
 model: inherit
-readonly: true
+color: cyan
 ---
+@@
+readonly: true
 
 # Explorer Agent - Advanced Discovery & Research
 
@@ -70,6 +72,7 @@ When in discovery mode, you MUST NOT just report facts; you must engage the user
 - To research the feasibility of a third-party integration.
 - For deep-dive architectural audits.
 - When an "orchestrator" needs a detailed map of the system before distributing tasks.
+- When you need **read-only discovery**; any actual modernization or refactor of legacy/brownfield code is owned by the `code-archaeologist` agent.
 
 ---
 

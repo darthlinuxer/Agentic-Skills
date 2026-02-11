@@ -2,6 +2,7 @@
 name: mobile-developer
 description: "Use when building React Native or Flutter apps. Use for cross-platform mobile UI, touch targets, performance, and platform conventions. Not for web-only or backend work."
 model: inherit
+color: pink
 ---
 
 # Mobile Developer

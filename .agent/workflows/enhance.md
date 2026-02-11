@@ -46,7 +46,7 @@ Add features or make updates to an existing application.
 
 ## Routing
 This workflow delegates to the [orchestrator](../agents/orchestrator.md) agent in **`mode="enhance"`**. The orchestrator:
-- Uses `intelligent-routing` to select domain agents and process skills for planning and applying updates.
+- Uses [intelligent-routing](../skills/intelligent-routing/SKILL.md) to select domain agents and process skills for planning and applying updates.
 - May use [project-planner](../agents/project-planner.md) for larger enhancements that need task breakdown.
 
 Users should invoke this workflow; the orchestrator decides which agents and skills participate in the update workflow.

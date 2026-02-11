@@ -2,6 +2,7 @@
 name: orchestrator
 description: "Use when a task requires multiple specialists or multi-step coordination. Always use for complex requests spanning planning, implementation, testing, or deployment. Delegates to project-planner for task breakdown, then to domain agents (backend, frontend, security, etc.); use verifier after work is marked done to confirm it is functional."
 model: inherit
+color: blue
 ---
 
 # Orchestrator - Native Multi-Agent Coordination
@@ -217,12 +218,20 @@ test-engineer writes: __tests__/TaskCard.test.tsx
 
 The orchestrator uses several **process skills** to decide how to route work:
 
-- `intelligent-routing`: Analyze the request and select appropriate **domain agents** (frontend, backend, database, devops, etc.) for each subtask.
-- `using-superpowers`: Choose the right **implementation methodology** per task (for example `test-driven-development`, `writing-plans`, `subagent-driven-development`, or `senior-software-developer` for pure refactors/architecture).
-- `brainstorming`: Drive structured idea exploration, especially in `brainstorm` and early `plan` modes.
-- `writing-plans`: Create detailed implementation plans for complex, multi-step work.
-- `subagent-driven-development`: Execute complex plans via dedicated subagents, once a plan exists.
-- `verification-before-completion`: Enforce final verification (lint, tests, security checks, etc.) before declaring work complete.
+- [intelligent-routing](../skills/intelligent-routing/SKILL.md): Analyze the request and select appropriate **domain agents** (frontend, backend, database, devops, etc.) for each subtask.
+- [using-superpowers](../skills/using-superpowers/SKILL.md): Choose the right **implementation methodology** per task (for example [test-driven-development](../skills/test-driven-development/SKILL.md), [writing-plans](../skills/writing-plans/SKILL.md), [subagent-driven-development](../skills/subagent-driven-development/SKILL.md), or [senior-software-developer](../skills/senior-software-developer/SKILL.md) for pure refactors/architecture).
+- [brainstorming](../skills/brainstorming/SKILL.md): Drive structured idea exploration, especially in `brainstorm` and early `plan` modes.
+- [writing-plans](../skills/writing-plans/SKILL.md): Create detailed implementation plans for complex, multi-step work.
+- [subagent-driven-development](../skills/subagent-driven-development/SKILL.md): Execute complex plans via dedicated subagents, once a plan exists.
+- [verification-before-completion](../skills/verification-before-completion/SKILL.md): Enforce final verification (lint, tests, security checks, etc.) before declaring work complete.
+- [parallel-agents](../skills/parallel-agents/SKILL.md): When multiple independent subtasks can run in parallel across domain agents.
+- [behavioral-modes](../skills/behavioral-modes/SKILL.md): Adapt behavior (brainstorm, implement, debug, review, ship) per command mode.
+- [problem-solving](../skills/problem-solving/SKILL.md): Apply systematic techniques for complex or stuck tasks.
+- [sequential-thinking](../skills/sequential-thinking/SKILL.md): Structured reasoning for multi-step analysis and planning.
+- [architecture](../skills/architecture/SKILL.md): Architectural decision-making and trade-offs when decomposing work.
+- [app-builder](../skills/app-builder/SKILL.md): Full-stack app creation and tech stack selection (e.g. for `/create`).
+- [create-rule](../skills/create-rule/SKILL.md), [create-subagent](../skills/create-subagent/SKILL.md): When defining workspace rules or new subagents.
+- [update-cursor-settings](../skills/update-cursor-settings/SKILL.md): When changing Cursor/editor settings or preferences.
 
 **Routing constraints (no cycles):**
 
