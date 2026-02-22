@@ -1,0 +1,88 @@
+{
+  "project": "Agentic-Skills Fixes",
+  "branchName": "fix-top-action-items",
+  "description": "Fix top action items from ASSESSMENT_REPORT.md",
+  "userStories": [
+    {
+      "id": "FIX-001",
+      "title": "Resolve content divergence - single source of truth",
+      "description": "As a developer, I want to establish a single source of truth for skills across platforms to eliminate content divergence.",
+      "acceptanceCriteria": [
+        "Choose one platform as master for skill content",
+        "Document the consolidation strategy",
+        "Copy consolidated content to all platforms",
+        "Verify all skills now have consistent content"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": "From AS-003: All 67 common skills have DIFFERENT content across platforms"
+    },
+    {
+      "id": "FIX-002",
+      "title": "Move doc.md out of skills directory",
+      "description": "As a developer, I want to move doc.md from .agent/skills/ to correct location since it's documentation, not a skill.",
+      "acceptanceCriteria": [
+        "Identify correct location for doc.md",
+        "Move file to appropriate directory",
+        "Verify no broken references"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": "From AS-003: doc.md incorrectly placed in .agent/skills/"
+    },
+    {
+      "id": "FIX-003",
+      "title": "Add persistent memory to .agent and .cursor platforms",
+      "description": "As a developer, I want to add MEMORY.md support to .agent and .cursor platforms similar to what .claude has.",
+      "acceptanceCriteria": [
+        "Study .claude MEMORY.md implementation",
+        "Add MEMORY.md support to .agent platform",
+        "Add MEMORY.md support to .cursor platform",
+        "Document memory usage in skills"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": "From AS-006: .claude has MEMORY.md, .agent and .cursor don't"
+    },
+    {
+      "id": "FIX-004",
+      "title": "Add missing gemini skill to .cursor",
+      "description": "As a developer, I want to add the gemini skill to .cursor platform since it exists in .agent and .claude but not .cursor.",
+      "acceptanceCriteria": [
+        "Find gemini skill in .agent or .claude",
+        "Copy to .cursor platform",
+        "Verify proper format"
+      ],
+      "priority": 4,
+      "passes": false,
+      "notes": "From AS-003: gemini missing from .cursor"
+    },
+    {
+      "id": "FIX-005",
+      "title": "Add verifier agent to .agent and .claude",
+      "description": "As a developer, I want to add the verifier agent to .agent and .claude platforms since it's unique to .cursor.",
+      "acceptanceCriteria": [
+        "Study verifier agent in .cursor",
+        "Add verifier agent to .claude",
+        "Add verifier agent to .agent",
+        "Test agent functionality"
+      ],
+      "priority": 5,
+      "passes": false,
+      "notes": "From AS-006: verifier agent unique to .cursor"
+    },
+    {
+      "id": "FIX-006",
+      "title": "Consolidate gemini skill across platforms",
+      "description": "As a developer, I want to consolidate the gemini skill to have single source of truth.",
+      "acceptanceCriteria": [
+        "Choose master gemini skill",
+        "Copy to all platforms",
+        "Verify no duplicates"
+      ],
+      "priority": 6,
+      "passes": false,
+      "notes": "From AS-003: gemini duplicated in .agent and .claude"
+    }
+  ]
+}
