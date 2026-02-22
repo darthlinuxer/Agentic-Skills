@@ -319,16 +319,58 @@ Show selection reasoning:
 - Reasoning: [why]
 ```
 
+## Memory and Recall Patterns
+
+### Learning from Routing Decisions
+
+After each routing decision, optionally record the outcome to improve future routing:
+
+```markdown
+## Routing Memory Log
+
+### [Date] - Routing Decision
+- **Request**: "[User message]"
+- **Detected Domains**: [list]
+- **Selected Agent**: [agent name]
+- **Outcome**: [success/needed-adjustment]
+- **Notes**: [if routing needed adjustment]
+```
+
+### Context-Aware Routing
+
+Use project-specific memory to improve routing accuracy:
+
+1. **Project Context**: Store common patterns specific to the project
+2. **User Preferences**: Remember explicit agent preferences
+3. **Success Patterns**: Track which agents perform best for specific task types
+
+### Recall Protocol
+
+Before routing, check MEMORY.md for:
+- Previous similar requests and their outcomes
+- User-specified agent preferences
+- Project-specific routing rules
+
+```markdown
+## Project Routing Rules
+- "auth" requests → always use security-auditor first
+- "database" requests → always use database-architect
+- [Add project-specific rules]
+```
+
+---
+
 ## Summary
 
 **intelligent-routing skill enables:**
 
-✅ Zero-command operation (no need for `/orchestrate`)  
-✅ Automatic specialist selection based on request analysis  
-✅ Transparent communication of which expertise is being applied  
-✅ Seamless integration with existing workflows  
-✅ Override capability for explicit agent mentions  
+✅ Zero-command operation (no need for `/orchestrate`)
+✅ Automatic specialist selection based on request analysis
+✅ Transparent communication of which expertise is being applied
+✅ Seamless integration with existing workflows
+✅ Override capability for explicit agent mentions
 ✅ Fallback to orchestrator for complex tasks
+✅ Memory integration for learning from past decisions
 
 **Result**: User gets specialist-level responses without needing to know the system architecture.
 

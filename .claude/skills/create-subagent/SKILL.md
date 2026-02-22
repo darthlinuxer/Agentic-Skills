@@ -219,6 +219,50 @@ Use the my-agent subagent to [task description]
 3. **Check into version control**: Share project subagents with your team
 4. **Use proactive language**: Include "use proactively" in descriptions
 
+## Memory Integration with Subagents
+
+### Context Passing Pattern
+
+When invoking subagents, pass relevant context from your main conversation:
+
+```
+Use the security-auditor agent to review authentication.
+
+Context from our discussion:
+- We implemented JWT-based auth
+- Using refresh tokens
+- Session storage in Redis
+```
+
+### Subagent Memory Files
+
+For persistent context across subagent invocations, create memory files:
+
+```markdown
+# [Subagent Name] Context
+
+## Project-Specific Notes
+- Key patterns used in this codebase
+- Important conventions to follow
+
+## Previous Work
+- [Date]: Completed [task description]
+- [Date]: Fixed [issue]
+
+## Common Scenarios
+- Scenario 1: How to handle [case]
+- Scenario 2: Preferred approach for [case]
+```
+
+### Recall Protocol
+
+Before creating a new subagent:
+1. Check existing subagents for similar functionality
+2. Review subagent memory files for context
+3. Consider if existing subagent can be extended
+
+---
+
 ## Troubleshooting
 
 ### Subagent Not Found

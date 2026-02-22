@@ -128,3 +128,26 @@ Started: Sun Feb 22 17:26:39 -03 2026
     4. Add gemini skill to .cursor (missing - only .agent and .claude have it)
 
 ---
+
+## Sun Feb 22 19:30:00 -03 2026 - AS-007
+- What was implemented
+  - Enhanced intelligent-routing skill with memory/recall patterns for learning from routing decisions
+  - Enhanced app-builder skill with subagent orchestration patterns and memory integration
+  - Enhanced create-subagent skill with memory integration (context passing, memory files)
+  - Verified research and parallel-agents already had subagent patterns and memory integration
+  - Ran validations - all passed (link validation, dangling skills, platform isolation, HTTP policy, docs secrets)
+
+- Files changed
+  - .claude/skills/intelligent-routing/SKILL.md (added memory/recall patterns section)
+  - .claude/skills/app-builder/SKILL.md (added subagent orchestration patterns)
+  - .claude/skills/create-subagent/SKILL.md (added memory integration section)
+  - prd.json (updated passes to true for AS-007)
+
+- **Learnings for future iterations:**
+  - Skills in .claude platform were enhanced; .agent and .cursor have separate skill content per AS-003 findings
+  - Memory patterns follow MEMORY.md file convention for persistent context
+  - Subagent patterns include: parallel execution, sequential chain, context passing, resume capability
+  - All three enhancements (subagents, parallel, memory) can be combined in a single skill
+  - Validations must pass before marking story complete
+
+---
