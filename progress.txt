@@ -80,6 +80,9 @@ Started: Sun Feb 22 17:26:39 -03 2026
 - create-subagent skill must remain platform-specific (contains platform path references)
 - 66 common skills synced from .claude to .agent and .cursor (excluding create-subagent)
 - Platform isolation check requires no cross-platform references in skill content
+- Verifier agent now available in all 3 platforms (.agent, .claude, .cursor) - provides independent validation
+- Agent YAML frontmatter format: name, description, model, color, memory (memory: project for persistent memory)
+- .claude and .agent agents use "Referenced skills" section format (after FIX-005 and FIX-003)
 ---
 
 ## Sun Feb 22 18:30:00 -03 2026 - AS-005
@@ -262,3 +265,25 @@ Started: Sun Feb 22 17:26:39 -03 2026
   - Use format `../skills/<skill-id>/SKILL.md` for skill references
 
 ---
+
+## Sun Feb 22 21:30:00 -03 2026 - FIX-005
+- What was implemented
+  - Studied verifier agent in .cursor (unique agent with skepticism validation pattern)
+  - Created verifier agent in .claude with same format as other .claude agents (YAML frontmatter + Referenced skills)
+  - Created verifier agent in .agent with YAML frontmatter format (matching orchestrator format from FIX-003)
+  - Both verifier agents include: memory: project, references to verification-before-completion and testing-patterns skills
+  - All validations pass (link validation, dangling skills, platform isolation)
+
+- Files changed
+  - .claude/agents/verifier.md (new - copied format from .claude debugger agent)
+  - .agent/agents/verifier.md (new - copied format from .agent orchestrator agent)
+  - prd.json (updated passes to true for FIX-005)
+
+- **Learnings for future iterations:**
+  - Verifier agent provides independent validation - does NOT accept claims at face value
+  - .claude agents use YAML frontmatter + "Referenced skills" section format
+  - .agent agents use YAML frontmatter (added in FIX-003) + "Referenced skills" section format
+  - Both platforms now have verifier agent matching .cursor functionality
+  - Agent color scheme: amber for verifier (skepticism/warning theme)
+  - Model: fast (quick validation checks)
+
