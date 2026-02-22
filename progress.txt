@@ -1,6 +1,23 @@
 # Agentic-Skills Assessment Progress Log
 Started: Sun Feb 22 17:26:39 -03 2026
 
+## Sat Feb 22 21:00:00 -03 2026 - FIX-002
+- What was implemented
+  - Identified doc.md as documentation (not a skill) in .agent/skills/
+  - Moved doc.md to .agent/README.md as primary platform documentation
+  - All validations pass (link validation, dangling skills, platform isolation)
+
+- Files changed
+  - .agent/README.md (moved from .agent/skills/doc.md)
+  - prd.json (updated passes to true for FIX-002)
+
+- **Learnings for future iterations:**
+  - Documentation files should be at platform root (README.md) or in docs/ directory
+  - doc.md was not a skill - lacked SKILL.md format and YAML frontmatter
+  - Platform root is appropriate location for platform-level documentation
+
+---
+
 ## Sat Feb 22 20:00:00 -03 2026 - FIX-001
 - What was implemented
   - Chose .claude as master platform for skill content

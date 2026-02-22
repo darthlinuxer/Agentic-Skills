@@ -27,8 +27,8 @@
         "Verify no broken references"
       ],
       "priority": 2,
-      "passes": false,
-      "notes": "From AS-003: doc.md incorrectly placed in .agent/skills/"
+      "passes": true,
+      "notes": "From AS-003: doc.md incorrectly placed in .agent/skills/. Implemented: Moved doc.md to .agent/README.md as primary documentation for the Antigravity Skills platform. All validations pass."
     },
     {
       "id": "FIX-003",
