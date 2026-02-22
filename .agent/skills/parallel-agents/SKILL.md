@@ -129,6 +129,46 @@ Use **Explore** for quick searches, **custom agents** for domain expertise.
 
 ---
 
+## True Parallel Execution
+
+For independent tasks, launch multiple agents simultaneously:
+
+### Launch Pattern
+```
+[Launch in background]
+Agent 1: "Analyze authentication module for security issues"
+Agent 2: "Review database queries for performance"
+Agent 3: "Check React components for accessibility"
+
+[Wait for all to complete]
+[Synthesize findings]
+```
+
+### Background Execution
+Use `run_in_background: true` to launch agents that run independently:
+- Good for: Independent research, parallel analysis, multiple reviews
+- Not for: Tasks with dependencies or shared context
+
+### Memory Integration
+After parallel execution, store findings in MEMORY.md:
+```
+## [Date] - Parallel Analysis Results
+
+### Task 1: Security Review
+- Finding: XSS vulnerability in login form
+- Severity: Critical
+
+### Task 2: Performance Review
+- Finding: N+1 query in user list
+- Severity: High
+
+### Task 3: Accessibility Review
+- Finding: Missing ARIA labels
+- Severity: Medium
+```
+
+---
+
 ## Synthesis Protocol
 
 After all agents complete, synthesize:
