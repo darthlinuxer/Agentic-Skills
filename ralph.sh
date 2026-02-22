@@ -1,15 +1,77 @@
 #!/bin/bash
 # Ralph Wiggum - Long-running AI agent loop
-# Usage: ./ralph.sh [--tool amp|claude] [max_iterations]
 
-set -e
-
-# Parse arguments
-TOOL="amp"  # Default to amp for backwards compatibility
+# Default values
+TOOL="amp"
 MAX_ITERATIONS=10
 
+# Help function
+show_help() {
+  cat << 'EOF'
+Ralph - Autonomous AI Agent Loop
+
+USAGE:
+    ./ralph.sh [OPTIONS] [max_iterations]
+
+OPTIONS:
+    --tool TOOL       AI tool to use: amp or claude (default: amp)
+    --tool=TOOL      Same as above but with = syntax
+    --help, -h       Show this help message
+
+ARGUMENTS:
+    max_iterations   Number of iterations to run (default: 10)
+
+EXAMPLES:
+    # Run with default settings (amp, 10 iterations)
+    ./ralph.sh
+
+    # Run 5 iterations with Claude Code
+    ./ralph.sh --tool claude 5
+
+    # Run 3 iterations with Amp
+    ./ralph.sh 3
+
+    # Run with Claude using equals syntax
+    ./ralph.sh --tool=claude 10
+
+CONFIGURATION:
+    Ralph reads config.sh for delivery settings:
+    - OPENCLAW_DELIVER_CHANNEL: telegram, whatsapp, discord, etc.
+    - OPENCLAW_DELIVER_TO: recipient ID (e.g., your Telegram user ID)
+    - OPENCLAW_MODE: local or remote
+
+    Copy config.sh.example to config.sh and customize.
+
+TELEGRAM MESSAGES:
+    When configured, Ralph sends:
+    - Overview: Total/pending/completed stories before starting
+    - Story Details: Title, description, acceptance criteria before each story
+    - Progress: Iteration status after each completion
+    - Completion: Final summary when done
+
+FILES:
+    prd.json         - Project requirements (user stories)
+    progress.txt     - Progress log (appended each iteration)
+    CLAUDE.md       - Agent instructions for Claude Code
+    prompt.md       - Agent instructions for Amp
+    config.sh       - Delivery configuration
+    archive/        - Previous runs archived here
+
+TROUBLESHOOTING:
+    - If no progress: Check prd.json exists with valid userStories
+    - If no delivery: Verify config.sh has OPENCLAW_DELIVER_CHANNEL set
+    - If Claude fails: Ensure MiniMax API key configured in ~/.claude/settings.json
+
+EOF
+}
+
+# Parse arguments
 while [[ $# -gt 0 ]]; do
   case $1 in
+    --help|-h)
+      show_help
+      exit 0
+      ;;
     --tool)
       TOOL="$2"
       shift 2
@@ -31,6 +93,7 @@ done
 # Validate tool choice
 if [[ "$TOOL" != "amp" && "$TOOL" != "claude" ]]; then
   echo "Error: Invalid tool '$TOOL'. Must be 'amp' or 'claude'."
+  echo "Run './ralph.sh --help' for usage information."
   exit 1
 fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
