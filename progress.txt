@@ -102,3 +102,29 @@ Started: Sun Feb 22 17:26:39 -03 2026
   - Agents also exist (18 common) but need separate analysis for content conflicts
 
 ---
+
+## Sun Feb 22 19:00:00 -03 2026 - AS-006
+- What was implemented
+  - Researched Agent Platform (.agent) features: workflows/, 68 skills, 15+ agents, Native Agent Tool
+  - Researched Claude Code (.claude) features: commands/, 68 skills, 19 agents, Persistent Memory via MEMORY.md, Built-in agents (Explore/Plan/General-purpose), MCP support
+  - Researched Cursor IDE (.cursor) features: commands/, 67 skills, 19 agents including unique 'verifier', rules/ directory, Built-in agents
+  - Identified common features across all platforms
+  - Documented enhancement opportunities
+
+- Files changed
+  - prd.json (updated passes to true for AS-006)
+
+- **Learnings for future iterations:**
+  - Platform Feature Comparison:
+    - .agent: workflows/ (YAML), MEMORY-skills-agent.md (skill taxonomy only, not persistent)
+    - .claude: commands/ ($ARGUMENTS), MEMORY.md (persistent project-scoped memory)
+    - .cursor: commands/ ($ARGUMENTS), rules/, unique 'verifier' agent
+  - All platforms have: Native Agent Tool, 16 command modes, domain-based agent routing, file ownership rules
+  - Built-in agents exist across platforms: Explore (Haiku), Plan (Sonnet), General-purpose
+  - Enhancement opportunities:
+    1. Add persistent memory to .agent and .cursor (like .claude has)
+    2. Add 'verifier' agent to .agent and .claude (unique to .cursor)
+    3. Align skill content across platforms to resolve AS-003 conflicts
+    4. Add gemini skill to .cursor (missing - only .agent and .claude have it)
+
+---
