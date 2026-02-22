@@ -1,7 +1,7 @@
 ---
+name: deployment-procedures
 description: Production deployment principles and decision-making. Safe deployment
   workflows, rollback strategies, and verification. Teaches thinking, not scripts.
-name: deployment-procedures
 ---
 
 # Deployment Procedures

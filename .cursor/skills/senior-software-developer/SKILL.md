@@ -25,9 +25,9 @@ You are a senior software engineer embedded in an agentic coding workflow. You w
 **Indicators:** `.py` files, `pyproject.toml`, `requirements.txt`, `setup.py`, `__init__.py`
 
 **Load these references:**
-- [reference/python-style.md](reference/python-style.md) — Style guide with uv package manager, type hints, modern idioms
-- [reference/python-testing.md](reference/python-testing.md) — pytest patterns, fixtures, mocking, async testing
-- [reference/python-patterns.md](reference/python-patterns.md) — SOLID principles, Pythonic patterns, error handling
+- `reference/python-style.md` — Style guide with uv package manager, type hints, modern idioms
+- `reference/python-testing.md` — pytest patterns, fixtures, mocking, async testing
+- `reference/python-patterns.md` — SOLID principles, Pythonic patterns, error handling
 
 **Key tools:** uv, pytest, black, ruff, mypy
 
@@ -35,9 +35,9 @@ You are a senior software engineer embedded in an agentic coding workflow. You w
 **Indicators:** `.cs` files, `.csproj`, `.sln`, `Program.cs`, `Startup.cs`
 
 **Load these references:**
-- [reference/csharp-style.md](reference/csharp-style.md) — Microsoft conventions, nullable refs, modern C# features
-- [reference/csharp-testing.md](reference/csharp-testing.md) — xUnit patterns, Moq, FluentAssertions, integration tests
-- [reference/csharp-patterns.md](reference/csharp-patterns.md) — SOLID principles, Options pattern, Result types, Polly
+- `reference/csharp-style.md` — Microsoft conventions, nullable refs, modern C# features
+- `reference/csharp-testing.md` — xUnit patterns, Moq, FluentAssertions, integration tests
+- `reference/csharp-patterns.md` — SOLID principles, Options pattern, Result types, Polly
 
 **Key tools:** dotnet CLI, xUnit, Moq, FluentAssertions, coverlet
 
@@ -45,9 +45,9 @@ You are a senior software engineer embedded in an agentic coding workflow. You w
 **Indicators:** `.ts` files (excluding `.d.ts`), `tsconfig.json`, TypeScript dependencies in `package.json`
 
 **Load these references:**
-- [reference/typescript-style.md](reference/typescript-style.md) — Strict mode, type system patterns, utility types
-- [reference/typescript-testing.md](reference/typescript-testing.md) — Jest patterns, mocking, parametrized tests
-- [reference/typescript-patterns.md](reference/typescript-patterns.md) — Branded types, discriminated unions, advanced types
+- `reference/typescript-style.md` — Strict mode, type system patterns, utility types
+- `reference/typescript-testing.md` — Jest patterns, mocking, parametrized tests
+- `reference/typescript-patterns.md` — Branded types, discriminated unions, advanced types
 
 **Key tools:** tsc, tsx, Jest, ESLint, Prettier
 
@@ -55,9 +55,9 @@ You are a senior software engineer embedded in an agentic coding workflow. You w
 **Indicators:** `.js` files with `type: "module"` in `package.json`, `index.js`, Express/Fastify/Koa dependencies
 
 **Load these references:**
-- [reference/nodejs-style.md](reference/nodejs-style.md) — Async patterns, environment validation, security
-- [reference/nodejs-testing.md](reference/nodejs-testing.md) — Supertest, integration tests, database testing
-- [reference/nodejs-patterns.md](reference/nodejs-patterns.md) — Graceful shutdown, performance, streams, security
+- `reference/nodejs-style.md` — Async patterns, environment validation, security
+- `reference/nodejs-testing.md` — Supertest, integration tests, database testing
+- `reference/nodejs-patterns.md` — Graceful shutdown, performance, streams, security
 
 **Key tools:** Jest/Vitest, Supertest, ESLint, Pino
 
@@ -332,10 +332,10 @@ VERIFICATION:
 - Prevents regressions
 
 **Refer to language-specific testing guides for detailed patterns:**
-- Python: [reference/python-testing.md](reference/python-testing.md) (pytest, fixtures, mocking)
-- C#: [reference/csharp-testing.md](reference/csharp-testing.md) (xUnit, Moq, FluentAssertions)
-- TypeScript: [reference/typescript-testing.md](reference/typescript-testing.md) (Jest, mocking, parametrized)
-- Node.js: [reference/nodejs-testing.md](reference/nodejs-testing.md) (Supertest, integration, database)
+- Python: `reference/python-testing.md` (pytest, fixtures, mocking)
+- C#: `reference/csharp-testing.md` (xUnit, Moq, FluentAssertions)
+- TypeScript: `reference/typescript-testing.md` (Jest, mocking, parametrized)
+- Node.js: `reference/nodejs-testing.md` (Supertest, integration, database)
 
 ### Pattern 2: Naive Then Optimize
 
@@ -421,10 +421,10 @@ Potential issues: Existing users without emails need backfill migration
 - ✓ Input validation for all public APIs
 
 **Refer to language-specific style guides for detailed standards:**
-- Python: [reference/python-style.md](reference/python-style.md) (PEP 8, type hints, uv package manager)
-- C#: [reference/csharp-style.md](reference/csharp-style.md) (Microsoft conventions, nullable refs)
-- TypeScript: [reference/typescript-style.md](reference/typescript-style.md) (strict mode, type system patterns)
-- Node.js: [reference/nodejs-style.md](reference/nodejs-style.md) (async patterns, environment validation)
+- Python: `reference/python-style.md` (PEP 8, type hints, uv package manager)
+- C#: `reference/csharp-style.md` (Microsoft conventions, nullable refs)
+- TypeScript: `reference/typescript-style.md` (strict mode, type system patterns)
+- Node.js: `reference/nodejs-style.md` (async patterns, environment validation)
 
 ### Communication
 
@@ -566,7 +566,7 @@ You have unlimited stamina. The human does not. Use your persistence wisely—lo
 
 This skill includes utility scripts for automated code quality checks and development environment setup:
 
-### [scripts/check_quality.py](scripts/check_quality.py)
+### `scripts/check_quality.py`
 Comprehensive quality checker that runs all language-specific tools:
 - **Python**: black, isort, flake8, mypy, pylint, pytest with coverage
 - **C#**: dotnet format, dotnet build, dotnet test with coverage
@@ -579,12 +579,12 @@ python3 scripts/check_quality.py
 ```
 
 ### Language-Specific Scripts
-- [scripts/check_quality_python.py](scripts/check_quality_python.py) - Python-only checks (black, ruff, mypy, pytest)
-- [scripts/check_quality_csharp.sh](scripts/check_quality_csharp.sh) - C#-only checks (dotnet format, build, test)
-- [scripts/check_quality_typescript.sh](scripts/check_quality_typescript.sh) - TypeScript-only checks (eslint, prettier, tsc, jest)
-- [scripts/check_quality_nodejs.sh](scripts/check_quality_nodejs.sh) - Node.js-only checks
+- `scripts/check_quality_python.py` - Python-only checks (black, ruff, mypy, pytest)
+- `scripts/check_quality_csharp.sh` - C#-only checks (dotnet format, build, test)
+- `scripts/check_quality_typescript.sh` - TypeScript-only checks (eslint, prettier, tsc, jest)
+- `scripts/check_quality_nodejs.sh` - Node.js-only checks
 
-### [scripts/coverage_report.py](scripts/coverage_report.py)
+### `scripts/coverage_report.py`
 Generates detailed test coverage analysis across languages:
 - Per-file coverage percentages
 - Uncovered lines identification
@@ -594,7 +594,7 @@ Generates detailed test coverage analysis across languages:
 python3 scripts/coverage_report.py
 ```
 
-### [scripts/setup_dev_environment.sh](scripts/setup_dev_environment.sh)
+### `scripts/setup_dev_environment.sh`
 Automated development environment setup:
 - Detects project languages
 - Installs linters, formatters, type checkers
@@ -612,4 +612,4 @@ bash scripts/setup_dev_environment.sh
 - Referenced by **verification-before-completion** skill
 
 **Integration:**
-These scripts implement the quality standards defined in the language-specific reference files ([reference/python-style.md](reference/python-style.md), etc.) and provide automated verification for the patterns taught in this skill.
+These scripts implement the quality standards defined in the language-specific reference files (`reference/python-style.md`, etc.) and provide automated verification for the patterns taught in this skill.

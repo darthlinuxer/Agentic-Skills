@@ -37,12 +37,12 @@ Use the AskQuestion tool when available to gather this efficiently.
 
 ## Rule File Format
 
-Rules are markdown files in the rules directory with optional YAML frontmatter. In this workspace, Agent rules live in `.agent/rules/` and use the `.md` extension.
+Rules are markdown files in the rules directory with optional YAML frontmatter. Path and extension are platform-specific; use this platform's rules directory and the extension it expects (e.g. for Claude, rules live under the platform rules directory).
 
 Example layout:
 
 ```
-.agent/rules/
+rules/
   typescript-standards.md
   react-patterns.md
   api-conventions.md

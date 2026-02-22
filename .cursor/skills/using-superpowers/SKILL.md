@@ -15,7 +15,7 @@ This is not negotiable. This is not optional. You cannot rationalize your way ou
 
 ## How to Access Skills
 
-**In this IDE:** Use the `Skill` tool. When you invoke a skill, its content is loaded and presented to you—follow it directly. Never use the Read tool on skill files.
+**In Claude Code:** Use the `Skill` tool. When you invoke a skill, its content is loaded and presented to you—follow it directly. Never use the Read tool on skill files.
 
 **In other environments:** Check your platform's documentation for how skills are loaded. If you can't find any documentation, then try to use the `READ` tool on the skill file path to load it.
 
@@ -113,14 +113,6 @@ digraph implementation_routing {
 - `test-driven-development` uses `senior-software-developer` patterns for code quality
 - `subagent-driven-development` uses both `test-driven-development` and `senior-software-developer`
 - `senior-software-developer` is a pattern library, not invoked directly for new features
-
-## Workspace Integration (Routing Contract)
-
-In this workspace:
-
-- `using-superpowers` is **never called directly by users or commands**.
-- It is invoked by the **`orchestrator` agent and domain agents** when they need to choose which **process/implementation skills** to apply for a given task (for example `test-driven-development` vs `writing-plans` vs `subagent-driven-development`).
-- This skill must **not** invoke commands or the `orchestrator` itself; it operates purely inside the current agent/orchestrator context to avoid any circular routing.
 
 ## Skill Priority
 

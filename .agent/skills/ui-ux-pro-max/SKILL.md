@@ -1,8 +1,9 @@
 ---
+name: ui-ux-pro-max
 description: Generate a UI/UX design system using local datasets and scripts. Use
   when you need structured visual guidance, color palettes, typography pairings, and
   UX rules for a product or page.
-name: ui-ux-pro-max
+license: MIT
 ---
 
 # UI/UX Pro Max

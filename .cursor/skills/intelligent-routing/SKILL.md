@@ -221,31 +221,24 @@ User: "Add mobile support to the web app"
 
 ## Integration with Existing Workflows
 
-### Caller (Workspace Contract)
+### With /orchestrate Command
 
-In this workspace:
+- **User types `/orchestrate`**: Explicit orchestration mode
+- **AI detects complex task**: Auto-invoke orchestrator (same result)
 
-- `intelligent-routing` is called by the **`orchestrator` agent** (and optionally by `project-planner`) to:
-  - Analyze tasks and subtasks.
-  - Select the most appropriate **domain agents** based on detected domains and complexity.
-- It is **not** called directly by commands or by users. Commands are the only user entrypoints.
-- This skill must not invoke commands or the orchestrator; it only returns agent-selection decisions to its caller to avoid circular routing.
-
-### With Commands and Modes
-
-- Each command (for example `/implement`, `/fix`, `/orchestrate`, `/deploy`) maps to an orchestrator **mode**.
-- Within that mode, the orchestrator uses `intelligent-routing` to choose which agents (`frontend-specialist`, `backend-specialist`, `database-architect`, `test-engineer`, etc.) should handle each part of the work.
+**Difference**: User doesn't need to know the command exists.
 
 ### With Socratic Gate
 
-- **Auto-routing does NOT bypass the Socratic Gate**.
-- If the task is unclear, the orchestrator must still ask clarifying questions first, then call `intelligent-routing` once it has enough context.
+- **Auto-routing does NOT bypass Socratic Gate**
+- If task is unclear, still ask questions first
+- Then route to appropriate agent
 
 ### With gemini.md Rules
 
-- **Priority**: gemini.md rules > intelligent-routing.
-- If gemini.md specifies explicit routing, follow it.
-- `intelligent-routing` is the **default** agent-selection helper when no explicit rule exists and after the orchestrator has determined the current command/mode.
+- **Priority**: gemini.md rules > intelligent-routing
+- If gemini.md specifies explicit routing, follow it
+- Intelligent routing is the DEFAULT when no explicit rule exists
 
 ## Testing the System
 
@@ -326,16 +319,58 @@ Show selection reasoning:
 - Reasoning: [why]
 ```
 
+## Memory and Recall Patterns
+
+### Learning from Routing Decisions
+
+After each routing decision, optionally record the outcome to improve future routing:
+
+```markdown
+## Routing Memory Log
+
+### [Date] - Routing Decision
+- **Request**: "[User message]"
+- **Detected Domains**: [list]
+- **Selected Agent**: [agent name]
+- **Outcome**: [success/needed-adjustment]
+- **Notes**: [if routing needed adjustment]
+```
+
+### Context-Aware Routing
+
+Use project-specific memory to improve routing accuracy:
+
+1. **Project Context**: Store common patterns specific to the project
+2. **User Preferences**: Remember explicit agent preferences
+3. **Success Patterns**: Track which agents perform best for specific task types
+
+### Recall Protocol
+
+Before routing, check MEMORY.md for:
+- Previous similar requests and their outcomes
+- User-specified agent preferences
+- Project-specific routing rules
+
+```markdown
+## Project Routing Rules
+- "auth" requests → always use security-auditor first
+- "database" requests → always use database-architect
+- [Add project-specific rules]
+```
+
+---
+
 ## Summary
 
 **intelligent-routing skill enables:**
 
-✅ Zero-command operation (no need for `/orchestrate`)  
-✅ Automatic specialist selection based on request analysis  
-✅ Transparent communication of which expertise is being applied  
-✅ Seamless integration with existing workflows  
-✅ Override capability for explicit agent mentions  
+✅ Zero-command operation (no need for `/orchestrate`)
+✅ Automatic specialist selection based on request analysis
+✅ Transparent communication of which expertise is being applied
+✅ Seamless integration with existing workflows
+✅ Override capability for explicit agent mentions
 ✅ Fallback to orchestrator for complex tasks
+✅ Memory integration for learning from past decisions
 
 **Result**: User gets specialist-level responses without needing to know the system architecture.
 

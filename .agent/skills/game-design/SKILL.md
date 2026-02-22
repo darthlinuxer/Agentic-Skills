@@ -1,7 +1,7 @@
 ---
+name: game-design
 description: Game design principles. GDD structure, balancing, player psychology,
   progression.
-name: game-design
 ---
 
 # Game Design Principles

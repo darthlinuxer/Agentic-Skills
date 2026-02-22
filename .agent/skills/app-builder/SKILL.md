@@ -1,8 +1,8 @@
 ---
+name: app-builder
 description: Main application building orchestrator. Creates full-stack applications
   from natural language requests. Determines project type, selects tech stack, coordinates
   agents.
-name: app-builder
 ---
 
 # App Builder - Application Building Orchestrator
@@ -58,6 +58,47 @@ Quick-start scaffolding for new projects. **Read the matching template only!**
 | `backend-specialist` | API, business logic |
 | `database-architect` | Schema, migrations |
 | `devops-engineer` | Deployment, preview |
+
+---
+
+## Subagent Orchestration Patterns
+
+### Parallel Component Generation
+
+For independent components, use parallel subagent execution:
+
+```
+[Launch in parallel]
+- Subagent 1: "Create Button component with variants"
+- Subagent 2: "Create Card component with slots"
+- Subagent 3: "Create Input component with validation"
+
+[Wait for all complete]
+[Integrate into pages]
+```
+
+### Sequential Build Pipeline
+
+For dependent tasks, use sequential orchestration:
+
+```
+1. database-architect: "Design schema for feature"
+2. backend-specialist: "Create API endpoints"
+3. frontend-specialist: "Build UI components"
+4. test-engineer: "Add integration tests"
+```
+
+### Memory Integration
+
+After app construction, store project context:
+
+```markdown
+## Project: [Name]
+- Tech Stack: [Stack]
+- Key Decisions: [Links to ADRs]
+- Agents Used: [list]
+- Status: [active/completed]
+```
 
 ---
 

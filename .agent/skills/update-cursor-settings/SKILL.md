@@ -1,6 +1,8 @@
 ---
 name: update-cursor-settings
-description: Modify editor/IDE user settings in settings.json. Use when the user wants to change editor settings, preferences, configuration, themes, font size, tab size, format on save, auto save, keybindings, or any settings.json values.
+description: Modify editor/IDE user settings in settings.json. Use when the user
+  wants to change editor settings, preferences, configuration, themes, font size,
+  tab size, format on save, auto save, keybindings, or any settings.json values.
 ---
 
 # Updating Editor Settings
@@ -9,7 +11,7 @@ This skill guides you through modifying editor/IDE user settings. Use this when 
 
 ## Settings File Location (IDE-specific)
 
-Paths vary by IDE. Common patterns:
+Paths vary by IDE. For Claude Code and other editors, see your platform's docs. Common patterns:
 | OS | Example path (VSCode-based) |
 |----|------|
 | macOS | ~/Library/Application Support/[IDE]/User/settings.json |

@@ -1,7 +1,7 @@
 ---
+name: game-audio
 description: Game audio principles. Sound design, music integration, adaptive audio
   systems.
-name: game-audio
 ---
 
 # Game Audio Principles

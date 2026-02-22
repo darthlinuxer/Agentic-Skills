@@ -1,7 +1,10 @@
 ---
+name: architecture
 description: Architectural decision-making framework. Requirements analysis, trade-off
-alwaysApply: false
+  evaluation, ADR documentation. Use when making architecture decisions or analyzing
+  system design.
 ---
+
 # Architecture Decision Framework
 
 > **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.

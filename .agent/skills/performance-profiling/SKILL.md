@@ -1,7 +1,7 @@
 ---
+name: performance-profiling
 description: Performance profiling principles. Measurement, analysis, and optimization
   techniques.
-name: performance-profiling
 ---
 
 # Performance Profiling

@@ -1,19 +1,19 @@
 ---
+name: parallel-agents
 description: Multi-agent orchestration patterns. Use when multiple independent tasks
   can run with different domain expertise or when comprehensive analysis requires
   multiple perspectives.
-name: parallel-agents
 ---
 
 # Native Parallel Agents
 
 > **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
-> Orchestration through Antigravity's built-in Agent Tool
+> Orchestration through this platform's built-in Agent Tool
 
 ## Overview
 
-This skill enables coordinating multiple specialized agents through Antigravity's native agent system. Unlike external scripts, this approach keeps all orchestration within Antigravity's control.
+This skill enables coordinating multiple specialized agents through this platform's native agent system. Unlike external scripts, this approach keeps all orchestration within the platform's control.
 
 ## When to Use Orchestration
 
@@ -115,7 +115,7 @@ Agents: security-auditor → penetration-tester → synthesis
 
 ---
 
-## Antigravity Built-in Agents
+## Built-in Agents
 
 These work alongside custom agents:
 
@@ -212,7 +212,7 @@ After all agents complete, synthesize:
 ## Key Benefits
 
 - ✅ **Single session** - All agents share context
-- ✅ **AI-controlled** - The orchestrator agent runs autonomously
+- ✅ **AI-controlled** - Claude orchestrates autonomously
 - ✅ **Native integration** - Works with built-in Explore, Plan agents
 - ✅ **Resume support** - Can continue previous agent work
 - ✅ **Context passing** - Findings flow between agents

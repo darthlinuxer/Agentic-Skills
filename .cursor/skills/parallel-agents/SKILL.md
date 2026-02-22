@@ -9,11 +9,11 @@ description: Multi-agent orchestration patterns. Use when multiple independent t
 
 > **🧠 MCP Tool Available**: Use **Sequential Thinking** for complex problem-solving in this domain. Break down decisions, debug chains, or design processes into structured reasoning steps.
 
-> Orchestration through this IDE's built-in Agent Tool
+> Orchestration through this platform's built-in Agent Tool
 
 ## Overview
 
-This skill enables coordinating multiple specialized agents through this IDE's native agent system. Unlike external scripts, this approach keeps all orchestration within the IDE's control.
+This skill enables coordinating multiple specialized agents through this platform's native agent system. Unlike external scripts, this approach keeps all orchestration within the platform's control.
 
 ## When to Use Orchestration
 
@@ -129,6 +129,46 @@ Use **Explore** for quick searches, **custom agents** for domain expertise.
 
 ---
 
+## True Parallel Execution
+
+For independent tasks, launch multiple agents simultaneously:
+
+### Launch Pattern
+```
+[Launch in background]
+Agent 1: "Analyze authentication module for security issues"
+Agent 2: "Review database queries for performance"
+Agent 3: "Check React components for accessibility"
+
+[Wait for all to complete]
+[Synthesize findings]
+```
+
+### Background Execution
+Use `run_in_background: true` to launch agents that run independently:
+- Good for: Independent research, parallel analysis, multiple reviews
+- Not for: Tasks with dependencies or shared context
+
+### Memory Integration
+After parallel execution, store findings in MEMORY.md:
+```
+## [Date] - Parallel Analysis Results
+
+### Task 1: Security Review
+- Finding: XSS vulnerability in login form
+- Severity: Critical
+
+### Task 2: Performance Review
+- Finding: N+1 query in user list
+- Severity: High
+
+### Task 3: Accessibility Review
+- Finding: Missing ARIA labels
+- Severity: Medium
+```
+
+---
+
 ## Synthesis Protocol
 
 After all agents complete, synthesize:
@@ -172,7 +212,7 @@ After all agents complete, synthesize:
 ## Key Benefits
 
 - ✅ **Single session** - All agents share context
-- ✅ **AI-controlled** - The orchestrator runs autonomously
+- ✅ **AI-controlled** - Claude orchestrates autonomously
 - ✅ **Native integration** - Works with built-in Explore, Plan agents
 - ✅ **Resume support** - Can continue previous agent work
 - ✅ **Context passing** - Findings flow between agents

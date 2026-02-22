@@ -1,7 +1,7 @@
 ---
+name: pc-games
 description: PC and console game development principles. Engine selection, platform
   features, optimization strategies.
-name: pc-games
 ---
 
 # PC/Console Game Development

@@ -1,10 +1,10 @@
 ---
+name: subagent-driven-development
 description: Execute implementation plans (created by writing-plans) by dispatching
   fresh subagents per task with two-stage review (spec compliance, then code quality).
   Use after writing-plans for complex multi-step projects in current session. Each
   subagent follows test-driven-development methodology and senior-software-developer
   patterns.
-name: subagent-driven-development
 ---
 
 # Subagent-Driven Development
@@ -252,6 +252,8 @@ When resuming work:
 3. Resume from last completed task
 
 This ensures continuity across sessions and prevents duplicate work.
+
+---
 
 ## Red Flags
 

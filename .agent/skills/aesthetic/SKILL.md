@@ -1,9 +1,10 @@
 ---
+name: aesthetic
 description: Create aesthetically beautiful interfaces following proven design principles.
   Use when building UI/UX, analyzing designs from inspiration sites, generating design
   images, implementing visual hierarchy and color theory, adding micro-interactions,
   or creating design documentation.
-name: aesthetic
+license: MIT
 ---
 
 # Aesthetic

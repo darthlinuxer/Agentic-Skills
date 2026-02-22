@@ -1,7 +1,7 @@
 ---
+name: writing-prompts
 description: Use when crafting prompts for LLMs to improve response quality, accuracy,
   consistency, and task performance
-name: writing-prompts
 ---
 
 # Writing Prompts
@@ -20,7 +20,7 @@ Use this skill when:
 - Developing prompts for production applications
 - Debugging prompt-related issues in LLM interactions
 - Optimizing token usage while maintaining output quality
-- Adapting prompts across different LLM providers (Anthropic, GPT, Gemini, etc.)
+- Adapting prompts across different LLM providers (Claude, GPT, Gemini, etc.)
 
 ## Core Pattern
 Follow this iterative RED-GREEN-REFACTOR process for prompt development:
@@ -310,7 +310,7 @@ Parse log entries into structured JSON:
 ### Step 10: Model-Specific Optimization
 Different LLMs have different strengths. Adapt accordingly:
 
-**Anthropic models:**
+**Claude:**
 - Excels with XML-structured prompts
 - Use `<thinking>` tags for extended reasoning
 - Supports very long context (200K+ tokens)
@@ -385,7 +385,7 @@ Provide your final schema with rationale for key decisions.
 ### 7. Not Leveraging Model-Specific Features
 ❌ **Bad:** Using identical prompts for all LLMs
 ✅ **Good:** 
-- Anthropic: Use XML structure, `<thinking>` tags, prefill
+- Claude: Use XML structure, `<thinking>` tags, prefill
 - GPT: Use system messages, function calling, temperature tuning
 - Gemini: Leverage multimodal capabilities
 
@@ -525,7 +525,7 @@ Compare outputs, keep best elements from each.
 
 ## Model-Specific Optimizations
 
-### Anthropic models
+### Claude (Anthropic)
 
 **Strengths:**
 - XML-structured prompts
@@ -561,7 +561,7 @@ Assistant: Here is my analysis in JSON format:
 {
 ```
 
-The model will continue from the prefilled start, ensuring JSON output.
+Claude will continue from the prefilled start, ensuring JSON output.
 
 ### GPT (OpenAI)
 
@@ -706,7 +706,7 @@ Effective prompt engineering delivers measurable improvements:
 
 **Cost efficiency:** 20-40% token reduction through concise, well-structured prompts without quality loss
 
-**Model leverage:** Full utilization of model-specific capabilities (XML for Anthropic, function calling for GPT, multimodal for Gemini)
+**Model leverage:** Full utilization of model-specific capabilities (XML for Claude, function calling for GPT, multimodal for Gemini)
 
 ## Quick Start Checklist
 
@@ -724,7 +724,7 @@ When crafting a new prompt, follow this checklist:
 - [ ] Measure against success criteria
 - [ ] Iterate based on failures
 - [ ] Refactor for clarity and token efficiency
-- [ ] Optimize for specific LLM (Anthropic, GPT, Gemini)
+- [ ] Optimize for specific LLM (Claude, GPT, Gemini)
 
 ## Prompt Template Library
 
@@ -844,7 +844,7 @@ For each option:
 
 **Anthropic Resources:**
 - Prompt engineering guide: 
-- Anthropic best practices: See `anthropic-best-practices.md` in writing-skills directory
+- Claude best practices: See `anthropic-best-practices.md` in writing-skills directory
 
 **OpenAI Resources:**
 - Prompt engineering guide: 

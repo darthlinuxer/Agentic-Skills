@@ -1,6 +1,6 @@
 ---
-description: Multiplayer game development principles. Architecture, networking, synchronization.
 name: multiplayer
+description: Multiplayer game development principles. Architecture, networking, synchronization.
 ---
 
 # Multiplayer Game Development

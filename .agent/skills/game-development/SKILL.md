@@ -1,7 +1,7 @@
 ---
+name: game-development
 description: Game development orchestrator. Routes to platform-specific skills based
   on project needs.
-name: game-development
 ---
 
 # Game Development

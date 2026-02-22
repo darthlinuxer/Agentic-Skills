@@ -1,6 +1,8 @@
 ---
 name: senior-pmbok-pm
-description: Use when creating, updating, or reviewing PMBOK artifacts in `senior-pmbok-pm/reference/PM_DOCS_PT_BR` (Portuguese) or `senior-pmbok-pm/reference/PM_DOC_EN` (English), ensuring each document follows the provided templates, inputs, and documentation guidance.
+description: Use when creating, updating, or reviewing PMBOK artifacts in `senior-pmbok-pm/reference/PM_DOCS_PT_BR`
+  (Portuguese) or `senior-pmbok-pm/reference/PM_DOC_EN` (English), ensuring each document
+  follows the provided templates, inputs, and documentation guidance.
 ---
 
 # Senior PMBOK Project Manager

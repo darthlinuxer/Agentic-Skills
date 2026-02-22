@@ -1,11 +1,11 @@
 ---
 name: create-rule
-description: Create Cursor rules for persistent AI guidance. Use when the user wants
+description: Create project rules for persistent AI guidance. Use when the user wants
   to create a rule, add coding standards, set up project conventions, configure file-specific
-  patterns, create RULE.md files, or asks about .cursor/rules/ or AGENTS.md.
+  patterns, create RULE.md files, or asks about the workspace rules directory or AGENTS.md.
 ---
 
-# Creating Cursor Rules
+# Creating Project Rules
 
 Create project rules in the platform-specific rules directory to provide persistent context for the AI agent.
 
@@ -37,15 +37,15 @@ Use the AskQuestion tool when available to gather this efficiently.
 
 ## Rule File Format
 
-Rules are markdown files in the rules directory with optional YAML frontmatter. In this workspace, Cursor rules live in `.cursor/rules/` and use the `.mdc` extension.
+Rules are markdown files in the rules directory with optional YAML frontmatter. Path and extension are platform-specific; use this platform's rules directory and the extension it expects (e.g. for Claude, rules live under the platform rules directory).
 
 Example layout:
 
 ```
-.cursor/rules/
-  typescript-standards.mdc
-  react-patterns.mdc
-  api-conventions.mdc
+rules/
+  typescript-standards.md
+  react-patterns.md
+  api-conventions.md
 ```
 
 ### File Structure

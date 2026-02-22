@@ -1,7 +1,7 @@
 ---
+name: powershell-windows
 description: PowerShell Windows patterns. Critical pitfalls, operator syntax, error
   handling.
-name: powershell-windows
 ---
 
 # PowerShell Windows Patterns

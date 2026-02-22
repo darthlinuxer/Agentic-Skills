@@ -1,7 +1,7 @@
 ---
+name: game-art
 description: Game art principles. Visual style selection, asset pipeline, animation
   workflow.
-name: game-art
 ---
 
 # Game Art Principles

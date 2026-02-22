@@ -1,6 +1,6 @@
 ---
-description: Code review guidelines covering code quality, security, and best practices.
 name: code-review-checklist
+description: Code review guidelines covering code quality, security, and best practices.
 ---
 
 # Code Review Checklist

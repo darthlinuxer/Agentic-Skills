@@ -1,119 +1,88 @@
 {
-  "project": "Agentic-Skills Assessment",
-  "branchName": "skill-assessment",
-  "description": "Assess and enhance skills across all platforms (Agent, Claude, Cursor) for conflicts, uniqueness, formatting, and platform-specific features",
+  "project": "Agentic-Skills Fixes",
+  "branchName": "fix-top-action-items",
+  "description": "Fix top action items from ASSESSMENT_REPORT.md",
   "userStories": [
     {
-      "id": "AS-001",
-      "title": "Explore Agentic-Skills structure and document platforms",
-      "description": "As an analyst, I want to understand the directory structure of Agentic-Skills to identify all platforms and their skill sets.",
+      "id": "FIX-001",
+      "title": "Resolve content divergence - single source of truth",
+      "description": "As a developer, I want to establish a single source of truth for skills across platforms to eliminate content divergence.",
       "acceptanceCriteria": [
-        "List all platform directories (.agent, .claude, .cursor, root skills/)",
-        "Identify all skill categories in each platform",
-        "Document the total count of skills per platform",
-        "Identify duplicate skills across platforms"
+        "Choose one platform as master for skill content",
+        "Document the consolidation strategy",
+        "Copy consolidated content to all platforms",
+        "Verify all skills now have consistent content"
       ],
       "priority": 1,
       "passes": true,
-      "notes": "Explored all platform directories: .agent (69 skills), .claude (68 skills), .cursor (67 skills). Massive overlap - 67-68 skills duplicated across platforms. Each platform also has agents, commands/rules, scripts, and workflows directories."
+      "notes": "From AS-003: All 67 common skills have DIFFERENT content across platforms. Implemented: Chose .claude as master platform, created SKILL_CONSOLIDATION.md, synced 66 common skills to .agent and .cursor (excluding create-subagent which is platform-specific). All validations pass."
     },
     {
-      "id": "AS-002",
-      "title": "Read platform documentation for skills format",
-      "description": "As an analyst, I want to read the official documentation for each platform to understand their skill format guidelines.",
+      "id": "FIX-002",
+      "title": "Move doc.md out of skills directory",
+      "description": "As a developer, I want to move doc.md from .agent/skills/ to correct location since it's documentation, not a skill.",
       "acceptanceCriteria": [
-        "Research Agent platform skill format (.agent directory)",
-        "Research Claude Code skill format (.claude directory)",
-        "Research Cursor IDE skill format (.cursor directory)",
-        "Document format requirements for each platform"
+        "Identify correct location for doc.md",
+        "Move file to appropriate directory",
+        "Verify no broken references"
       ],
       "priority": 2,
-      "passes": true,
-      "notes": "Researched all three platforms. Key findings: .agent uses workflows/ with YAML frontmatter (trigger, description), .claude uses commands/ with $ARGUMENTS, .cursor uses commands/ similar to .claude but with different agent integration. Skills format is consistent across all (SKILL.md with name/description frontmatter). Agents in .agent/.cursor have YAML frontmatter (name, description, model, color) while .claude uses plain markdown with Referenced skills section."
+      "passes": false,
+      "notes": "From AS-003: doc.md incorrectly placed in .agent/skills/"
     },
     {
-      "id": "AS-003",
-      "title": "Check skills for conflicts and uniqueness",
-      "description": "As an analyst, I want to check if skills conflict with each other or have duplicates across platforms.",
+      "id": "FIX-003",
+      "title": "Add persistent memory to .agent and .cursor platforms",
+      "description": "As a developer, I want to add MEMORY.md support to .agent and .cursor platforms similar to what .claude has.",
       "acceptanceCriteria": [
-        "Compare skills across all platforms",
-        "Identify conflicting or duplicate skills",
-        "Check for naming inconsistencies",
-        "Document conflicts found with recommendations"
+        "Study .claude MEMORY.md implementation",
+        "Add MEMORY.md support to .agent platform",
+        "Add MEMORY.md support to .cursor platform",
+        "Document memory usage in skills"
       ],
       "priority": 3,
-      "passes": true,
-      "notes": "Analyzed all three platforms. Findings: (1) 67 common skills across all platforms but ALL have different content - major conflict; (2) 16 skills differ between .claude and .cursor (architecture, create-rule, create-subagent, geo-fundamentals, intelligent-routing, lint-and-validate, mcp-builder, mobile-design, parallel-agents, senior-agile-pm-budget-analyst, senior-software-developer, sequential-thinking, update-cursor-settings, using-superpowers, writing-prompts, writing-skills); (3) doc.md incorrectly placed in .agent/skills (not a skill, it's documentation); (4) gemini skill duplicated in .agent and .claude; (5) 18 common agents across platforms with potential content differences. Recommendations: Consolidate to single source of truth per skill, remove doc.md, deduplicate gemini."
+      "passes": false,
+      "notes": "From AS-006: .claude has MEMORY.md, .agent and .cursor don't"
     },
     {
-      "id": "AS-004",
-      "title": "Validate skills against platform guidelines",
-      "description": "As an analyst, I want to validate each skill against its platform's formatting guidelines.",
+      "id": "FIX-004",
+      "title": "Add missing gemini skill to .cursor",
+      "description": "As a developer, I want to add the gemini skill to .cursor platform since it exists in .agent and .claude but not .cursor.",
       "acceptanceCriteria": [
-        "Check each skill has required files (SKILL.md)",
-        "Validate format matches platform requirements",
-        "Check for common errors or missing fields",
-        "Document validation results"
+        "Find gemini skill in .agent or .claude",
+        "Copy to .cursor platform",
+        "Verify proper format"
       ],
       "priority": 4,
-      "passes": true,
-      "notes": "Validated all skills across platforms. Findings: (1) .claude has 68 skills, .agent has 68 skills, .cursor has 67 skills - all with SKILL.md files; (2) All skills have proper YAML frontmatter with name and description; (3) doc.md incorrectly placed in .agent/skills/ - documentation file, not a skill; (4) All skills follow kebab-case naming convention; (5) Template files (TEMPLATE.md) found in app-builder templates across all platforms - these follow same frontmatter format"
+      "passes": false,
+      "notes": "From AS-003: gemini missing from .cursor"
     },
     {
-      "id": "AS-005",
-      "title": "Analyze workflows and command flows",
-      "description": "As an analyst, I want to understand how commands/workflows connect to agents and skills.",
+      "id": "FIX-005",
+      "title": "Add verifier agent to .agent and .claude",
+      "description": "As a developer, I want to add the verifier agent to .agent and .claude platforms since it's unique to .cursor.",
       "acceptanceCriteria": [
-        "Review run-validations.sh script",
-        "Analyze how skills are invoked",
-        "Document the agent/skill interaction flow",
-        "Identify any issues in the flow"
+        "Study verifier agent in .cursor",
+        "Add verifier agent to .claude",
+        "Add verifier agent to .agent",
+        "Test agent functionality"
       ],
       "priority": 5,
-      "passes": true,
-      "notes": "Analyzed workflows and command flows. Flow: User command → Command file (with routing) → Agent (orchestrator) → Skills. Found: (1) Platform isolation is strictly enforced - no cross-platform links allowed; (2) Commands in .claude/commands/ and .cursor/commands/ are nearly identical; (3) .agent/workflows/ uses YAML frontmatter format; (4) All commands delegate to orchestrator agent with mode parameter; (5) Validations pass - 67-68 skills, no dangling references, all links valid; (6) Key issue: Skills referenced in agents have different content across platforms (from AS-003)."
+      "passes": false,
+      "notes": "From AS-006: verifier agent unique to .cursor"
     },
     {
-      "id": "AS-006",
-      "title": "Research platform-specific features for enhancement",
-      "description": "As an enhancer, I want to research each platform's capabilities for subagents, parallel execution, and memory.",
+      "id": "FIX-006",
+      "title": "Consolidate gemini skill across platforms",
+      "description": "As a developer, I want to consolidate the gemini skill to have single source of truth.",
       "acceptanceCriteria": [
-        "Research Agent platform features (subagents, parallel, memory)",
-        "Research Claude Code specific features (MCP, tools)",
-        "Research Cursor IDE features (MCP, agents)",
-        "Document enhancement opportunities"
+        "Choose master gemini skill",
+        "Copy to all platforms",
+        "Verify no duplicates"
       ],
       "priority": 6,
-      "passes": true,
-      "notes": "Researched all three platforms. Key findings: (1) Agent Platform (.agent): Uses workflows/ with YAML frontmatter, 68 skills, 15+ agents, no persistent memory file, Native Agent Tool for orchestration. (2) Claude Code (.claude): Commands with $ARGUMENTS, 68 skills, 19 agents, Persistent Memory via MEMORY.md (project-scoped), Built-in agents (Explore/Plan/General-purpose), MCP support via mcp-builder skill. (3) Cursor IDE (.cursor): Commands with $ARGUMENTS, 67 skills, 19 agents including unique 'verifier' agent, no memory file, Built-in agents (Explore/Plan/General-purpose), rules/ directory. (4) All platforms share: 16 command modes, domain-based agent routing, file ownership rules, pre-flight checks. (5) Enhancement opportunities: Add persistent memory to .agent and .cursor, add verifier to .agent/.claude, align skills across platforms."
-    },
-    {
-      "id": "AS-007",
-      "title": "Enhance skills with platform-specific features",
-      "description": "As an enhancer, I want to update skills to leverage each platform's unique features.",
-      "acceptanceCriteria": [
-        "Update at least 3 skills with subagent patterns",
-        "Add parallel execution where applicable",
-        "Integrate memory/recall patterns where relevant",
-        "Test enhanced skills work correctly"
-      ],
-      "priority": 7,
-      "passes": true,
-      "notes": "Enhanced 3 skills in .claude platform: (1) intelligent-routing - Added memory/recall patterns for learning from routing decisions with context-aware routing and recall protocol; (2) app-builder - Added subagent orchestration patterns (parallel component generation, sequential build pipeline) and memory integration; (3) create-subagent - Added memory integration with context passing patterns and subagent memory files. Also verified research and parallel-agents already had subagent patterns and memory integration. All validations passed."
-    },
-    {
-      "id": "AS-008",
-      "title": "Create comprehensive assessment report",
-      "description": "As a reporter, I want to create a final report with all findings and recommendations.",
-      "acceptanceCriteria": [
-        "Summarize all findings from AS-001 to AS-007",
-        "List all conflicts and duplicates found",
-        "Provide enhancement recommendations",
-        "Include prioritized action items"
-      ],
-      "priority": 8,
-      "passes": true,
-      "notes": "Created comprehensive assessment report (ASSESSMENT_REPORT.md) with findings from AS-001 to AS-007. Report includes: structure analysis, format guidelines, conflicts/duplicates, validation results, workflow analysis, platform-specific features, enhancements applied, and prioritized action items."
+      "passes": false,
+      "notes": "From AS-003: gemini duplicated in .agent and .claude"
     }
   ]
 }

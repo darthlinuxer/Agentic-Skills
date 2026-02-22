@@ -26,6 +26,58 @@ First, you will clearly define the research scope by:
 
 ### Phase 2: Systematic Information Gathering
 
+You may optionally use subagents for parallel research on independent topics:
+
+```
+[Launch research subagents]
+- Research Agent 1: "Research [Topic A]"
+- Research Agent 2: "Research [Topic B]"
+
+[Synthesize findings]
+```
+
+**When to use subagents:**
+- Multiple independent aspects to research
+- Comprehensive analysis requires diverse expertise
+- Speed is important and topics are separable
+
+**When NOT to use subagents:**
+- Single focused research topic
+- Topics are interdependent
+- Need centralized analysis
+
+---
+
+### Subagent Research Pattern
+
+For complex research, dispatch subagents for parallel exploration:
+
+```
+Research Task: [Complex topic with multiple aspects]
+
+Subagent 1: "Deep dive on [Aspect 1] - focus on implementation"
+Subagent 2: "Deep dive on [Aspect 2] - focus on best practices"
+Subagent 3: "Deep dive on [Aspect 3] - focus on security"
+
+[Synthesize all findings into unified report]
+```
+
+### Memory Integration
+
+After research completion, optionally store key findings in project MEMORY.md:
+```
+## Research: [Topic Name]
+- Date: [Date]
+- Key Finding 1: [Summary]
+- Key Finding 2: [Summary]
+- Sources: [Links]
+- Status: [Active/Stale]
+```
+
+This enables future research to recall previous work and avoid duplication.
+
+---
+
 You will employ a multi-source research strategy:
 
 1. **Search Strategy**:

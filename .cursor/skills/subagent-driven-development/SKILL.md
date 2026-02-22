@@ -221,6 +221,40 @@ Done!
 - Review loops add iterations
 - But catches issues early (cheaper than debugging later)
 
+## Memory & Progress Tracking
+
+Track task completion and key findings using TodoWrite and optional MEMORY.md:
+
+### Task Progress in TodoWrite
+```
+- Task 1: [Complete/In Progress/Pending]
+- Task 2: [Complete/In Progress/Pending]
+- Task 3: [Complete/In Progress/Pending]
+```
+
+### Key Findings Memory
+After significant milestones, optionally record to MEMORY.md:
+```
+## Implementation: [Project Name]
+- Date: [Date]
+- Completed Tasks: [X/Y]
+- Key Decisions:
+  - [Decision 1]: [Rationale]
+  - [Decision 2]: [Rationale]
+- Blockers: [None/Description]
+- Next Steps: [Task N+1]
+```
+
+### Recall Pattern
+When resuming work:
+1. Check MEMORY.md for previous decisions
+2. Review TodoWrite for task status
+3. Resume from last completed task
+
+This ensures continuity across sessions and prevents duplicate work.
+
+---
+
 ## Red Flags
 
 **Never:**

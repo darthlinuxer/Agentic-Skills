@@ -1,4 +1,5 @@
 ---
+name: backend-development
 description: Build robust backend systems with modern technologies (Node.js, Python,
   Go, Rust), frameworks (NestJS, FastAPI, Django), databases (PostgreSQL, MongoDB,
   Redis), APIs (REST, GraphQL, gRPC), authentication (OAuth 2.1, JWT), testing strategies,
@@ -7,7 +8,7 @@ description: Build robust backend systems with modern technologies (Node.js, Pyt
   and monitoring. Use when designing APIs, implementing authentication, optimizing
   database queries, setting up CI/CD pipelines, handling security vulnerabilities,
   building microservices, or developing production-ready backend systems.
-name: backend-development
+license: MIT
 ---
 
 # Backend Development Skill

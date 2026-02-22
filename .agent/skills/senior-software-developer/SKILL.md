@@ -1,10 +1,10 @@
 ---
+name: senior-software-developer
 description: Provides production-quality patterns, standards, and language-specific
   best practices for Python, C#, Node.js, and TypeScript. Used as the implementation
   guideline within test-driven-development workflow, or directly for architecture
   decisions and complex refactoring. Not invoked directly for new feature implementation
   - use test-driven-development instead.
-name: senior-software-developer
 ---
 
 # Senior Software Developer

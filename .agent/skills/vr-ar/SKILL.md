@@ -1,6 +1,6 @@
 ---
-description: VR/AR development principles. Comfort, interaction, performance requirements.
 name: vr-ar
+description: VR/AR development principles. Comfort, interaction, performance requirements.
 ---
 
 # VR/AR Development

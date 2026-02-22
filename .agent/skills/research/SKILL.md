@@ -1,7 +1,8 @@
 ---
+name: research
 description: Use when you need to research, analyze, and plan technical solutions
   that are scalable, secure, and maintainable.
-name: research
+license: MIT
 ---
 
 # Research
