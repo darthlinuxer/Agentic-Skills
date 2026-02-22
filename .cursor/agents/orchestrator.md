@@ -233,6 +233,7 @@ The orchestrator uses several **process skills** to decide how to route work:
 - [app-builder](../skills/app-builder/SKILL.md): Full-stack app creation and tech stack selection (e.g. for `/create`).
 - [create-rule](../skills/create-rule/SKILL.md), [create-subagent](../skills/create-subagent/SKILL.md): When defining workspace rules or new subagents.
 - [update-cursor-settings](../skills/update-cursor-settings/SKILL.md): When changing Cursor/editor settings or preferences.
+- [gemini](../skills/gemini/SKILL.md): Global behavior rules for the workspace (Priority: P0).
 
 **Routing constraints (no cycles):**
 

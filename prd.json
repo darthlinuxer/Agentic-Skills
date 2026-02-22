@@ -54,8 +54,8 @@
         "Verify proper format"
       ],
       "priority": 4,
-      "passes": false,
-      "notes": "From AS-003: gemini missing from .cursor"
+      "passes": true,
+      "notes": "Implemented: Added gemini skill from .claude (master) to .cursor. Added reference in orchestrator agent. All validations pass."
     },
     {
       "id": "FIX-005",

@@ -243,3 +243,22 @@ Started: Sun Feb 22 17:26:39 -03 2026
   - Single source of truth strategy recommended to resolve content conflicts
 
 ---
+
+## Sun Feb 22 18:30:00 -03 2026 - FIX-004
+- What was implemented
+  - Added gemini skill to .cursor platform (copied from .claude as master)
+  - Added reference to gemini skill in .cursor/agents/orchestrator.md
+  - All validations pass (link validation, dangling skills, platform isolation)
+
+- Files changed
+  - .cursor/skills/gemini/SKILL.md (new - copied from .claude)
+  - .cursor/agents/orchestrator.md (added gemini skill reference)
+  - prd.json (updated passes to true for FIX-004)
+
+- **Learnings for future iterations:**
+  - .claude is master platform for skill content (per FIX-001)
+  - gemini is global behavior rules skill (Priority: P0)
+  - Skills must be referenced in agents/commands/rules to avoid dangling check failures
+  - Use format `../skills/<skill-id>/SKILL.md` for skill references
+
+---
