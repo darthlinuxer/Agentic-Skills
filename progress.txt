@@ -18,6 +18,34 @@ Started: Sun Feb 22 17:26:39 -03 2026
 
 ---
 
+## Sat Feb 22 22:00:00 -03 2026 - FIX-003
+- What was implemented
+  - Studied .claude MEMORY.md implementation (memory: project in YAML frontmatter)
+  - Added memory: project to 5 agents in .cursor (orchestrator, explorer-agent, project-planner, documentation-writer, verifier)
+  - Added YAML frontmatter with memory: project to 4 agents in .agent (orchestrator, explorer-agent, project-planner, documentation-writer)
+  - Skills already reference MEMORY.md usage in parallel-agents, intelligent-routing, research, subagent-driven-development
+  - All validations pass
+
+- Files changed
+  - .cursor/agents/orchestrator.md (added memory: project)
+  - .cursor/agents/explorer-agent.md (added memory: project)
+  - .cursor/agents/project-planner.md (added memory: project)
+  - .cursor/agents/documentation-writer.md (added memory: project)
+  - .cursor/agents/verifier.md (added memory: project)
+  - .agent/agents/orchestrator.md (added YAML frontmatter with memory: project)
+  - .agent/agents/explorer-agent.md (added YAML frontmatter with memory: project)
+  - .agent/agents/project-planner.md (added YAML frontmatter with memory: project)
+  - .agent/agents/documentation-writer.md (added YAML frontmatter with memory: project)
+  - prd.json (updated passes to true for FIX-003)
+
+- **Learnings for future iterations:**
+  - Persistent memory is enabled via memory: project in agent YAML frontmatter
+  - .claude and .cursor use consistent YAML frontmatter format for agents
+  - .agent required adding new YAML frontmatter (previously didn't use it)
+  - Skills that benefit from memory: orchestrator (coordination patterns), explorer-agent (codebase knowledge), project-planner (planning context), documentation-writer (style preferences), verifier (verification patterns)
+
+---
+
 ## Sat Feb 22 20:00:00 -03 2026 - FIX-001
 - What was implemented
   - Chose .claude as master platform for skill content

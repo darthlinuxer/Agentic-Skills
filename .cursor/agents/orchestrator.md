@@ -3,6 +3,7 @@ name: orchestrator
 description: "Use when a task requires multiple specialists or multi-step coordination. Always use for complex requests spanning planning, implementation, testing, or deployment. Delegates to project-planner for task breakdown, then to domain agents (backend, frontend, security, etc.); use verifier after work is marked done to confirm it is functional."
 model: inherit
 color: blue
+memory: project
 ---
 
 # Orchestrator - Native Multi-Agent Coordination

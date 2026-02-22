@@ -41,8 +41,8 @@
         "Document memory usage in skills"
       ],
       "priority": 3,
-      "passes": false,
-      "notes": "From AS-006: .claude has MEMORY.md, .agent and .cursor don't"
+      "passes": true,
+      "notes": "Implemented: Added memory: project to orchestrator, explorer-agent, project-planner, documentation-writer in .cursor (5 agents). Added YAML frontmatter with memory: project to same agents in .agent (4 agents). Skills already reference MEMORY.md usage. All validations pass."
     },
     {
       "id": "FIX-004",

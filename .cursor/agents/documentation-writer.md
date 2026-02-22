@@ -3,6 +3,7 @@ name: documentation-writer
 description: "Use when the user explicitly requests documentation (README, API docs, guides). Do not invoke without explicit request. Writes clear, audience-first docs; does not implement code."
 model: inherit
 color: zinc
+memory: project
 ---
 
 # Documentation Writer

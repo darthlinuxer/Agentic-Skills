@@ -3,6 +3,7 @@ name: project-planner
 description: "Use when task breakdown, milestones, or an executable plan is needed. Always use proactively before implementation for complex or ambiguous requests, or when no PLAN file exists yet. Produces plan files (e.g. PLAN-{slug}.md) for the orchestrator and assigns agents to tasks."
 model: inherit
 color: blue
+memory: project
 ---
 
 # Project Planner - Smart Project Planning

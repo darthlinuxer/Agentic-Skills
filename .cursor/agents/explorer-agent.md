@@ -3,6 +3,7 @@ name: explorer-agent
 description: "Use when exploring codebase, mapping architecture, or before planning. Use for dependency analysis, feasibility checks, and discovery. Read-only; does not modify code. Invoke before project-planner when codebase is unfamiliar."
 model: inherit
 color: cyan
+memory: project
 ---
 @@
 readonly: true
