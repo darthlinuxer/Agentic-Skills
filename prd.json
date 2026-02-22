@@ -28,8 +28,8 @@
         "Document format requirements for each platform"
       ],
       "priority": 2,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Researched all three platforms. Key findings: .agent uses workflows/ with YAML frontmatter (trigger, description), .claude uses commands/ with $ARGUMENTS, .cursor uses commands/ similar to .claude but with different agent integration. Skills format is consistent across all (SKILL.md with name/description frontmatter). Agents in .agent/.cursor have YAML frontmatter (name, description, model, color) while .claude uses plain markdown with Referenced skills section."
     },
     {
       "id": "AS-003",

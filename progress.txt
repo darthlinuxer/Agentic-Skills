@@ -17,4 +17,22 @@ Started: Sun Feb 22 17:26:39 -03 2026
   - .agent has workflows/, .claude has commands/, .cursor has commands/ and rules/
   - Each skill directory contains SKILL.md file
   - Agent files are in .md format in agents/ directories
+
+## Sun Feb 22 17:40:00 -03 2026 - AS-002
+- What was implemented
+  - Researched skill format for all three platforms (.agent, .claude, .cursor)
+  - Documented differences in agents, commands, workflows, and rules formats
+  - Identified format consistency and platform-specific variations
+
+- Files changed
+  - prd.json (updated passes to true for AS-002)
+
+- **Learnings for future iterations:**
+  - Skills format is consistent: SKILL.md with YAML frontmatter (name, description)
+  - Agents format differs: .agent/.cursor use YAML frontmatter (name, description, model, color), .claude uses plain markdown with "Referenced skills" section
+  - .agent uses workflows/ with YAML frontmatter (trigger, description)
+  - .claude and .cursor use commands/ with "$ARGUMENTS" section and "Before answering" preamble
+  - .cursor agents include "Workspace Integration" section not present in other platforms
+  - .cursor has no rules/ directory (unlike .agent which has rules/)
+  - Root level skills/ directory exists with 2 skills (prd, ralph)
 ---
